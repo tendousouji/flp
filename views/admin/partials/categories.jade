@@ -1,0 +1,26 @@
+h3.orange-text
+  i.fa.fa-pencil-square
+  | {{title}}
+
+table.table.table-hover
+  thead
+    tr
+      th #
+      th Name
+      th Description
+      th Status
+      th Belong to group
+  tbody
+    tr(ng-repeat='category in categories')
+      td
+        a(href='/admin/categories/{{category._id}}') {{$index + 1}}
+      td 
+        a(href='/admin/categories/{{category._id}}') {{category.name}}
+      td {{category.description}}
+      td
+        span(ng-if='category.is_active == 1')
+          | Active
+        span(ng-if='category.is_active == 0')
+          | Lock
+      td {{category.group.name}}
+a.btn.btn-app-sm(href='/admin/categories/new') New Category

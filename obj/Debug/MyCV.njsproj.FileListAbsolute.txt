@@ -1,0 +1,4 @@
+D:\NodeProjects\CV\MeanTemplate\obj\Debug\MyCV.njsprojResolveAssemblyReference.cache
+D:\NodeProjects\CV\MeanTemplate\bin\Microsoft.NodejsTools.WebRole.dll
+D:\NodeProjects\CV\MyCV\obj\Debug\MyCV.njsprojResolveAssemblyReference.cache
+D:\NodeProjects\CV\MyCV\bin\Microsoft.NodejsTools.WebRole.dll

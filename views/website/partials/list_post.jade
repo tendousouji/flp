@@ -1,0 +1,59 @@
+﻿.row.category-title-bar
+  .container.category-title-text(ng-bind="catalory.name")
+
+.container
+  .row
+    .col-lg-8.col-md-8.col-sm-12.col-xs-12.main-content
+      .row
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-review-list
+
+          .row.post-review(ng-repeat="post in posts")
+            .col-lg-6.col-md-6.col-sm-12.col-xs-12.post-review-thumbnail
+              .post-review-image
+                .hover-overlay
+                span 370x340
+            .col-lg-6.col-md-6.col-sm-12.col-xs-12.post-review-text
+              .post-review-details.row
+                .col-lg-8.col-md-8.col-sm-8.col-xs-8.posts-author-date
+                  span.post-date(ng-bind="post.date_create | date:'dd/MM/yyyy'")
+                  span -
+                  span.post-author(ng-bind="post.author.full_name")
+                .col-lg-4.col-md-4.col-sm-4.col-xs-4.text-right.posts-comment
+                  span.post-watch
+                    i.fa.fa-eye
+                    span(ng-bind="post.views.length")
+                  span -
+                  span.post-comment
+                    i.fa.fa-comments-o
+                    span(ng-bind="post.comments.length")
+              .post-review-description.row
+                .post-review-title(ng-bind="post.title")
+                .review-text(ng-bind="post.description")
+              .read-more.row
+                span read more
+                i.fa.fa-arrows-h
+
+    .col-lg-4.col-md-4.col-sm-12.col-xs-12.relative-content
+      .row.content-box
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12.category-list
+          .row
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12.content-box-title
+              .underline
+              span Category
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12.category-items
+              .row.categories(ng-repeat="catalory in topCatalories")
+                .hover-line
+                .col-lg-8.col-md-8.col-sm-8.col-xs-8.categories-title(ng-bind="catalory.name")
+                .col-lg-4.col-md-4.col-sm-4.col-xs-4.categories-number
+                  .number-box(ng-bind="catalory.posts.length")
+      .row.content-box
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12.category-list
+          .row
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12.content-box-title
+              .underline
+              span top rating articals
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12.articals
+              .row.articals-items(ng-repeat="post in topPosts track by $index")
+                .seperate-line
+                .col-lg-2.col-md-2.col-sm-2.col-xs-2.articals-order(ng-bind="($index + 1) + '.'")
+                .col-lg-10.col-md-10.col-sm-10.col-xs-10.articals-content(ng-bind="post.title")  

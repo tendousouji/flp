@@ -1,0 +1,36 @@
+﻿h3.orange-text
+  i.fa.fa-pencil-square
+  | {{pageTitle}}
+.main-content
+  form(name='dataform', novalidate='')
+    .row
+      .col-md-6
+        .form-group
+          label.label-ctrl(for='title') - Title:
+          input#title.form-control(type='text', ng-model='post.title', ng-change='nbspReplaceInTitle(post.title)', autocomplete='off', required='')
+        .form-group
+          label.label-ctrl(for='desc') - Description:
+          textarea#desc.form-control(ng-model='post.description', ng-change='nbspReplaceInDesc(post.description)', rows='4')
+        .form-group
+          label.label-ctrl - Types:
+          select.form-control(ng-options='option.name for option in types track by option._id', ng-model='selectedType')
+        .form-group
+          label.label-ctrl - Categories:
+          select.form-control(ng-options='option.name for option in categories track by option._id', ng-model='selectedCategory')
+        .form-group
+          label.label-ctrl(for='image') - Choose cover image:
+          input#image.form-control.file-upload(type='file', ng-model='file', ngf-select='onUpdateThumb($files)', accept='image/*')
+      .col-md-6
+        .form-group
+          label.label-ctrl - Cover image:
+          img.img-responsive(src='{{post.image_url}}')
+    .row
+      .col-md-12
+        label.label-ctrl(for='editor') - Main content:
+        br
+        .form-group
+          input#image_add.file-upload(type='file', ngf-select='onAddImages($files)', accept='image/*', style='display: none;')
+        div(ckeditor='options', ng-model='htmlEditor', ready='onReady()')
+    div(style='padding-top: 15px;')
+      button.btn.btn-app-sm(ng-click='action()', ng-disabled='dataform.$invalid') {{actionBtnText}}
+      button.btn.btn-app-sm.remove-btn(ng-click='remove()', ng-show='isEdit') Remove

@@ -1,0 +1,56 @@
+﻿doctype html
+html
+  head
+    meta(name="viewport",content="initial-scale=1")
+    title(ng-bind="title")
+    base(href="/")
+    link(rel="shortcut icon",type="image/x-icon",href="mine.ico")
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/libs/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/libs/ng-table/dist/ng-table.css')
+    link(rel='stylesheet', href='/libs/angular-flash-alert/dist/angular-flash.min.css')
+    link(rel='stylesheet', href='/stylesheets/admin.css')
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-2')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.home-logo-text(href='/') Amin Page
+        #bs-example-navbar-collapse-2.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#', ng-click='logout()')
+                i.fa.fa-sign-out
+                |  Sign out
+            li.avatar
+              a(href='#')
+                | {{admin_name}}
+                img.user-img.img-circle(src='images/admin/user_admin.png')
+    .row
+      #dashboard.col-md-2.col-sm-3.sidebar
+        .cover
+          ul.nav.nav-sidebar
+            li
+              a(href='/admin')
+                i.fa.fa-pencil-square
+                |  New Post
+            li
+              a(href='/admin/posts')
+                i.fa.fa-check-square
+                |  Created Posts
+            li
+              a(href='/admin/categories')
+                i.fa.fa-check-square
+                |  Categories
+            li
+              a(href='/admin/groups')
+                i.fa.fa-check-square
+                |  Groups
+      .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2
+        div(flash-message='5000')
+        block content
+    script(src="/libs/requirejs/require.js", data-main="/javascripts/admin/main.js")

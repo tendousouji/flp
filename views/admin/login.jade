@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta(name="viewport",content="initial-scale=1")
+    title
+      | Admin Login
+    base(href="/")
+    link(rel="shortcut icon",type="image/x-icon",href="mine.ico")
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/libs/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/admin.css')
+  body.admin-bg(ng-cloak, ng-controller="LoginCtrl")
+    .form-container
+      h3.form-title
+        | Admin Login
+      form(name='fmlogin', novalidate='')
+        .form-group
+          label(for='userName') Username:
+          input#userName.form-control(type='text', ng-model='user.username', required='', autofocus='')
+        .form-group
+          label(for='password') Password:
+          input#password.form-control(type='password', ng-model='user.password', required='')
+        button.btn.btn-app(ng-click='login()')
+          i.fa.fa-chevron-right
+          | Login
+      p.errors(ng-bind="errors")
+    script(src="/libs/requirejs/require.js", data-main="/javascripts/admin/main.js")

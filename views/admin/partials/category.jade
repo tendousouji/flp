@@ -1,0 +1,26 @@
+h3.orange-text
+  i.fa.fa-pencil-square
+  | {{title}}
+.main-content(style='width: 60%;')
+  form(name='newCategoryForm', novalidate='')
+    .form-group
+      label.label-ctrl(for='name') - Name:
+      input#name.form-control(type='text', ng-model='category.name',  required='')
+    .form-group
+      label.label-ctrl(for='desc') - Description:
+      textarea#desc.form-control(ng-model='category.description', rows='4', required='')
+    .form-group
+      label.label-ctrl - Groups:
+      select.form-control(ng-options='option.name for option in groups track by option._id', ng-model='selectedGroup')
+    .form-group
+      label.label-ctrl 
+        | - Satus:
+      br
+      label.label-ctrl
+        input(type='radio', ng-model='category.is_active', value='1', style='margin-left: 20px; margin-right: 5px;')
+        | Active
+      br
+      label.label-ctrl
+        input(type='radio', ng-model='category.is_active', value='0', style='margin-left: 20px; margin-right: 5px;')
+        | Lock
+    button.btn.btn-app-sm(ng-click='actionCategory()', ng-disabled='newCategoryForm.$invalid') {{actionLabel}}

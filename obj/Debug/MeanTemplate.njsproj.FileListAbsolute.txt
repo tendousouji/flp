@@ -1,0 +1,2 @@
+D:\NodeProjects\MeanProjectTemplate\MeanTemplate\MeanTemplate\obj\Debug\MeanTemplate.njsprojResolveAssemblyReference.cache
+D:\NodeProjects\MeanProjectTemplate\MeanTemplate\MeanTemplate\bin\Microsoft.NodejsTools.WebRole.dll

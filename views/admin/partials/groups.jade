@@ -1,0 +1,26 @@
+h3.orange-text
+  i.fa.fa-pencil-square
+  | {{title}}
+
+table.table.table-hover
+  thead
+    tr
+      th #
+      th Name
+      th Description
+      th Status
+      th Created Date
+  tbody
+    tr(ng-repeat='group in groups')
+      td
+        a(href='/admin/groups/{{group._id}}') {{$index + 1}}
+      td 
+        a(href='/admin/groups/{{group._id}}') {{group.name}}
+      td {{group.description}}
+      td
+        span(ng-if='group.is_active == 1')
+          | Active
+        span(ng-if='group.is_active == 0')
+          | Lock
+      td {{group.date_create}}
+a.btn.btn-app-sm(href='/admin/groups/new') New Group

@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,vietnamese')
+
+@import url('https://fonts.googleapis.com/css?family=Lobster&subset=latin,vietnamese')
+
+.sidebar
+  display none
+
+@media (min-width: 768px)
+  .sidebar
+    position fixed
+    top 60px
+    bottom 0
+    left 0
+    z-index 1000
+    display block
+    padding 0
+    overflow-x hidden
+    overflow-y hidden
+    background url("../images/admin/sidebar_bg.jpg")
+    background-size cover !important
+    transition all 0.3s ease
+    -webkit-transition all 0.3s ease
+    -o-transition all 0.3s ease
+
+.nav-sidebar
+  padding-top 20px
+  & > li
+    & > a
+      padding-left 10px
+      color #9da6ab
+      transition all 0.5s ease
+      -webkit-transition all 0.5s ease
+      -o-transition all 0.5s ease
+
+.nav-sidebar > li > a:hover, .nav-sidebar > li > a:focus
+  padding-left 20px
+  color #fff
+  background #84B908
+
+.nav-bottom
+  width 100%
+  position absolute
+  bottom 0
+
+body
+  font-family 'Open Sans', sans-serif
+  overflow-x hidden
+  line-height 1.75
+  padding-top 60px
+  color #777
+  font-size 14px !important
+
+i
+  padding 0 10px
+
+a
+  text-decoration none !important
+  color #84B908
+  &:hover
+    color #feb41c
+
+span
+  font-style italic
+  font-size 14px
+
+p
+  padding 5px 0
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance none !important
+  margin 0
+
+.none-background
+  background none !important
+
+.blue-text
+  color #29d9c2
+
+.orange-text
+  color #feb41c
+
+.center-text
+  text-align center
+
+.bold-text
+  font-weight bold
+
+.navbar
+  border-radius 0
+  -moz-border-radius 0
+  -webkit-border-radius 0
+  -ms-border-radius 0
+  -o-border-radius 0
+  border none
+
+.navbar-inverse
+  background rgba(41, 217, 194, 0.9)
+  .navbar-nav
+    & > li
+      & > a
+        font-weight bold
+        color #fff !important
+        &:hover
+          color #2C3E50 !important
+  .navbar-brand
+    padding 7.5px
+    img
+      width 135px
+
+@media (min-width: 768px)
+  .navbar-nav
+    li
+      a
+        padding-top 19.5px
+        padding-bottom 19.5px
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus
+  background rgba(58, 195, 176, 0.9)
+
+.home-logo-text
+  color #fff !important
+  padding 9px 0
+  font-size 30px
+  font-weight bold
+  font-family 'Lobster', cursive
+
+.avatar
+  a
+    padding-top 5px !important
+    padding-bottom 5px !important
+
+.cover
+  background rgba(0, 0, 0, 0.6)
+  width 100%
+  height 100%
+
+.user-img
+  width 50px
+  height 50px
+
+.btn-am
+  color #fff
+  background #29d9c2
+  border-color #29d9c2
+  border-radius 0
+
+.btn-am:hover,
+.btn-am:focus
+  background #128f76
+  border-color #128f76
+
+.form-control
+  border 1px solid #dce4ec
+  border-radius 0 !important
+  box-shadow none
+  &:focus
+    border-color #29d9c2 !important
+    box-shadow 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 5px rgba(41, 217, 194, 0.6) !important
+
+input[type='file'].form-control
+  padding 0
+
+.file-upload
+  padding 0
+  &::-webkit-file-upload-button
+    background #3DDCC8
+    border none
+    padding 8px
+    color #fff
+    font-style italic
+
+.main-content
+  padding 10px 5%
+
+.label-ctrl
+  font-weight normal
+
+.btn-app, .btn-app-sm
+  font-weight bold
+  color #fff !important
+  background #3DDCC8
+  border-radius 0 !important
+  box-shadow 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+  transition all ease .5s
+
+.btn-app
+  padding 15px 35px
+  text-transform uppercase
+
+.btn-app-sm
+  padding 6px 12px
+
+.btn-app:hover, .btn-app-sm:hover
+  background #49fce4
+  box-shadow 0 4px 10px 0 rgba(0, 0, 0, 0.16), 0 4px 20px 0 rgba(0, 0, 0, 0.12)
+
+.admin-bg
+  background url('../images/admin/admin_bg.jpg')
+  background-size cover
+
+.form-container
+  position absolute
+  width 600px
+  left 28%
+  top 25%
+  background rgba(255, 255, 255, .9)
+  padding 30px
+  border-radius 10px
+  .form-title
+    margin -30px -30px 10px -30px
+    background rgba(0, 150, 136, .8)
+    border-top-left-radius 10px
+    border-top-right-radius 10px
+    padding 15px
+    color #fff
+    font-style italic
+    font-family 'Lobster', cursive
+  label
+    color #009688
+    font-size 13px
+  .form-control
+    background rgba(255, 255, 255, .9)
+    padding 20px 5px
+    &:focus
+      border-color #4db6ac !important
+      box-shadow 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 5px rgba(41, 217, 194, 0.6) !important
+  .btn-app
+    padding 10px 20px
+    text-transform none
+    float right
+    background #009688
+    &:hover
+      background #4db6ac
+      box-shadow 0 4px 10px 0 rgba(0, 0, 0, 0.16), 0 4px 20px 0 rgba(0, 0, 0, 0.12)
+
+.pagination
+  margin 0
+
+.menu-container
+  ul
+    list-style-type none
+
+.errors
+  color: #f44336
+  font-style: italic
+  font-weight: bold
+
+.remove-btn
+  background: #f44336
+  float: right
+
+.remove-btn:hover
+  background: #ff1744
+
+.alert
+  position: fixed
+  top: 65px
+  right: 5px
+  z-index: 999
+  margin-bottom: 0

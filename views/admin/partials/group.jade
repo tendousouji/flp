@@ -1,0 +1,23 @@
+h3.orange-text
+  i.fa.fa-pencil-square
+  | {{title}}
+.main-content(style='width: 60%;')
+  form(name='newGroupForm', novalidate='')
+    .form-group
+      label.label-ctrl(for='name') - Name:
+      input#name.form-control(type='text', ng-model='group.name',  required='')
+    .form-group
+      label.label-ctrl(for='desc') - Description:
+      textarea#desc.form-control(ng-model='group.description', rows='4', required='')
+    .form-group
+      label.label-ctrl 
+        | - Satus:
+      br
+      label.label-ctrl
+        input(type='radio', ng-model='group.is_active', value='1', style='margin-left: 20px; margin-right: 5px;')
+        | Active
+      br
+      label.label-ctrl
+        input(type='radio', ng-model='group.is_active', value='0', style='margin-left: 20px; margin-right: 5px;')
+        | Lock
+    button.btn.btn-app-sm(ng-click='actionGroup()', ng-disabled='newGroupForm.$invalid') {{actionLabel}}

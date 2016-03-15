@@ -1,0 +1,215 @@
+﻿doctype html
+html(ng-controller="BaseCtrl")
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    title(ng-bind="title")
+    base(href="/")
+    script(src='/javascripts/jquery-2.1.4.min.js')
+    link(rel="shortcut icon",type="image/x-icon",href="mine.ico")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800")
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/libs/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    link(rel='stylesheet', href='css/bootstrap.css', type='text/css')
+    link(rel='stylesheet', href='css/font-awesome.min.css', type='text/css')
+    link(rel='stylesheet', href='css/style.css', type='text/css')
+    link(rel='stylesheet', href='css/responsive.css', type='text/css')
+    link(rel='stylesheet', href='css/perfect-scrollbar.css')
+    link(rel='stylesheet', href='css/owl.carousel.css', type='text/css')
+    link(rel='stylesheet', href='css/animate.css', type='text/css')
+    link(rel='stylesheet', href='css/colors/color.css', type='text/css')
+
+
+  body(ng-cloak,onload='goforit()')
+    .container-fluid#main-container
+                    p(ng-hide="error_message.length <= 0", ng-bind="error_message")
+                    p(ng-hide="error_message.length <= 0", ng-bind="error_message")
+      .container
+        .row.header
+          .col-lg-2.col-md-4.col-sm-12.col-xs-12.text-center.logo(style="margin-top:-25px; padding: 0;")
+            img(src="./images/create_thumb.png")
+          .col-lg-4.col-md-4.col-sm-12.col-xs-12(style="margin-top: -25px; margin-left:-30px; padding: 0;")
+            .social-link.row
+              .col-lg-5.col-md-5.col-sm-4.col-xs-3
+              .col-lg-1.col-md-1.col-sm-1.col-xs-1.social-logo.text-center#facebook 
+                i.fa.fa-facebook
+              .col-lg-1.col-md-1.col-sm-1.col-xs-1.social-logo.text-center#google
+                i.fa.fa-google-plus
+              .col-lg-1.col-md-1.col-sm-1.col-xs-1.social-logo.text-center#twitter
+                i.fa.fa-twitter
+              .col-lg-1.col-md-1.col-sm-1.col-xs-1.social-logo.text-center#linkedin
+                i.fa.fa-linkedin
+          .col-lg-6.col-md-4.col-sm-12.col-xs-12
+            .row(ng-controller="LoginCtrl")
+              .col-lg-12.col-md-12.login-form
+                form.row(ng-submit="login()")
+                  .col-lg-4.col-md-5.col-sm-5.col-xs-5(style="margin-top: -10px; padding: 0;")
+                    input(type="text", placeholder="Username", ng-model="username")
+                  .col-lg-4.col-md-5.col-sm-5.col-xs-5(style="margin-top: -10px; padding: 0;")
+                    input(type="password", placeholder="Password", ng-model="password")
+                  .col-lg-2.col-md-2.col-sm-2.col-xs-2.text-right(style="margin-top: -10px;  padding: 0;")
+                    button(type="submit") Login
+                  .col-lg-2.col-md-2.col-sm-2.col-xs-2.text-right(style="margin-top: -10px;padding: 0;")
+                    //- button(type="submit") Signup
+                    
+                    button(type='submit', data-toggle='modal', data-target='#register') Sign in
+                    #register.modal.fade(role='dialog')
+                      .modal-dialog
+                        .modal-content
+                          .modal-header
+                            h3.text-center Sign in
+                          .modal-body
+                            .row
+                                form()
+                                  .form-group
+                                    .col-md-12
+                                      label.sign-in-label
+                                        | User name
+                                        span.text-danger *
+                                      input.form-control(type='text')
+                                  .form-group
+                                    .col-md-6
+                                      label.sign-in-label
+                                        | Password
+                                        span.text-danger *
+                                      input.form-control(type='password')
+                                    .col-md-6
+                                      label.sign-in-label
+                                        | Confirm Password
+                                        span.text-danger *
+                                      input.form-control(type='password')
+                                  .form-group
+                                    .col-md-6
+                                      label.sign-in-label Name
+                                      input.form-control(type='text')
+                                    .col-md-6
+                                      label.sign-in-label
+                                        | Email
+                                        span.text-danger *
+                                      input.form-control(type='text')
+                                  .form-group
+                                    .col-md-12
+                                      label.sign-in-label Phone
+                                      input.form-control(type='tel')
+                                  .form-group
+                                    .col-md-12
+                                      .row
+                                        label.col-md-12.sign-in-label-birthday Birthday
+                                        .col-md-3
+                                          input.form-control(type='text', placeholder='year')
+                                        .col-md-6
+                                          input.form-control(type='text', placeholder='month')
+                                        .col-md-3
+                                          input.form-control(type='text', placeholder='day')
+                                  .form-group
+                                    .col-md-12
+                                      label.control-label.sign-in-label Country
+                                      select.form-control(name='')
+                                        option(value='vietnam') Viet Nam
+                                        option(value='american') United State of America
+                                        option(value='england') United State of Kingdom
+                                  .form-group
+                                    .col-md-12
+                                      label.control-label.sign-in-label Sex
+                                      select.form-control(name='')
+                                        option(value='male') Male
+                                        option(value='female') Female
+                                        
+                          .modal-footer
+                            button.btn.btn-primary.col-md-3.col-md-offset-3(type='submit') Login
+                            button.btn.btn-default.col-md-3(type='submit') Cancel
+
+                  .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    p(ng-hide="error_message.length <= 0", ng-bind="error_message")
+      
+      .row.menu-bar
+        .container
+          .row
+            .col-lg-1.col-md-1.col-sm-0.col-xs-0
+            .col-lg-1.col-md-1.text-center.menu-items
+              i.fa.fa-home
+              span Home
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.text-center.menu-items
+              i.fa.fa-pencil 
+              span ETCF
+               .submenu
+                .submenu-item Assessment tools
+                .submenu-item Background and Overview
+                .submenu-item Complete version
+                .submenu-item Domain 1-Language
+                .submenu-item Domain 2-Teaching
+                .submenu-item Domain 3-Learners
+                .submenu-item Domain 4-Attitudes and Values
+                .submenu-item Domain 5-Laerning form Practice
+                .submenu-item For Trainers-How to use ETCF
+                .submenu-item ETCF presentations
+
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.text-center.menu-items
+              i.fa.fa-user 
+              span User
+               .submenu
+                .submenu-item Edit Profile
+                .submenu-item Password reset
+                .submenu-item Login
+                .submenu-item Register
+            .col-lg-2.col-md-2.col-sm-12.col-xs-12.text-center.menu-items 
+              i.fa.fa-picture-o 
+              span Gallery
+               .submenu
+                .submenu-item Da Nang RFLC
+                .submenu-item Ha Noi Pedagogical University 2
+            .col-lg-2.col-md-2.col-sm-12.col-xs-12.menu-items 
+              i.fa.fa-slideshare 
+              span Presentations
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menu-items
+              i.fa.fa-video-camera 
+              span Videos
+               .submenu
+                .submenu-item Articles with video
+                .submenu-item Shaping the way we teach English
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.text-center.menu-items 
+              i.fa.fa-newspaper-o 
+              span News
+            .col-lg-1.col-md-1.col-sm-0.col-xs-0
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.text-center.menu-items
+              .theme-layout
+              #search-area
+                i.fa.fa-search
+              .search-input
+                .arrow
+                input(placeholder="Search.....")
+
+      block content
+
+script(src="/libs/requirejs/require.js", data-main="/javascripts/website/main.js")
+script(type='text/javascript', src='js/modernizr.js')
+script(src='js/jquery-2.1.4.js')
+script(type='text/javascript', src='js/html5lightbox.js') 
+script(type='text/javascript', src='js/scrolltopcontrol.js')
+script(type='text/javascript', src='js/slick.min.js')
+script(type='text/javascript', src='js/owl.carousel.min.js')
+script(type='text/javascript', src='js/highlight.pack.js')
+script(type='text/javascript', src='js/tabifier.js')
+script(type='text/javascript', src='js/js.js')
+script(type='text/javascript', src='js/jPages.min.js')
+script(type='text/javascript', src='js/perfect-scrollbar.js')
+script(type='text/javascript', src='js/perfect-scrollbar.jquery.js')
+script(src='js/script.js')
+script(src='js/clock.js')
+script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+  
+
+script.
+  $(document).ready(function(){
+    $('#search-area').on('click', function() {
+      $(this).toggleClass('click-bg');
+      $('.search-input').toggleClass('show-input-field');
+    });
+  });
+    
+  
