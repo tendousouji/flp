@@ -170,7 +170,6 @@ form button {
 }
 .menu-items {
   z-index: 100;
-  border: 1px solid;
   float: left;
 }
 .menu-items:hover .submenu-item {
@@ -220,6 +219,7 @@ form button {
   background: #383e41;
   margin: 0 auto;
   border-radius: 5px;
+  float: right;
 }
 #search-area:hover {
   cursor: pointer;
@@ -228,6 +228,9 @@ form button {
   margin: 0;
   padding: 0;
   color: #fff;
+}
+#search-container {
+  float: right;
 }
 .slider {
   height: 100%;
@@ -1162,9 +1165,9 @@ form button {
   background: #000;
 }
 .search-input {
-  width: 200px;
+  width: 160px;
   margin-left: -110px;
-  display: none;
+  display: block;
 }
 .search-input.show-input-field {
   display: block;
@@ -1177,6 +1180,7 @@ form button {
   border: 3px solid #bdbdbd;
   border-radius: 5px;
   padding-left: 15px;
+  float: right;
 }
 .search-input input:focus {
   outline: none;

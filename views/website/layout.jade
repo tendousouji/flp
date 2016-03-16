@@ -52,11 +52,34 @@ html(ng-controller="BaseCtrl")
                     input(type="text", placeholder="Username", ng-model="username")
                   .col-lg-4.col-md-5.col-sm-5.col-xs-5(style="margin-top: -10px; padding: 0;")
                     input(type="password", placeholder="Password", ng-model="password")
-                  .col-lg-2.col-md-2.col-sm-2.col-xs-2.text-right(style="margin-top: -10px;  padding: 0;")
-                    button(type="submit") Login
-                  .col-lg-2.col-md-2.col-sm-2.col-xs-2.text-right(style="margin-top: -10px;padding: 0;")
-                    //- button(type="submit") Signup
-                    
+                  //- login
+                  .col-lg-2.col-md-1.col-sm-1.col-xs-1.text-right(style="margin-top: -10px; padding: 0;")
+                    button(type='submit', data-toggle='modal', data-target='#login-modal') Login
+                    #login-modal.modal.fade(role='dialog')
+                      .modal-dialog
+                        .modal-content.col-md-8.col-md-offset-2
+                          .modal-header
+                            h3.text-center Login
+                          .modal-body
+                            .row
+                              //- form
+                              .form-group
+                                .col-md-12
+                                  label(style="float:left;")
+                                    | User name
+                                    span.text-danger *
+                                  input.form-control(type='text')
+                              .form-group
+                                .col-md-12
+                                  label(style="float:left;")
+                                    | Password
+                                    span.text-danger *
+                                  input.form-control(type='password')
+                          .modal-footer
+                            button.btn.btn-primary.col-md-3.col-md-offset-3(type='submit') Login
+                            button.btn.btn-default.col-md-3(type='submit') Cancel
+                  //- end-login
+                  .col-lg-2.col-md-1.col-sm-1.col-xs-1.text-right(style="margin-top: -10px; padding: 0;")
                     button(type='submit', data-toggle='modal', data-target='#register') Sign in
                     #register.modal.fade(role='dialog')
                       .modal-dialog
@@ -65,63 +88,62 @@ html(ng-controller="BaseCtrl")
                             h3.text-center Sign in
                           .modal-body
                             .row
-                                form()
-                                  .form-group
-                                    .col-md-12
-                                      label.sign-in-label
-                                        | User name
-                                        span.text-danger *
-                                      input.form-control(type='text')
-                                  .form-group
-                                    .col-md-6
-                                      label.sign-in-label
-                                        | Password
-                                        span.text-danger *
-                                      input.form-control(type='password')
-                                    .col-md-6
-                                      label.sign-in-label
-                                        | Confirm Password
-                                        span.text-danger *
-                                      input.form-control(type='password')
-                                  .form-group
-                                    .col-md-6
-                                      label.sign-in-label Name
-                                      input.form-control(type='text')
-                                    .col-md-6
-                                      label.sign-in-label
-                                        | Email
-                                        span.text-danger *
-                                      input.form-control(type='text')
-                                  .form-group
-                                    .col-md-12
-                                      label.sign-in-label Phone
-                                      input.form-control(type='tel')
-                                  .form-group
-                                    .col-md-12
-                                      .row
-                                        label.col-md-12.sign-in-label-birthday Birthday
-                                        .col-md-3
-                                          input.form-control(type='text', placeholder='year')
-                                        .col-md-6
-                                          input.form-control(type='text', placeholder='month')
-                                        .col-md-3
-                                          input.form-control(type='text', placeholder='day')
-                                  .form-group
-                                    .col-md-12
-                                      label.control-label.sign-in-label Country
-                                      select.form-control(name='')
-                                        option(value='vietnam') Viet Nam
-                                        option(value='american') United State of America
-                                        option(value='england') United State of Kingdom
-                                  .form-group
-                                    .col-md-12
-                                      label.control-label.sign-in-label Sex
-                                      select.form-control(name='')
-                                        option(value='male') Male
-                                        option(value='female') Female
-                                        
+                              form()
+                                .form-group
+                                  .col-md-12
+                                    label.sign-in-label
+                                      | User name
+                                      span.text-danger *
+                                    input.form-control(type='text')
+                                .form-group
+                                  .col-md-6
+                                    label.sign-in-label
+                                      | Password
+                                      span.text-danger *
+                                    input.form-control(type='password')
+                                  .col-md-6
+                                    label.sign-in-label
+                                      | Confirm Password
+                                      span.text-danger *
+                                    input.form-control(type='password')
+                                .form-group
+                                  .col-md-6
+                                    label.sign-in-label Name
+                                    input.form-control(type='text')
+                                  .col-md-6
+                                    label.sign-in-label
+                                      | Email
+                                      span.text-danger *
+                                    input.form-control(type='text')
+                                .form-group
+                                  .col-md-12
+                                    label.sign-in-label Phone
+                                    input.form-control(type='tel')
+                                .form-group
+                                  .col-md-12
+                                    .row
+                                      label.col-md-12.sign-in-label-birthday Birthday
+                                      .col-md-3
+                                        input.form-control(type='text', placeholder='year')
+                                      .col-md-6
+                                        input.form-control(type='text', placeholder='month')
+                                      .col-md-3
+                                        input.form-control(type='text', placeholder='day')
+                                .form-group
+                                  .col-md-12
+                                    label.control-label.sign-in-label Country
+                                    select.form-control(name='')
+                                      option(value='vietnam') Viet Nam
+                                      option(value='american') United State of America
+                                      option(value='england') United State of Kingdom
+                                .form-group
+                                  .col-md-12
+                                    label.control-label.sign-in-label Sex
+                                    select.form-control(name='')
+                                      option(value='male') Male
+                                      option(value='female') Female
                           .modal-footer
-                            button.btn.btn-primary.col-md-3.col-md-offset-3(type='submit') Login
+                            button.btn.btn-primary.col-md-3.col-md-offset-3(type='submit') Sign in
                             button.btn.btn-default.col-md-3(type='submit') Cancel
 
                   .col-lg-12.col-md-12.col-sm-12.col-xs-12
@@ -130,7 +152,7 @@ html(ng-controller="BaseCtrl")
       .row.menu-bar
         .container
           .row
-            .col-lg-1.col-md-1.col-sm-0.col-xs-0
+            //- .col-lg-1.col-md-1.col-sm-0.col-xs-0
             .col-lg-1.col-md-1.text-center.menu-items
               i.fa.fa-home
               span Home
@@ -175,41 +197,41 @@ html(ng-controller="BaseCtrl")
             .col-lg-1.col-md-1.col-sm-12.col-xs-12.text-center.menu-items 
               i.fa.fa-newspaper-o 
               span News
-            .col-lg-1.col-md-1.col-sm-0.col-xs-0
-            .col-lg-1.col-md-1.col-sm-12.col-xs-12.text-center.menu-items
+            //- .col-lg-1.col-md-1.col-sm-0.col-xs-0
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.text-center.menu-items#search-container
               .theme-layout
               #search-area
                 i.fa.fa-search
               .search-input
-                .arrow
+                //- .arrow
                 input(placeholder="Search.....")
 
       block content
 
-script(src="/libs/requirejs/require.js", data-main="/javascripts/website/main.js")
-script(type='text/javascript', src='js/modernizr.js')
-script(src='js/jquery-2.1.4.js')
-script(type='text/javascript', src='js/html5lightbox.js') 
-script(type='text/javascript', src='js/scrolltopcontrol.js')
-script(type='text/javascript', src='js/slick.min.js')
-script(type='text/javascript', src='js/owl.carousel.min.js')
-script(type='text/javascript', src='js/highlight.pack.js')
-script(type='text/javascript', src='js/tabifier.js')
-script(type='text/javascript', src='js/js.js')
-script(type='text/javascript', src='js/jPages.min.js')
-script(type='text/javascript', src='js/perfect-scrollbar.js')
-script(type='text/javascript', src='js/perfect-scrollbar.jquery.js')
-script(src='js/script.js')
-script(src='js/clock.js')
-script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    script(src="/libs/requirejs/require.js", data-main="/javascripts/website/main.js")
+    script(type='text/javascript', src='js/modernizr.js')
+    //- script(src='js/jquery-2.1.4.js')
+    script(type='text/javascript', src='js/html5lightbox.js') 
+    script(type='text/javascript', src='js/scrolltopcontrol.js')
+    script(type='text/javascript', src='js/slick.min.js')
+    script(type='text/javascript', src='js/owl.carousel.min.js')
+    script(type='text/javascript', src='js/highlight.pack.js')
+    script(type='text/javascript', src='js/tabifier.js')
+    script(type='text/javascript', src='js/js.js')
+    script(type='text/javascript', src='js/jPages.min.js')
+    script(type='text/javascript', src='js/perfect-scrollbar.js')
+    script(type='text/javascript', src='js/perfect-scrollbar.jquery.js')
+    script(src='js/script.js')
+    script(src='js/clock.js')
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
   
 
-script.
-  $(document).ready(function(){
-    $('#search-area').on('click', function() {
-      $(this).toggleClass('click-bg');
-      $('.search-input').toggleClass('show-input-field');
-    });
-  });
-    
+    script.
+      $(document).ready(function(){
+        $('#search-area').on('click', function() {
+          $(this).toggleClass('click-bg');
+          $('.search-input').toggleClass('show-input-field');
+        });
+      });
+        
   

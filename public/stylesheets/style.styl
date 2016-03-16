@@ -159,7 +159,6 @@ form button
   .submenu-item
    display:block
  z-index: 100
- border: 1px solid
  float: left
 .submenu-item
    display: none
@@ -203,6 +202,9 @@ form button
     margin: 0
     padding: 0
     color: #ffffff
+  float: right
+#search-container
+  float: right
 //===============End Of Menu Bar===============
 
 //===============Slider===============
@@ -1032,9 +1034,9 @@ form button
   &.click-bg
     background: #000000
 .search-input
-  width: 200px
+  width: 160px
   margin-left: -110px
-  display: none
+  display: block
   &.show-input-field
     display: block
   input
@@ -1045,6 +1047,7 @@ form button
     border: 3px solid #bdbdbd
     border-radius: 5px
     padding-left: 15px
+    float: right
     &:focus
       outline: none
 .arrow
