@@ -13,37 +13,8 @@ var groupPostSchema = new Schema({
 });
 
 //Virtual
+//Map model to collection
 groupPostSchema.virtual('catalories');
-
-//Instance methods
-/*groupPostSchema.methods.findCatalories = function (condition, callback) {
-  //add find child
-  condition.group_id = this._id;
-  
-  //Find
-  this.model('Catalory').find(condition, callback);
-}*/
-
-/*groupPostSchema.methods.findPosts = function (condition, callback) {
-  //Find catalories
-  this.model('Catalory').find({ group: this._id }, function (err, catalories) {
-    if (err) {
-      callback(err, null); //check error
-    } else {
-      //Make array catalory id
-      var cataloryIds = [];
-      for (var i in catalories) {
-        cataloryIds.push(catalories[i]);
-      }
-      
-      //Add array catalory id to condition
-      condition.catalory = { $in : [cataloryIds] };
-      
-      //Find
-      this.model('Post').find(condition, callback)
-    }
-  });
-}*/
 
 //Statics methods
 groupPostSchema.statics.findByJoinChild = function (conditions, populates, joins, callback) {
@@ -64,18 +35,6 @@ groupPostSchema.statics.findByJoinChild = function (conditions, populates, joins
   var populatePost = populates.post || [];
   
   var self = this;
-  
-  /*self.find(function (err, groups) { 
-    
-  });
-
-  self.model('Catalory').find(function (err, catalories) { 
-  
-  });
-
-  self.model('Post').find(function (err, post) { 
-  
-  });*/
 
   var group = self.find(conditionGroup);
   
