@@ -51,9 +51,6 @@
           $scope.activeId.push(0);
         }
         
-        // console.log(groups);
-        // console.log($scope.topCatalories);
-        // console.log($scope.topPosts);
       });
 
     }]);
