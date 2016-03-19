@@ -1,4 +1,5 @@
 .header {
+  float: center;
   min-height: 80px;
   width: 100%;
   background-color: #000;
@@ -6,13 +7,58 @@
 #search {
   position: absolute;
 }
+.menu-items {
+  z-index: 100;
+}
+.menu-items:hover .submenu-item {
+  display: block;
+}
+.submenu-item {
+  display: none;
+  height-min: 50px;
+  width: 230px;
+  background: #fff;
+  font-size: 8px;
+  text-align: left;
+  padding-left: 10px;
+  color: #000;
+  border-top: 1px solid #d3d3d3;
+}
+.submenu-item:hover {
+  background: #d3d3d3;
+  color: #f00;
+}
+.menu-items {
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #383e41;
+}
+@media (max-width: 768px) {
+  .menu-items {
+    text-align: center;
+  }
+}
+.menu-items:hover {
+  cursor: pointer;
+  color: #333;
+}
+.menu-items .submenu {
+  display: block;
+}
+a:hover {
+  text-decoration: none;
+}
 .menu {
-  min-height: 25px;
+  float: center;
   width: 100%;
-  border-bottom: 4px solid #00a2d7;
 }
 .slider {
-  min-height: 500px;
+  margin-top: -20px;
+  border-top: 4px solid #00a2d7;
   width: 100%;
   background-color: #000;
 }
@@ -37,6 +83,9 @@
 h3 {
   text-align: center;
 }
+.categories-title {
+  height: 55px;
+}
 .first-post-thumbnail {
   width: 100%;
   height: 250px;
@@ -55,4 +104,20 @@ p {
 }
 .next-post-title {
   margin-top: 15px;
+}
+.footer {
+  height: 300px;
+  width: 100%;
+  background-color: #d1b545;
+}
+.endfooter {
+  height: 100px;
+  width: 100%;
+  background-color: #c4c3be;
+}
+hr {
+  border-top: 1px solid #848450;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  align: center;
 }

@@ -34,7 +34,7 @@ html(ng-controller="BaseCtrl")
           .logo(style="margin-top :2px;")
             img(src="./images/logo3.png")
         .col-lg-4.col-md-4.col-sm-6.col-xs-6
-          #search
+          #search.text-right
             form.navbar-form(role='search')
               .input-group
                 input.form-control(type='text', placeholder='Search', name='q')
@@ -43,23 +43,119 @@ html(ng-controller="BaseCtrl")
                     i.glyphicon.glyphicon-search
           
         .col-lg-4.col-md-4.col-sm-6.col-xs-6
-          .login-form(style="margin-top:10px;")
+          .login-form
             .row
               .col-lg-2.col-md-2.col-sm-3.col-xs-3
-                button.btn.btn-default(style ="submit") Login
+                form.navbar-form(role='search')
+                  button.btn.btn-default(type='submit', data-toggle='modal', data-target='#login') Login
+                  #login.modal.fade(role='dialog')
+                    .modal-dialog(style="width:500px;")
+                        .modal-content
+                          .modal-header
+                            h3.text-center Login
+                          .modal-body
+                            .row
+                              form.form-inline(role='form')
+                                .form-group
+                                  .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                          
+                                    label.sr-only.control-label
+                                      | Email
+                                      span.text-danger *
+                                   
+                                    input.form-control(type='text' placeholder='Email *')
+                                .form-group
+                                  .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                                    label.sr-only.control-label
+                                      | Password
+                                      span.text-danger *
+                                    input.form-control(type='password' placeholder='Password *')
+                                .checkbox.col-lg-offset-1.col-md-offset-1.col-sm-offset-1.col-xs-offset-1
+                                  label
+                                    input(type='checkbox')
+                                    |  Remember password
+                                
+                                
+                        
+                                      
+                          .modal-footer
+                            button.btn.btn-primary.col-lg-offset-3.col-lg-3.col-md-3.col-sm-3.col-xs-3(type='submit') Login
+                            button.btn.btn-default.col-lg-offset-3.col-lg-3.col-md-3.col-sm-3.col-xs-3(type='submit') Cancel
               .col-lg-2.col-md-2.col-sm-3.col-xs-3
-                button.btn.btn-primary(style="submit") Sign in
+                form.navbar-form(role='search')
+                  button.btn.btn-primary(type='submit', data-toggle='modal', data-target='#register') Sign in
+                  #register.modal.fade(role='dialog')
+                    .modal-dialog(style="width:500px;")
+                        .modal-content
+                          .modal-header
+                            h3.text-center Sign in
+                          .modal-body
+                            .row
+                              form.form-inline(role='form')
+                                .form-group
+                                  .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                                    label.sr-only.control-label Name
+                                    input.form-control(type='text' placeholder='Name')
+                                .form-group
+                                  .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                                    label.sr-only.control-label
+                                      | Username
+                                      span.text-danger *
+                                    input.form-control(type='text' placeholder='Username *')
+                                      
+                                .form-group
+                                  .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                                    label.sr-only.control-label
+                                      | Password
+                                      span.text-danger *
+                                    input.form-control(type='password' placeholder='Password *')
+                                .form-group      
+                                  .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                                    label.sr-only.control-label
+                                      | Confirm Password
+                                      span.text-danger *
+                                    input.form-control(type='password' placeholder='ConfirmPassword *')
+                                
+                                .form-group
+                                  .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                          
+                                    label.sr-only.control-label
+                                      | Email
+                                      span.text-danger *
+                                   
+                                    input.form-control(type='text' placeholder='Email *')
+                                .form-group
+                                  .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                                      
+                                    label.sr-only.control-label Phone
+                                   
+                                    input.form-control(type='tel' placeholder='Phone')
+                                .form-group
+                                  .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                                      
+                                    label.sr-only.control-label Birthday
+                                  .col-lg-3.col-md-3.col-sm-3.col-xs-3   
+                                    input.form-control(type='text', placeholder='day')
+                                  .col-lg-3.col-md-3.col-sm-3.col-xs-3   
+                                    input.form-control(type='text', placeholder='month')
+                                  .col-lg-3.col-md-3.col-sm-3.col-xs-3  
+                                    input.form-control(type='text', placeholder='year')
+                      
+                                .form-group
+                                  .col-lg-12.col-md-12.col-sm-6.col-xs-6
+                                      
+                                    label.sr-only.control-label.control-label.sign-in-label Sex
+                                    
+                                    select.form-control(name='')
+                                      option(value='male' ) Male
+                                      option(value='female' ) Female
+                                      
+                          .modal-footer
+                            button.btn.btn-primary.col-lg-offset-3.col-lg-3.col-md-3.col-sm-3.col-xs-3(type='submit') Sign in
+                            button.btn.btn-default.col-lg-offset-3.col-lg-3.col-md-3.col-sm-3.col-xs-3(type='submit') Cancel
+
       .row.menu
-        //- .container
-        //-   .col-lg-12.col-md-12-col-sm-12.col-xs-12
-        //-     .row
-        //-       .col-lg-1.col-md-1.col-sm-12.col-xs-12
-        //-       .col-lg-1.col-md-1.col-sm-12.col-xs-12
-        //-       .col-lg-2.col-md-2.col-sm-12.col-xs-12
-        //-       .col-lg-2.col-md-2.col-sm-12.col-xs-12
-        //-       .col-lg-1.col-md-1.col-sm-12.col-xs-12
-        //-       .col-lg-1.col-md-1.col-sm-12.col-xs-12
-        //-       .col-lg-1.col-md-1.col-sm-12.col-xs-12
+        
         
         nav.navbar.navbar-inverse
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='#main-menu')
@@ -71,7 +167,7 @@ html(ng-controller="BaseCtrl")
             a.navbar-brand(href='') example.com
           .col-md-offset-3#main-menu.navbar-collapse.collapse
             ul.nav.navbar-nav
-              li.active
+              li.active.menu-items
                 a(href='') HOME
               li.dropdown
                 a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
@@ -107,10 +203,13 @@ html(ng-controller="BaseCtrl")
                 ul.dropdown-menu
                   li
                     a(href='#') Edit Profile
+                  li.divider(role='separator')
                   li
                     a(href='#') Password reset
+                  li.divider(role='separator')
                   li
                     a(href='#') Login
+                  li.divider(role='separator')
                   li
                     a(href='#') Register
               li.dropdown
@@ -120,10 +219,19 @@ html(ng-controller="BaseCtrl")
                 ul.dropdown-menu
                   li
                     a(href='#') Da Nang RFLC
+                  li.divider(role='separator')
                   li
                     a(href='#') Ha Noi Pedagogical University 2
-              li
+              li.menu-items
                 a(href='#') PRESENTATIONS
+                  .submenu
+                    .submenu-item 
+                      a(href="#")
+                        |Assessment tools
+                    .submenu-item 
+                       a(href="#")
+                        |Background and Overview
+                
               li.dropdown
                 a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
                   | VIDEOS
@@ -131,6 +239,7 @@ html(ng-controller="BaseCtrl")
                 ul.dropdown-menu
                   li
                     a(href='#') Articles with video
+                  li.divider(role='separator')
                   li
                     a(href='#') Shaping the way we teach English
               li
@@ -141,7 +250,7 @@ html(ng-controller="BaseCtrl")
                   | My Account 
                   span.caret
                 ul.dropdown-menu
-                  // danh sach menu (li)
+                  //- danh sach menu (li)
                   li
                     a(href='') Profile
                   li
