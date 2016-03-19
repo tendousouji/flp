@@ -27,164 +27,76 @@ html(ng-controller="BaseCtrl")
 
   body(ng-cloak,onload='goforit()')
     .container-fluid#main-container
-                    p(ng-hide="error_message.length <= 0", ng-bind="error_message")
-                    p(ng-hide="error_message.length <= 0", ng-bind="error_message")
-      .container
-        .row.header
-          .col-lg-2.col-md-4.col-sm-12.col-xs-12.text-center.logo(style="margin-top:-25px; padding: 0;")
-            img(src="./images/create_thumb.png")
-          .col-lg-4.col-md-4.col-sm-12.col-xs-12(style="margin-top: -25px; margin-left:-30px; padding: 0;")
-            .social-link.row
-              .col-lg-5.col-md-5.col-sm-4.col-xs-3
-              .col-lg-1.col-md-1.col-sm-1.col-xs-1.social-logo.text-center#facebook 
-                i.fa.fa-facebook
-              .col-lg-1.col-md-1.col-sm-1.col-xs-1.social-logo.text-center#google
-                i.fa.fa-google-plus
-              .col-lg-1.col-md-1.col-sm-1.col-xs-1.social-logo.text-center#twitter
-                i.fa.fa-twitter
-              .col-lg-1.col-md-1.col-sm-1.col-xs-1.social-logo.text-center#linkedin
-                i.fa.fa-linkedin
-          .col-lg-6.col-md-4.col-sm-12.col-xs-12
-            .row(ng-controller="LoginCtrl")
-              .col-lg-12.col-md-12.login-form
-                form.row(ng-submit="login()")
-                  .col-lg-4.col-md-5.col-sm-5.col-xs-5(style="margin-top: -10px; padding: 0;")
-                    input(type="text", placeholder="Username", ng-model="username")
-                  .col-lg-4.col-md-5.col-sm-5.col-xs-5(style="margin-top: -10px; padding: 0;")
-                    input(type="password", placeholder="Password", ng-model="password")
-                  .col-lg-2.col-md-2.col-sm-2.col-xs-2.text-right(style="margin-top: -10px;  padding: 0;")
-                    button(type="submit") Login
-                  .col-lg-2.col-md-2.col-sm-2.col-xs-2.text-right(style="margin-top: -10px;padding: 0;")
-                    //- button(type="submit") Signup
-                    
-                    button(type='submit', data-toggle='modal', data-target='#register') Sign in
-                    #register.modal.fade(role='dialog')
-                      .modal-dialog
-                        .modal-content
-                          .modal-header
-                            h3.text-center Sign in
-                          .modal-body
-                            .row
-                                form()
-                                  .form-group
-                                    .col-md-12
-                                      label.sign-in-label
-                                        | User name
-                                        span.text-danger *
-                                      input.form-control(type='text')
-                                  .form-group
-                                    .col-md-6
-                                      label.sign-in-label
-                                        | Password
-                                        span.text-danger *
-                                      input.form-control(type='password')
-                                    .col-md-6
-                                      label.sign-in-label
-                                        | Confirm Password
-                                        span.text-danger *
-                                      input.form-control(type='password')
-                                  .form-group
-                                    .col-md-6
-                                      label.sign-in-label Name
-                                      input.form-control(type='text')
-                                    .col-md-6
-                                      label.sign-in-label
-                                        | Email
-                                        span.text-danger *
-                                      input.form-control(type='text')
-                                  .form-group
-                                    .col-md-12
-                                      label.sign-in-label Phone
-                                      input.form-control(type='tel')
-                                  .form-group
-                                    .col-md-12
-                                      .row
-                                        label.col-md-12.sign-in-label-birthday Birthday
-                                        .col-md-3
-                                          input.form-control(type='text', placeholder='year')
-                                        .col-md-6
-                                          input.form-control(type='text', placeholder='month')
-                                        .col-md-3
-                                          input.form-control(type='text', placeholder='day')
-                                  .form-group
-                                    .col-md-12
-                                      label.control-label.sign-in-label Country
-                                      select.form-control(name='')
-                                        option(value='vietnam') Viet Nam
-                                        option(value='american') United State of America
-                                        option(value='england') United State of Kingdom
-                                  .form-group
-                                    .col-md-12
-                                      label.control-label.sign-in-label Sex
-                                      select.form-control(name='')
-                                        option(value='male') Male
-                                        option(value='female') Female
-                                        
-                          .modal-footer
-                            button.btn.btn-primary.col-md-3.col-md-offset-3(type='submit') Login
-                            button.btn.btn-default.col-md-3(type='submit') Cancel
-
-                  .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                    p(ng-hide="error_message.length <= 0", ng-bind="error_message")
+      //- p(ng-hide="error_message.length <= 0", ng-bind="error_message")
+      //- p(ng-hide="error_message.length <= 0", ng-bind="error_message")        
+      .row.header
+        .col-lg-4.col-md-4.col-sm-12.col-xs-12
+          .logo(style="margin-top :2px;")
+            img(src="./images/logo3.png")
+        .col-lg-4.col-md-4.col-sm-6.col-xs-6
+          #search
+            form.navbar-form(role='search')
+              .input-group
+                input.form-control(type='text', placeholder='Search', name='q')
+                .input-group-btn
+                  button.btn.btn-default(type='submit')
+                    i.glyphicon.glyphicon-search
+          
+        .col-lg-4.col-md-4.col-sm-6.col-xs-6.text-center
+          .login-form(style="margin-top:10px;")
+            .row
+              .col-lg-6.col-md-6.col-sm-6.col-xs-6
+                button.btn.btn-default(style ="submit") Login
+              .col-lg-6.col-md-6.col-sm-6.col-xs-6
+                button.btn.btn-primary(style="submit") Sign in
       
-      .row.menu-bar
-        .container
-          .row
-            .col-lg-1.col-md-1.col-sm-0.col-xs-0
-            .col-lg-1.col-md-1.text-center.menu-items
-              i.fa.fa-home
+      .row
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+          .row.menubar
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item.active-item
+              .menubar-item-highlight
               span Home
-            .col-lg-1.col-md-1.col-sm-12.col-xs-12.text-center.menu-items
-              i.fa.fa-pencil 
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item
+              .menubar-item-highlight
               span ETCF
-               .submenu
-                .submenu-item Assessment tools
-                .submenu-item Background and Overview
-                .submenu-item Complete version
-                .submenu-item Domain 1-Language
-                .submenu-item Domain 2-Teaching
-                .submenu-item Domain 3-Learners
-                .submenu-item Domain 4-Attitudes and Values
-                .submenu-item Domain 5-Laerning form Practice
-                .submenu-item For Trainers-How to use ETCF
-                .submenu-item ETCF presentations
-
-            .col-lg-1.col-md-1.col-sm-12.col-xs-12.text-center.menu-items
-              i.fa.fa-user 
+              .submenubar
+                .submenubar-item Assessment tools
+                .submenubar-item Background and Overview
+                .submenubar-item Complete versions
+                .submenubar-item Domain 1 - Language
+                .submenubar-item Domain 2 - Teaching
+                .submenubar-item Domain 3 - Learners
+                .submenubar-item Domain 4 - Attitudes and Values
+                .submenubar-item Domain 5 - Learning from Practice
+                .submenubar-item For Trainers - How to use ETCF
+                .submenubar-item ETCF Presentation
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item
+              .menubar-item-highlight
               span User
-               .submenu
-                .submenu-item Edit Profile
-                .submenu-item Password reset
-                .submenu-item Login
-                .submenu-item Register
-            .col-lg-2.col-md-2.col-sm-12.col-xs-12.text-center.menu-items 
-              i.fa.fa-picture-o 
+              .submenubar
+                .submenubar-item Edit Profile
+                .submenubar-item Password Reset
+                .submenubar-item Login
+                .submenubar-item Register
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item
+              .menubar-item-highlight
               span Gallery
-               .submenu
-                .submenu-item Da Nang RFLC
-                .submenu-item Ha Noi Pedagogical University 2
-            .col-lg-2.col-md-2.col-sm-12.col-xs-12.menu-items 
-              i.fa.fa-slideshare 
-              span Presentations
-            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menu-items
-              i.fa.fa-video-camera 
-              span Videos
-               .submenu
-                .submenu-item Articles with video
-                .submenu-item Shaping the way we teach English
-            .col-lg-1.col-md-1.col-sm-12.col-xs-12.text-center.menu-items 
-              i.fa.fa-newspaper-o 
+              .submenubar
+                .submenubar-item Da Nang RFLC
+                .submenubar-item Ha Noi Pedagogical University 2
+            .col-lg-2.col-md-2.col-sm-12.col-xs-12.menubar-item 
+              .menubar-item-highlight
+              span Symposium Presentations
+            .col-lg-2.col-md-2.col-sm-12.col-xs-12.menubar-item
+              .menubar-item-highlight
+              span Video Materials
+              .submenubar
+                .submenubar-item Articles with videos
+                .submenubar-item Shaping the way we teach English
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item 
+              .menubar-item-highlight
               span News
-            .col-lg-1.col-md-1.col-sm-0.col-xs-0
-            .col-lg-1.col-md-1.col-sm-12.col-xs-12.text-center.menu-items
-              .theme-layout
-              #search-area
-                i.fa.fa-search
-              .search-input
-                .arrow
-                input(placeholder="Search.....")
-
-      block content
+      //- block content
 
 script(src="/libs/requirejs/require.js", data-main="/javascripts/website/main.js")
 script(type='text/javascript', src='js/modernizr.js')
@@ -206,10 +118,21 @@ script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
 
 script.
   $(document).ready(function(){
+    
     $('#search-area').on('click', function() {
       $(this).toggleClass('click-bg');
       $('.search-input').toggleClass('show-input-field');
     });
-  });
     
+    $('.menubar-item').on('click', function() {
+      $('.menubar-item').removeClass('active-item');
+      $(this).addClass('active-item');
+    });
+
+
+  });
+
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    // Include all compiled plugins (below), or include individual files as needed
+    script(src='js/bootstrap.min.js')
   
