@@ -27,8 +27,8 @@ html(ng-controller="BaseCtrl")
 
   body(ng-cloak,onload='goforit()')
     .container-fluid#main-container
-                    p(ng-hide="error_message.length <= 0", ng-bind="error_message")
-                    p(ng-hide="error_message.length <= 0", ng-bind="error_message")        
+      //- p(ng-hide="error_message.length <= 0", ng-bind="error_message")
+      //- p(ng-hide="error_message.length <= 0", ng-bind="error_message")        
       .row.header
         .col-lg-4.col-md-4.col-sm-12.col-xs-12
           .logo(style="margin-top :2px;")
@@ -42,168 +42,96 @@ html(ng-controller="BaseCtrl")
                   button.btn.btn-default(type='submit')
                     i.glyphicon.glyphicon-search
           
-        .col-lg-4.col-md-4.col-sm-6.col-xs-6
+        .col-lg-4.col-md-4.col-sm-6.col-xs-6.text-center
           .login-form(style="margin-top:10px;")
             .row
-              .col-lg-2.col-md-2.col-sm-3.col-xs-3
+              .col-lg-6.col-md-6.col-sm-6.col-xs-6
                 button.btn.btn-default(style ="submit") Login
-              .col-lg-2.col-md-2.col-sm-3.col-xs-3
+              .col-lg-6.col-md-6.col-sm-6.col-xs-6
                 button.btn.btn-primary(style="submit") Sign in
-      .row.menu
-        //- .container
-        //-   .col-lg-12.col-md-12-col-sm-12.col-xs-12
-        //-     .row
-        //-       .col-lg-1.col-md-1.col-sm-12.col-xs-12
-        //-       .col-lg-1.col-md-1.col-sm-12.col-xs-12
-        //-       .col-lg-2.col-md-2.col-sm-12.col-xs-12
-        //-       .col-lg-2.col-md-2.col-sm-12.col-xs-12
-        //-       .col-lg-1.col-md-1.col-sm-12.col-xs-12
-        //-       .col-lg-1.col-md-1.col-sm-12.col-xs-12
-        //-       .col-lg-1.col-md-1.col-sm-12.col-xs-12
-        
-        nav.navbar.navbar-inverse
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#main-menu')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          //.navbar-header.col-md-offset-2
-            a.navbar-brand(href='') example.com
-          .col-md-offset-3#main-menu.navbar-collapse.collapse
-            ul.nav.navbar-nav
-              li.active
-                a(href='') HOME
-              li.dropdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                  | ETCF 
-                  span.caret
-                ul.dropdown-menu
-                  li
-                    a(href='#') Assessment tools
-                  li
-                    a(href='#') Background and Overview
-                  li
-                    a(href='#') Complete version
-                  li.divider(role='separator')
-                  li
-                    a(href='#') Domain 1-Language
-                  li
-                    a(href='#') Domain 2-Teaching
-                  li
-                    a(href='#') Domain 3-Learners
-                  li
-                    a(href='#') Domain 4-Attitudes and Values
-                  li
-                    a(href='#') Domain 5-Learning form Practice
-                  li.divider(role='separator')
-                  li
-                    a(href='#') For Trainers-How to use ETCF
-                  li
-                    a(href='#') ETCF presentations
-              li.dropdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                  | USER
-                  span.caret
-                ul.dropdown-menu
-                  li
-                    a(href='#') Edit Profile
-                  li
-                    a(href='#') Password reset
-                  li
-                    a(href='#') Login
-                  li
-                    a(href='#') Register
-              li.dropdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                  | GALLERY
-                  span.caret
-                ul.dropdown-menu
-                  li
-                    a(href='#') Da Nang RFLC
-                  li
-                    a(href='#') Ha Noi Pedagogical University 2
-              li
-                a(href='#') PRESENTATIONS
-              li.dropdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                  | VIDEOS
-                  span.caret
-                ul.dropdown-menu
-                  li
-                    a(href='#') Articles with video
-                  li
-                    a(href='#') Shaping the way we teach English
-              li
-                a(href='#') NEWS
-              
-              //li.dropdown.navbar-right
-                a(data-toggle='dropdown', href='')
-                  | My Account 
-                  span.caret
-                ul.dropdown-menu
-                  // danh sach menu (li)
-                  li
-                    a(href='') Profile
-                  li
-                    a(href='') Change Password
-        //- .container
-        //-   .row
-        //-     .col-lg-1.col-md-1.col-sm-0.col-xs-0
-        //-     .col-lg-1.col-md-1.text-center.menu-items
-        //-       i.fa.fa-home
-        //-       span Home
-        //-     .col-lg-1.col-md-1.col-sm-12.col-xs-12.text-center.menu-items
-        //-       i.fa.fa-pencil 
-        //-       span ETCF
-               
+      
+      .row
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+          .row.menubar
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item.active-item
+              .menubar-item-highlight
+              span Home
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item
+              .menubar-item-highlight
+              span ETCF
+              .submenubar
+                .submenubar-item Assessment tools
+                .submenubar-item Background and Overview
+                .submenubar-item Complete versions
+                .submenubar-item Domain 1 - Language
+                .submenubar-item Domain 2 - Teaching
+                .submenubar-item Domain 3 - Learners
+                .submenubar-item Domain 4 - Attitudes and Values
+                .submenubar-item Domain 5 - Learning from Practice
+                .submenubar-item For Trainers - How to use ETCF
+                .submenubar-item ETCF Presentation
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item
+              .menubar-item-highlight
+              span User
+              .submenubar
+                .submenubar-item Edit Profile
+                .submenubar-item Password Reset
+                .submenubar-item Login
+                .submenubar-item Register
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item
+              .menubar-item-highlight
+              span Gallery
+              .submenubar
+                .submenubar-item Da Nang RFLC
+                .submenubar-item Ha Noi Pedagogical University 2
+            .col-lg-2.col-md-2.col-sm-12.col-xs-12.menubar-item 
+              .menubar-item-highlight
+              span Symposium Presentations
+            .col-lg-2.col-md-2.col-sm-12.col-xs-12.menubar-item
+              .menubar-item-highlight
+              span Video Materials
+              .submenubar
+                .submenubar-item Articles with videos
+                .submenubar-item Shaping the way we teach English
+            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item 
+              .menubar-item-highlight
+              span News
+      //- block content
 
-        //-     .col-lg-1.col-md-1.col-sm-12.col-xs-12.text-center.menu-items
-        //-       i.fa.fa-user 
-        //-       span User
-               
-        //-     .col-lg-2.col-md-2.col-sm-12.col-xs-12.text-center.menu-items 
-        //-       i.fa.fa-picture-o 
-        //-       span Gallery
-              
-        //-     .col-lg-2.col-md-2.col-sm-12.col-xs-12.menu-items 
-        //-       i.fa.fa-slideshare 
-        //-       span Presentations
-        //-     .col-lg-1.col-md-1.col-sm-12.col-xs-12.menu-items
-        //-       i.fa.fa-video-camera 
-        //-       span Videos
-               
-        //-     .col-lg-1.col-md-1.col-sm-12.col-xs-12.text-center.menu-items 
-        //-       i.fa.fa-newspaper-o 
-        //-       span News
-       
-
-      block content
-
-script(src="/libs/requirejs/require.js", data-main="/javascripts/website/main.js")
-script(type='text/javascript', src='js/modernizr.js')
-script(src='js/jquery-2.1.4.js')
-script(type='text/javascript', src='js/html5lightbox.js') 
-script(type='text/javascript', src='js/scrolltopcontrol.js')
-script(type='text/javascript', src='js/slick.min.js')
-script(type='text/javascript', src='js/owl.carousel.min.js')
-script(type='text/javascript', src='js/highlight.pack.js')
-script(type='text/javascript', src='js/tabifier.js')
-script(type='text/javascript', src='js/js.js')
-script(type='text/javascript', src='js/jPages.min.js')
-script(type='text/javascript', src='js/perfect-scrollbar.js')
-script(type='text/javascript', src='js/perfect-scrollbar.jquery.js')
-script(src='js/script.js')
-script(src='js/clock.js')
-script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    script(src="/libs/requirejs/require.js", data-main="/javascripts/website/main.js")
+    script(type='text/javascript', src='js/modernizr.js')
+    //- script(src='js/jquery-2.1.4.js')
+    script(type='text/javascript', src='js/html5lightbox.js') 
+    script(type='text/javascript', src='js/scrolltopcontrol.js')
+    script(type='text/javascript', src='js/slick.min.js')
+    script(type='text/javascript', src='js/owl.carousel.min.js')
+    script(type='text/javascript', src='js/highlight.pack.js')
+    script(type='text/javascript', src='js/tabifier.js')
+    script(type='text/javascript', src='js/js.js')
+    script(type='text/javascript', src='js/jPages.min.js')
+    script(type='text/javascript', src='js/perfect-scrollbar.js')
+    script(type='text/javascript', src='js/perfect-scrollbar.jquery.js')
+    script(src='js/script.js')
+    script(src='js/clock.js')
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
   
 
 script.
   $(document).ready(function(){
+    
     $('#search-area').on('click', function() {
       $(this).toggleClass('click-bg');
       $('.search-input').toggleClass('show-input-field');
     });
+    
+    $('.menubar-item').on('click', function() {
+      $('.menubar-item').removeClass('active-item');
+      $(this).addClass('active-item');
+    });
+
+
   });
+
 script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
     // Include all compiled plugins (below), or include individual files as needed
     script(src='js/bootstrap.min.js')
