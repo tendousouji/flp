@@ -56,3 +56,7 @@ p {
 .next-post-title {
   margin-top: 15px;
 }
+.categories-title {
+  float: left;
+  margin: 10px;
+}
