@@ -100,7 +100,9 @@ h3 {
 }
 .first-post-thumbnail {
   width: 100%;
-  height: 250px;
+}
+.first-post-thumbnail img {
+  width: 100%;
 }
 h4,
 p {
@@ -127,7 +129,4 @@ p {
   height: 50px;
   padding-left: 10px;
   line-height: 50px;
-}
-.next-post .row .col-lg-3.col-md-3.col-sm-3.col-xs-3 {
-  width: 100px;
 }
