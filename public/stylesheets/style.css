@@ -93,7 +93,7 @@
   min-height: 60px;
 }
 .categories {
-  background-color: #e5e0e0;
+  background-color: #fff;
 }
 h3 {
   text-align: center;
@@ -129,4 +129,15 @@ p {
   height: 50px;
   padding-left: 10px;
   line-height: 50px;
+}
+.categories-content {
+  margin-top: 20px;
+}
+a {
+  color: #000;
+}
+a:hover {
+  color: #ff8b00;
+  text-decoration: none;
+  transition: color 0.5s;
 }
