@@ -61,6 +61,7 @@ a:hover {
   border-top: 4px solid #00a2d7;
   width: 100%;
   background-color: #000;
+  margin-bottom: 20px;
 }
 .col-centerd {
   float: none;
@@ -105,6 +106,7 @@ p {
 .next-post-title {
   margin-top: 15px;
 }
+<<<<<<< HEAD
 .footer {
   height: 300px;
   width: 100%;
@@ -120,4 +122,9 @@ hr {
   margin-top: -5px;
   margin-bottom: -5px;
   align: center;
+=======
+.categories-title {
+  float: left;
+  margin: 10px;
+>>>>>>> 23f2a3b01ebc0d58488038d1437187cd27198d88
 }
