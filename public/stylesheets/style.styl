@@ -1,1065 +1,127 @@
-﻿html
-  font-size: 62.5%
-  line-height: 1.4
-
-body
-  font-size: 1.6rem
-  overflow: hidden
-  overflow-y: scroll
-  max-width: 100%
-  max-height: 100%
-  font-family: 'Open Sans', sans-serif
-  background: #ffffff
-
-//Override
-.sidebar-content
-  position: fixed
-  top:0
-  z-index:20
+﻿.header
+  height:80px
   width: 100%
-.layout-padding
-  padding: 1px 8px 1px 8px
-.layout-padding > *, .layout-padding > .flex
-  padding: 1px
-.md-ripple-container
-  -webkit-mask-image: none !important
+  // border: 2px solid yellow
+  // background-color: black
+  //border-bottom: 3px solid #00A2D7;  
+    
+#search 
+    position: absolute
 
-//Header
-.circle-avatar
-  margin: 6px 8px
-  border-radius: 50%
-.header-info p
-  color: rgba(0,0,0,0.54)
-  margin: 0
-.header-info h3
-  margin: 0
-.md-icon-button > span
-  font-size: 1.5em
-  color: black
-
-.textColor
-  color: #b1b1b1
-.black
-  color: #383e41
-.red-background
-  background: #d70204
-.Red
-  color: #d70204
-
-//===============Tendou's CSS===============
-
-#main-container
-  background: #ffffff
-
-.test-frame
-  border: 2px solid black
-
-a:visited, a:active, a:link
-  color: #000000
-  text-decoration: none
-
-//===============Header===============
-
-.header
-  height: 112px
-  margin: 30px 0
-
-.login-form
-  height: 112px
-  margin: 0
-  padding: 0
-.login-form form
-  margin: 0
-  padding: 0
-  margin-top: 26px
-
-form input 
-  margin: 0
-  padding: 0
-  font-size: 14px
-  height: 30px
-  line-height: 30px
-  color: #383e41
-  border: 1px solid #bdbdbd
-  width: 90%
-  padding: 0 10px
-
-form input::-webkit-input-placeholder
-  color: #bdbdbd
- 
-form input:-moz-placeholder
-  color: #bdbdbd
- 
-form input::-moz-placeholder
-  color: #bdbdbd
- 
-form input:-ms-input-placeholder  
-  color: #bdbdbd
-
-form p
-  margin: 0
-  padding: 0
-  color: #d70204
-  font-weight: bold
-  font-size: 14px
-  height: 30px
-  line-height: 30px
-  text-align: center
-
-form button 
-  margin: 0
-  padding: 0
-  height: 30px
-  padding: 0 10px
-  font-weight: bold
-  text-transform: uppercase
-  font-size: 14px
-  background: #383e41
-  color: #ffffff
-  border: none
-  border-radius: 5px
-
-.social-link
-  height: 112px
-.social-logo
-  height: 40px
-  width: 40px
-  line-height: 40px
-  margin: 0
-  padding: 0
-  margin: 36px 5px
-  background: #f6f6f6
-  border-radius: 5px
-  &:hover
-    cursor: pointer
-  i
-    font-size: 18px
-    margin: 0
-    padding: 0
-#facebook
-  color: #3c599b
-#google
-  color: #ff4848
-#twitter
-  color: #4d9fd7
-#linkedin
-  color: #0076b4
-//===============End Of Header===============
-
-//===============Menu Bar===============
-.menu-bar
-  border-top: 1px solid #ebefef
-  border-bottom: 1px solid #ebefef
-  font-weight: bold
-  padding: 10px 0
-  i
-    margin-right: 5px
-.menu-items
- &:hover
-  .submenu-item
-   display:block
- z-index: 100
- float: left
-.submenu-item
-   display: none
-   height-min: 50px
-   width:230px
-   background: #ffffff
-   font-size: 11px
-   text-align:left
-   padding-left: 10px
-   color: black
-   border-top: 1px solid #D3D3D3
-   &:hover
-    background: #D3D3D3
-    color:red
-.menu-items
-  height: 40px
-  margin: 0
-  padding: 0
-  font-size: 16px
-  line-height: 40px
-  text-transform: uppercase
-  color: #383e41
-  @media (max-width: 768px)
-    text-align: center
-  &:hover
-    cursor: pointer
-    color: #d70204
-   .submenu
-      display: block
-#search-area
-  width: 40px
-  height: 40px
-  font-size: 18px
-  line-height: 40px
-  background: #383e41
-  margin: 0 auto
-  border-radius: 5px
-  &:hover
-    cursor: pointer
-  i
-    margin: 0
-    padding: 0
-    color: #ffffff
-  float: right
-#search-container
-  float: right
-//===============End Of Menu Bar===============
-
-//===============Slider===============
-
-.slider
-  height: 100%
-  margin-bottom: 20px
-  background: #ffffff
-  position: relative
-
-.slider-border
-  height: 100%
-  margin: 0
-  padding: 0
-  width: 100%
-  overflow: hidden
-
-.slider-container
-  height: 100%
-  transition: all 1s ease
-
-.slider-content
-  height: 482px
-  float: left
-  margin: 0
-  padding: 0
-#image
-  background: url("/images/slide1.jpg")
-  
-  background-size: cover
-  background-position: center
-#image1
-  background: url("/images/slide2.jpg")
-  
-  background-size: cover
-  background-position: center
-#image2
-  background: url("/images/slide3.jpg")
-  
-  background-size: cover
-  background-position: center
-.image-thumbnail
-  height: 482px
-  width: 565px
-  background: #cccccc
-  font-size: 40px
-  line-height: 482px
-  text-align: center
-  color: #959595
-  font-weight: 600
-  @media (max-width: 768px)
-    margin: 0 auto
-  @media (max-width: 480px)
-    width: 434px
-    height: 370px
-    line-height: 370px
-    font-size: 35px
-
-.slider-post
-  margin: 0
-  padding: 0
-  padding-left: 20px
-  padding-right: 50px
-
-.slider-category
-  padding-bottom: 5px
-  
-.slider-category-box
-  text-transform: uppercase
-  color: #ffffff
-  background: #d70204
-  text-align: center
-  width: 130px
-  height: 30px
-  font-size: 14px
-  font-weight: bold
-  line-height: 30px
-  border-radius: 5px
-
-.slider-post-title
-  text-transform: uppercase
-  color: #ffffff
-  font-size: 35px
-  font-weight: 600
-  padding: 15px 0
-
-.slider-post-details
-  color: #7c7c7c
-  text-transform: uppercase
-  font-size: 12px
-  padding: 10px 0
-  font-weight: 600
-  .date
-    &:hover
-      cursor: pointer
-      color: #d70204
-  .author
-    &:hover
-      cursor: pointer
-      color: #d70204
-
-.seperate
-  margin: 0 5px
-
-.slider-post-description
-  color: #cccccc
-  font-weight: 700
-  font-size: 14px
-  line-height: 24px
-
-.navi-arrows
-  border: 2px solid #ffffff
-  color: #ffffff
-  position: absolute
+.menubar
+  // border: 2px solid blue
+  border-top: 2px solid #000000
+  margin-top: 20px
+  background: #fafafa
+.menubar-item
+  // border: 2px solid red
   height: 50px
-  font-size: 30px
-  width: 50px
-  top: 216px
+  line-height: 50px
   text-align: center
-  border-radius: 5px
+  font-size: 18px
+  font-weight: bold
+  position: relative
+  transition: all 0.4s ease
+  &.active-item
+    .menubar-item-highlight
+      opacity: 1
+  &:hover
+    cursor: pointer
+    color: #ff7200
+    .menubar-item-highlight
+      opacity: 1
+    .submenubar
+      height: 500px
+
+.menubar-item-highlight
+  border-bottom: 5px solid #ff7200
+  position: absolute
+  top: -6px
+  left: 0
+  width: 100%
+  opacity: 0
+  border-left: 2px solid #ffffff
+  border-right: 2px solid #ffffff
+  transition: all 0.4s ease
   @media (max-width: 768px)
     display: none
-  &:hover
-    cursor: pointer
-  i
-    font-weight: bold
-    margin: 0
-    padding: 0
-    text-align: center
 
-//===============End Of Slider===============
-
-.main-content
-  margin: 20px 0
-
-.group-title
-  text-transform: uppercase
-  font-size: 30px
-  font-weight: bold
-  border-left: 2px solid #383e41
-  color: #383e41
-  margin: 20px 0
-  padding-left: 15px
-  line-height: 100%
-
-.category
-  margin: 10px 0
-
-.category-title
-  text-transform: uppercase
-  font-size: 14px
-  margin: 0
-  padding: 0
-  //margin-right: 20px
-  margin-bottom: 15px
-  font-weight: bold
-  height: 40px
-  line-height: 40px
-  color: #383e41
-  background: #f6f6f6
-  border-left: 2px solid #ffffff
-  &.active-category
-    color: #ffffff
-    background: #d70204
-  &:hover  
-    cursor: pointer
-  i
-    margin-right: 5px
-    font-size: 14px
-
-.category-content
-  opacity: 0
-  display: none
-  transition: all 1s ease
-  &.active-category-content
-    opacity: 1
-    display: block
-
-
-.large-review
-  margin: 0
-  padding: 0
-
-.large-review-post
-  margin: 0
-  padding: 0
-  &:hover
-    .hover-overlay
-      transform: scale(1)
-      border-radius: 0
-      opacity: 0.2
-
-.large-image-thumbnail
-  background: #cccccc
-  width: 370px
-  height: 340px
-  color: #959595
-  font-size: 35px
-  text-align: center
-  line-height: 340px
-  position: relative
-  &:hover
-    cursor: pointer
-  @media (max-width: 768px)
-    margin: 0 auto
-    
-.hover-overlay
-  height: 100%
-  width: 100%
-  background: #323232
-  opacity: 0
+.submenubar
   position: absolute
-  transition: all 0.5s ease
-  border-radius: 100%
-  transform: scale(0)
-
-.large-post-description
-  margin-top: 10px
-  margin-bottom: 10px
-
-.author-date
-  text-transform: uppercase
-  color: #798291
-  font-size: 14px
-.post-author
-  margin-left: 5px
-  &:hover
-    color: #d70204
-    cursor: pointer
-.post-date
-  margin-right: 5px
-  &:hover
-    color: #d70204
-    cursor: pointer
-
-.comment
-  font-size: 14px
-  color: #798291
-  padding-right: 32px
-.post-watch
-  margin-right: 5px
-  i
-    margin-right: 5px
-.post-comment
-  margin-left: 5px
-  &:hover
-    color: #d70204
-    cursor: pointer    
-  i
-    margin-right: 5px
-
-.large-post-thumbnail
-  .title
-    text-transform: capitalize
-    color: #383e41
-    font-size: 20px
-    font-weight: bold
-    &:hover
-      cursor: pointer
-      color: #d70204
-  .content-highlight
-    color: #798291
-    font-size: 16px
-
-.small-review-post
-  margin-bottom: 15px
-  &:hover
-    cursor: pointer
-    .hover-overlay
-      transform: scale(1)
-      border-radius: 0
-      opacity: 0.2
-    .small-post-title
-      color: #d70204
-
-.small-image-thumbnail
-  background: #cccccc
-  width: 108px
-  height: 102px
-  color: #959595
-  font-size: 15px
-  text-align: center
-  line-height: 100px
-  position: relative
-  @media (max-width: 768px)
-    margin: 0 auto
-
-.small-post-detail
-  height: 102px
-  padding: 11px 15px
-.small-post-date
-  color: #798291
-  text-transform: uppercase
-  font-size: 14px
-  line-height: 20px
-  height: 20px
-.small-post-title
-  color: #383e41
-  text-transform: capitalize
-  font-weight: bold
-  height: 60px
-
-.relative-content
-  margin: 20px 0
-  border-top: 1px solid #ebefef
-  border-bottom: 1px solid #ebefef
-
-.content-box
-  border: 2px solid #ebefef
-  border-top: 1px solid #ebefef
-  border-bottom: 1px solid #ebefef
-  height: 100%
-  padding: 35px 25px
-
-.content-box-title
-  padding: 0
-  position: relative
-  font-size: 20px
-  line-height: 20px
-  text-transform: uppercase
-  font-weight: bold
-  height: 35px
-.underline
-  position: absolute
-  height: 100%
-  width: 75px
-  border-bottom: 5px solid #d70204
-
-.category-items
-  margin-top: 30px
-.categories
-  background: #f6f6f6
-  position: relative
-  &:hover
-    .hover-line
-      height: 100%
-.hover-line
-  position: absolute
-  border: 2px solid #d70204
-  width: 0px
-  height: 15%
-  transition: all 0.3s ease
-.categories-title
-  text-transform: uppercase
-  font-size: 14px
-  font-weight: bold
-  padding: 15px 0
-  //text-align: center
-  padding-left: 25px
-  &:hover
-    cursor: pointer
-.categories-number
-  padding: 9px 0
-.number-box
-  border: 2px solid #d70204
-  width: 40px
-  font-sixe: 14px
-  line-height: 14px
-  padding: 6px 0
-  text-align: center
-  font-weight: bold
-  color: #d70204
-  margin: 0 auto
-
-.articals 
-  margin-top: 30px
-.articals-items
-  background: #fbfbfb
-  padding: 20px
-  position: relative
-  &:hover
-    .seperate-line
-      border: 1px solid #d70204    
-
-.articals-order
-  text-align: center
-  font-weight: 800
-  font-style: italic
-  font-size: 25px
-  line-height: 25px
-
-.articals-content
-  font-size: 14px
-  text-transform: uppercase 
-  font-weight: bold
-  line-height: 25px
-  &:hover
-    cursor: pointer
-
-.seperate-line
-  border: 1px solid #eef2f2
-  position: absolute
-  left: 30px
-  top: 60px
-  width: 250px
-  transition: all 0.3s ease
-  @media (max-width: 768px)
-    left: 40px
-    width: 300px
-
-.post-review-list
-  border: 1px solid transparent
-
-.post-review
-  margin-bottom: 30px
-  &:hover
-    .hover-overlay
-      transform: scale(1)
-      border-radius: 0
-      opacity: 0.2
-
-.post-review-thumbnail
-  margin: 0
-  padding: 0
-
-.post-review-image
-  @extends .large-image-thumbnail
-
-.post-review-text
-  padding-right: 25px
-  padding-top: 19px
-.post-review-details
-
-.posts-author-date
-  @extends .author-date
-  margin: 0
-  padding: 0
-.posts-comment
-  @extends .comment
-  margin: 0
-  padding: 0
-
-.post-review-description
-  margin-top: 8px
-
-.post-review-title
-  text-transform: capitalize
-  color: #383e41
-  font-size: 20px
-  font-weight: bold
-  line-height: 30px
-  &:hover
-    cursor: pointer
-
-.review-text
-  font-size: 16px
-  color: #798291
-  margin-top: 10px
-
-.read-more
-  text-transform: uppercase
-  padding: 20px 0
-  font-size: 14px
-  font-weight: 600
-  color: #d70204
-  &:hover
-    cursor: pointer
-  i
-    margin-left: 5px
-
-.category-title-bar
-  background: #fafafa
-.category-title-text
-  padding: 0
-  text-transform uppercase
-  font-size: 25px
-  font-weight: bold
-  height: 150px
-  line-height: 150px
-
-.post-intro
-  padding-top: 60px
-  padding-bottom: 30px
-.post-intro-author
-  margin: 0
-  padding: 0
-.author-image
-  @extends .large-image-thumbnail
-  background-image:url("/images/LT1.jpg")
-  width: 165px
-  height: 153px
-  line-height: 153px
-  font-size: 16px
-  font-weight: 600
-.author-name
-  text-transform: capitalize
-  font-weight: 600
-  color: #798291
-  font-size: 14px
-  padding: 8px 0
-.post-intro-date, .post-intro-type
-  padding: 0
-  background: #d70204
-  color: #ffffff
-  text-align: center
-  text-transform: uppercase
-  font-size: 12px
-  font-weight: 600
-  margin-right: 15px
-  padding: 8px 0
-
-.post-intro-title
-  font-size: 30px
-  font-weight: bold
-  line-height: 30px
-  padding: 25px 0
-
-.post-like-rating
-  background: #f4f4f4
-  padding: 50px
-
-.post-like
-  margin: 0
-  padding: 0
-  height: 40px
-  padding-top: 2.5px
-
-.post-like-watch, .post-like-love
-  border: 2px solid #2b2b2b
-  float: left
-  font-weight: bold
-  font-size: 15px
-  line-height: 15px
-  margin-right: 20px
-  padding: 8px 25px
-  color: #2b2b2b
-  i
-    margin-right: 15px
-    color: #2b2b2b
-
-.post-rating
-  padding: 0
-
-.post-rating-star
-  height: 40px
-  float: right
-  i
-    font-size: 25px
-    color: #b3b3b3
-    margin-right: 5px
-    line-height: 40px
-    &.active
-      color: #d70204
-
-.post-rating-title
-  float: right
-  height: 40px
-  padding-left: 8px
-  i
-    float: left
-    line-height: 40px
-    color: #2b2b2b
-    margin-right: -1px
-
-.post-rating-title-box
-  height: 40px
-  width: 55px
-  background: #2b2b2b
-  float: left
-  border-radius: 3px
-  line-height: 40px
-  font-size: 20px
-  color: #ffffff
-  text-align: center
-
-.about-author
-  position: relative
-  overflow: hidden
-  padding-top: 50px
-  padding-bottom: 50px
-
-.about-author-image
-  @extends .large-image-thumbnail
-  background-image:url("/images/LT1.jpg")
   top: 50px
-  left: 0
-  width: 173px
-  height: 173px
-  line-height: 173px
-  font-size: 20px
-  font-weight: 600
-  position: absolute
-  border-right: 10px solid #ffffff
-  border-bottom: 10px solid #ffffff
-
-.about-author-content
-  background: #2b2b2b
-  margin-top: 15px
-  margin-left: 15px
-  padding-left: 183px
-  padding-top: 50px
-  padding-bottom: 50px
-
-.about-author-name
-  color: #ffffff
-  text-transform: capitalize
-  font-size: 25px
-  font-weight: 600
-
-.about-author-position
-  text-transform: capitalize
-  font-size: 14px
-  line-height: 14px
-  color: #7c7c7c
-  padding: 8px 0
-
-.about-author-description
-  font-size: 16px
-  color: #cccccc  
-  font-weight: 600
-  padding: 15px 0
-
-.author-social-link
-  padding-left: 10px
-
-.author-social-logo
-  height: 30px
-  width: 30px
-  line-height: 30px
-  margin: 0
-  padding: 0
-  margin: 10px 5px
-  background: #3c3e41
-  border-radius: 5px
-  transition: all 0.3s ease
-  i
-    font-size: 14px
-    margin: 0
-    padding: 0
-  &:hover
-    cursor: pointer
-    background: #d70204
-    i
-      color: #ffffff
-
-.comments-section
-  margin-bottom: 50px
-
-.comments-number
-  margin: 0
-  padding: 0
-  font-weight: bold
-  text-transform: uppercase
-  font-size: 20px
-  text-align: center
-  line-height: 20px
-  padding: 25px 0
-  background: #2b2b2b
-  color: #ffffff
-  i
-    margin-right: 10px
-    font-size: 20px
-  span
-    margin-right: 5px
-
-.comments-post
-  margin-top: 50px
-
-.first-comments
-  margin-bottom: 25px
-
-.second-comments
-  margin-top: 25px
-
-.commentor-image
-  @extends .large-image-thumbnail
-  background-image:url("/images/cmt.jpg")
-  width: 260px
-  height: 212px
-  line-height: 212px
-  font-size: 25px
-  font-weight: 600
-  &:hover
-    cursor: default
-
-.comments-details
-  height: 212px
-  margin: 0
-  padding: 0
-
-.comments-author-name
-  text-transform: capitalize
-  color: #2b2b2b
-  font-weight: 600
-  font-size: 18px
-  line-height: 18px
-  padding-bottom: 15px
-
-.comments-author-content
-  color: #2b2b2b
-
-.comments-author-datetime
-  padding-top: 20px
-  font-size: 14px
-  color: #2b2b2b
-  font-weight: 600
-  .comment-datetime
-    text-transform: uppercase
-  .seperate-slash
-    margin: 0 5px
-  .report-btn
-    text-transform: uppercase
-    color: #d70204
-    &:hover
-      cursor: pointer
-
-.send-comment-form
-  padding: 0
-  padding-top: 35px
-
-.send-comment-icon
-  text-align: center
-  height: 50px
-  font-size: 18px
-  line-height: 50px
-.send-comment-input
-  height: 100%
-  padding: 0
-  input
-    height: 50px
-    border: none
-    font-size: 14px
-    text-transform: uppercase
-    font-weight: 600
-    width: 100%
-    color: #cccccc
-  textarea
-    border: none
-    width: 100%
-    font-size: 14px
-    line-height: 50px
-    text-transform: uppercase
-    font-weight: 600
-    margin: 0
-    color: #cccccc
-
-.send-comment-title
-  margin: 0
-  padding: 0
-  margin-bottom: 20px
-  font-size: 18px
-  i
-    margin-right: 10px
-  span
-    text-transform: uppercase
-    font-weight: 800
-
-.send-comment-name, .send-comment-email, .send-comment-website, .send-comment-message
-  border: 3px solid #cccccc
-  margin: 0
-  padding: 0
-  margin-bottom: 20px
-  height: 100%
-
-.send-comment-btn
-  background: #d70204
-  border: none
-  color: #ffffff
-  text-transform: uppercase
-  font-weight: 800
-  font-size: 14px
-  padding: 15px 30px
-
-.post-content
-  margin-top: 50px
-
-//===============End of Tendou's CSS===============
-
-//Content
-.section
-  background-size: cover
-
-//Section Cover
-.cover
-  background-image: url(/images/cover-background.png)
-  padding: 30% 0 0 0
-.cover-container
-  padding: 15px
-.cover-avatar
-  border: 10px solid rgba(0,0,0,0.1)
-  vertical-align: middle
-  display: inline-block
-  -webkit-border-radius: 50%
-  moz-border-radius: 50%
-  border-radius: 50%
-.cover-avatar img
-  -webkit-border-radius: 50%
-  moz-border-radius: 50%
-  border-radius: 50%
-.cover-info
-  color: white
-  margin-top: 20px
-.cover-info p,.cover-info h2,.cover-info div
-  text-align: center
-  margin: 0 auto 0 auto
-@media screen and (min-width: 600px)
-  .cover-avatar
-    border-width: 15px
-  .cover-info .title
-    font-size: 2.8em
-  .cover-info .description
-    font-size: 2.3em
-    font-weight: 200
-  .cover-info p,.cover-info h2,.cover-info div
-    text-align: left
-@media screen and (min-width: 960px)
-  .cover-avatar
-    border-width: 20px
-  .cover-info
-    margin-top: 0
-  .cover-info p, .cover-info h2, .cover-info div  
-    margin: 0
-
-//==========================search button======================================
-.search-area
-  width: 50px
-  height: 50px
-  background: #404040
-  color: #ffffff
-  line-height: 50px
-  font-size: 20px
-  text-align: center
-  border-radius: 10px
-  margin-left: 250px
-  &:hover
-    cursor: pointer
-  &.click-bg
-    background: #000000
-.search-input
-  width: 160px
-  margin-left: -110px
-  display: block
-  &.show-input-field
-    display: block
-  input
-    height: 40px
-    width: 200px
-    font-size: 16px
-    font-weight: bold
-    border: 3px solid #bdbdbd
-    border-radius: 5px
-    padding-left: 15px
-    float: right
-    &:focus
-      outline: none
-.arrow
-  border: 20px solid transparent
-  border-bottom: 20px solid #bdbdbd
-  border-top: none
-  width: 0
+  width: 280px
   height: 0
-  margin-left: 140px
-
-
-.sign-in-label
-  float: left
-.sign-in-label-birthday
+  overflow: hidden
+  transition: all 0.2s ease
+.submenubar-item
+  height: 50px
+  width: 280px
   text-align: left
+  font-size: 14px
+  color: #000000
+  background: rgba(255, 255, 255, 0.5)
+  padding-left: 15px
+  z-index: 100
+  transition: all 0.2s ease
+  &:hover
+    background: #ff7200
+    color: #ffffff
+    
+.slider
+  min-height: 500px
+  width: 100%
+  // border: 2px solid blue
+  background-color: #000000
+  margin-bottom: 20px
+.col-centerd
+  float: none
+  margin: 0 auto
+.home-quote
+  text-align: center
+  margin-top:10px
+  padding : 0px 0px
+  border-top: 1px solid #00A2D7
+  border-bottom: 1px solid #00A2D7
+  font-style: italic
+.h-quote
+  min-height:60px
+.groups
+  //border: 2px solid red
+.categories
+  
+  //border: 2px solid green
+  background-color:#e5e0e0
+  
+.first-post
+  //border: 2px solid black
+.next-post
+  //border: 2px solid #9de8e8
+  
+  
+
+
+
+h3
+  text-align:center
+.first-post-thumbnail
+  width: 100%
+  height: 250px
+  // background-image: url("./images/tit1.jpg")
+  //background: rgba(255, 0, 0, 0.8)
+h4,p
+  margin-left :10px
+  margin-top:10px
+.first-post-index
+  //background: #e8e8b0
+
+
+.first-post-content
+  font-size: 16px
+
+  
+.next-post-thumbnail
+  width: 70px
+  height: 70px
+  //border: 1px solid orange
+.next-post-title
+  margin-top:15px

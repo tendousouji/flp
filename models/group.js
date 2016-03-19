@@ -83,6 +83,8 @@ groupPostSchema.statics.findByJoinChild = function (conditions, populates, joins
   for (var i in populateGroup) {
     group.populate(populateGroup[i]);
   }
+
+  console.log(group);
   
   //run
   group.exec(function (err, groups) {
