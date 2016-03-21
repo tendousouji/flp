@@ -106,7 +106,7 @@
                               h4
                                 a(href ="#")(ng-bind="catalory.posts[$index].title")
                             .first-post-content
-                              p(ng-bind="catalory.posts[$index].content | limitTo:100")
+                              p(ng-bind-html="catalory.posts[$index].content | limitTo:100 | unsafe")
                             .first-post-index
                               p
                                 span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
