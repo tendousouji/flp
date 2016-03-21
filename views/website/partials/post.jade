@@ -226,7 +226,10 @@
             h2 Comment
         //
 
-        //
+  //- public/javascripts/website/filter/index.js
+  //- public/javascripts/website/filter/unsafe.js
+  .row.post-content
+    p(ng-bind-html="post.content | unsafe")
 
 
 
