@@ -4,11 +4,10 @@
 }
 #search {
   position: absolute;
+  margin-top: 5px;
 }
 .menubar {
-  border-top: 2px solid #000;
   margin-top: 20px;
-  background: #fafafa;
 }
 .menubar-item {
   z-index: 2;
@@ -26,6 +25,7 @@
 .menubar-item:hover {
   cursor: pointer;
   color: #ff7200;
+  background-color: #faf9fa;
 }
 .menubar-item:hover .menubar-item-highlight {
   opacity: 1;
@@ -63,7 +63,7 @@
   text-align: left;
   font-size: 14px;
   color: #000;
-  background: rgba(255,255,255,0.5);
+  background: #fff;
   padding-left: 15px;
   z-index: 100;
   transition: all 0.2s ease;
@@ -142,4 +142,87 @@ a:hover {
   color: #ff8b00;
   text-decoration: none;
   transition: color 0.5s;
+}
+.title-bar {
+  background: #ff7200;
+  height: 55px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.title-bar span {
+  margin-right: 10px;
+  position: relative;
+  z-index: 999;
+  font: 23px 'Oswald', sans-serif;
+  float: left;
+  color: #fff;
+  background: #4c4c4c url("images/title-arrow.jpg") right center no-repeat;
+  height: 55px;
+  line-height: 55px;
+  position: relative;
+  padding: 0 20px 0 10px;
+  display: inline-block;
+}
+.first-list-1 {
+  height: 200px;
+}
+.city {
+  float: left;
+  margin: 5px;
+  padding: 25px;
+  padding-top: -10px;
+  width: 350px;
+  height: 200px;
+  border: 2px solid #87cefa;
+}
+.image-first-list-1 {
+  height: 100px;
+}
+.content-fist-list-1 {
+  height: 100px;
+  background: rgba(255,255,0,0.75);
+}
+.next-list-1 {
+  height: 200px;
+}
+.last-list-1 {
+  height: 200px;
+}
+.list-view {
+  border: 2px solid #008b8b;
+  height: 670px;
+}
+.del {
+  height: 25px;
+  background: #fff;
+}
+.text {
+  height: 650px;
+}
+.footer {
+  border-top: 2px solid #d9dbda;
+  color: #fff;
+  min-height: 300px;
+  width: 100%;
+  background-color: #b5b551;
+}
+.footer h2 {
+  text-align: center;
+  color: #000;
+}
+.endfooter {
+  height: 100px;
+  width: 100%;
+  background-color: #c4c3be;
+}
+hr {
+  border-top: 1px solid #a8a843;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  align: center;
+}
+.footer-list-post {
+  border: 2px solid #ffc0cb;
+  height: 200px;
 }

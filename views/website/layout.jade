@@ -23,79 +23,86 @@ html(ng-controller="BaseCtrl")
     link(rel='stylesheet', href='css/owl.carousel.css', type='text/css')
     link(rel='stylesheet', href='css/animate.css', type='text/css')
     link(rel='stylesheet', href='css/colors/color.css', type='text/css')
+    link(rel='stylesheet', href='http://www.w3schools.com/lib/w3.css')
+
+    link(rel='stylesheet', href='css/bootstrap.css')
+    link(rel='stylesheet', href='css/flexslider.css')
+    link(rel='stylesheet', href='css/ie.css')
+    link(rel='stylesheet', href='css/prettyPhoto.css')
+    link(rel='stylesheet', href='rs-plugin/css/settings.css', media='screen')
+    link(rel='stylesheet', href='rs-plugin/css/responsive.css', media='screen')
+    link(rel='stylesheet', href='css/elastislide.css')
+    link(rel='stylesheet', href='css/style.css')
+    link(rel='stylesheet', href='css/responsive.css')
+    // Fonts
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,600,800', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Oswald:400,700', rel='stylesheet', type='text/css')
 
 
-  body(ng-cloak,onload='goforit()')
-    .container-fluid#main-container
-      //- p(ng-hide="error_message.length <= 0", ng-bind="error_message")
-      //- p(ng-hide="error_message.length <= 0", ng-bind="error_message")        
-      .row.header
-        .col-lg-4.col-md-4.col-sm-12.col-xs-12
-          .logo(style="margin-top :2px;")
-            img(src="./images/logo2.png")
-        .col-lg-4.col-md-4.col-sm-6.col-xs-6
-          #search
-            form.navbar-form(role='search')
-              .input-group
-                input.form-control(type='text', placeholder='Search', name='q')
-                .input-group-btn
-                  button.btn.btn-default(type='submit')
-                    i.glyphicon.glyphicon-search
-          
-        .col-lg-4.col-md-4.col-sm-6.col-xs-6.text-center
-          .login-form(style="margin-top:10px;")
-            .row
-              .col-lg-6.col-md-6.col-sm-6.col-xs-6
-                button.btn.btn-default(style ="submit") Login
-              .col-lg-6.col-md-6.col-sm-6.col-xs-6
-                button.btn.btn-primary(style="submit") Sign in
-      
-      .row
-        .col-lg-12.col-md-12.col-sm-12.col-xs-12
-          .row.menubar
-            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item.active-item
-              .menubar-item-highlight
-              span Home
-            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item
-              .menubar-item-highlight
-              span ETCF
-              .submenubar
-                .submenubar-item Assessment tools
-                .submenubar-item Background and Overview
-                .submenubar-item Complete versions
-                .submenubar-item Domain 1 - Language
-                .submenubar-item Domain 2 - Teaching
-                .submenubar-item Domain 3 - Learners
-                .submenubar-item Domain 4 - Attitudes and Values
-                .submenubar-item Domain 5 - Learning from Practice
-                .submenubar-item For Trainers - How to use ETCF
-                .submenubar-item ETCF Presentation
-            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item
-              .menubar-item-highlight
-              span User
-              .submenubar
-                .submenubar-item Edit Profile
-                .submenubar-item Password Reset
-                .submenubar-item Login
-                .submenubar-item Register
-            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item
-              .menubar-item-highlight
-              span Gallery
-              .submenubar
-                .submenubar-item Da Nang RFLC
-                .submenubar-item Ha Noi Pedagogical University 2
-            .col-lg-2.col-md-2.col-sm-12.col-xs-12.menubar-item 
-              .menubar-item-highlight
-              span Symposium Presentations
-            .col-lg-2.col-md-2.col-sm-12.col-xs-12.menubar-item
-              .menubar-item-highlight
-              span Video Materials
-              .submenubar
-                .submenubar-item Articles with videos
-                .submenubar-item Shaping the way we teach English
-            .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item 
-              .menubar-item-highlight
-              span News
+  body(ng-cloak)
+    .container-fluid#main-containe
+      //fix run header
+      .top(style="width:100%;height:170px;position:fixed;top:0;z-index:3;background-color:#ffffff;")
+        .row.header
+          .col-lg-4.col-md-4.col-sm-12.col-xs-12
+            .logo(style="margin-top :2px;")
+              img.img-rounded.img-responsive(src="/images/logo 3.png", style="width:400px;height:105px;")
+         
+          .col-lg-2.col-md-2.col-sm-12.col-xs-12.text-center.col-md-offset-4
+            .login-form(style="margin-top:13px;")
+              .row
+                .col-lg-3.col-md-3.col-sm-3.col-xs-3
+                  button.btn.btn-primary(style ="submit") Login
+                .col-lg-3.col-md-3.col-sm-3.col-xs-3
+                  button.btn.btn-primary(style="submit") Register
+          .col-lg-2.col-md-2.col-sm-12.col-xs-12
+            #search
+              form.navbar-form(role='search')
+                .input-group
+                  input.form-control(type='text', placeholder='Search', name='q')
+                  .input-group-btn
+                    button.btn.btn-default(type='submit')
+                      i.glyphicon.glyphicon-search
+           
+        
+        .row
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-md-offset-1
+            .row.menubar
+              .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item.active-item
+                .menubar-item-highlight
+                span Home
+              .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item
+                .menubar-item-highlight
+                span ETCF
+                .submenubar
+                  .submenubar-item Assessment tools
+                  .submenubar-item Background and Overview
+                  .submenubar-item Complete versions
+                  .submenubar-item Domain 1 - Language
+                  .submenubar-item Domain 2 - Teaching
+                  .submenubar-item Domain 3 - Learners
+                  .submenubar-item Domain 4 - Attitudes and Values
+                  .submenubar-item Domain 5 - Learning from Practice
+                  .submenubar-item For Trainers - How to use ETCF
+                  .submenubar-item ETCF Presentation
+              .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item
+                .menubar-item-highlight
+                span Gallery
+                .submenubar
+                  .submenubar-item Da Nang RFLC
+                  .submenubar-item Ha Noi Pedagogical University 2
+              .col-lg-3.col-md-3.col-sm-12.col-xs-12.menubar-item 
+                .menubar-item-highlight
+                span Symposium Presentations
+              .col-lg-2.col-md-2.col-sm-12.col-xs-12.menubar-item
+                .menubar-item-highlight
+                span Video Materials
+                .submenubar
+                  .submenubar-item Articles with videos
+                  .submenubar-item Shaping the way we teach English
+              .col-lg-1.col-md-1.col-sm-12.col-xs-12.menubar-item 
+                .menubar-item-highlight
+                span News
       block content
 
     script(src="/libs/requirejs/require.js", data-main="/javascripts/website/main.js")
@@ -114,6 +121,19 @@ html(ng-controller="BaseCtrl")
     script(src='js/script.js')
     script(src='js/clock.js')
     script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+
+    script(src='js/jquery-1.7.1.min.js')
+    script(src='js/jquery.flexslider-min.js')
+    script(src='js/modernizr.custom.17475.js')
+    script(src='js/jquery.elastislide.js')
+    script(src='js/jquery.isotope.min.js')
+    script(src='rs-plugin/js/jquery.themepunch.plugins.min.js')
+    script(src='rs-plugin/js/jquery.themepunch.revolution.js')
+    script(src='js/jquery.cycle.all.js')
+    script(src='js/jquery.prettyPhoto.js')
+    script(src='http://maps.google.com/maps/api/js?sensor=true')
+    script(src='js/jquery.ui.map.full.min.js')
+    script(src='js/custom.js')
   
 
 script.
@@ -134,5 +154,5 @@ script.
 
 script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
     // Include all compiled plugins (below), or include individual files as needed
-    script(src='js/bootstrap.min.js')
+script(src='js/bootstrap.min.js')
   
