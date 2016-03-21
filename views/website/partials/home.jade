@@ -106,7 +106,11 @@
                               h4
                                 a(href ="#")(ng-bind="catalory.posts[$index].title")
                             .first-post-content
-                              p(ng-bind-html="catalory.posts[$index].content | limitTo:100 | unsafe")
+                              //- p(ng-if="catalory.posts[$index].content.length >= 100" ng-bind-html="catalory.posts[$index].content | limitTo:100 | unsafe")
+                              //- p(ng-if="catalory.posts[$index].content.length <  100" ng-bind-html="catalory.posts[$index].content | unsafe")
+                              //- p {{catalory.posts[$index].content.length > 100 ? catalory.posts[$index].content.substring(0,100) + '...' : catalory.posts[$index].content}}
+                              p(ng-if="catalory.posts[$index].content.length >= 100" ng-bind-html="catalory.posts[$index].content.substring(0,100) + '...' | unsafe")
+                              p(ng-if="catalory.posts[$index].content.length <  100" ng-bind-html="catalory.posts[$index].content | unsafe")
                             .first-post-index
                               p
                                 span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
