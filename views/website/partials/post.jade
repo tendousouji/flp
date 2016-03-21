@@ -1,4 +1,4 @@
-.row.category-title-bar
+﻿.row.category-title-bar
   .container.category-title-text(ng-bind="post.catalory.name")
 
 .container
@@ -32,6 +32,8 @@
         i.fa.fa-star.active
         i.fa.fa-star
 
+  //- public/javascripts/website/filter/index.js
+  //- public/javascripts/website/filter/unsafe.js
   .row.post-content
     p(ng-bind-html="post.content | unsafe")
 
