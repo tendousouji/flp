@@ -1,4 +1,5 @@
-﻿.container-fluid
+﻿//- home.jade to bind data
+.container-fluid
   .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12
       .slider(style="margin-top:180px;")
@@ -13,16 +14,10 @@
           .carousel-inner(role='listbox')
             .item.active
               img(src='images/1.jpg', alt='aaa', style="width:100%;")
-              //- .carousel-caption
-              //-   | Teacher Training
             .item
               img(src='images/2.jpg', alt='bbb', style="width:100%;")
-              //- .carousel-caption
-              //-   | Presentations
             .item
               img(src='images/3.jpg', alt='ccc', style="width:100%;")
-              //- .carousel-caption
-              //-   | Method Learning
             a.left.carousel-control(href='#home-slideshow', role='button', data-slide='prev')
               span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
               span.sr-only Previous
@@ -31,87 +26,43 @@
               span.sr-only Next
 
   .row
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+    .col-lg-12.col-md-12.col-sm-12.col-xs-12(ng-repeat="(groupId,group) in groups track by $index")
       .groups
         .row
-          //1
-          .col-lg-4.col-md-4.col-sm-12.col-xs-12
+          .col-lg-4.col-md-4.col-sm-12.col-xs-12(ng-repeat="catalory in group.catalories track by $index")
             .categories
               .row
                 .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .categories-title 
-                    h3 Góp ý xây dựng diễn đàn
+                  .categories-title
+                    h3(ng-bind="catalory.name")
               .row.categories-content
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .first-post
-                    .row
-                      .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                        .first-post-thumbnail.img-rounded
-                          img(src="./images/tit1.jpg")
-                        .first-post-title
-                          h4
-                            a(href ="#") Justice Department tries to force Google to hand over user data
-                        .first-post-content
-                          p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-                        .first-post-index
-                          p
-                            span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
-                              a(href="#")(style="margin-left:10px;") 4504
-                              
-                            span.glyphicon.glyphicon-time(style="margin-right:20px;")
-                              a(href="#")(style="margin-left:10px;") 12:33PM
-                            
-                            span.glyphicon.glyphicon-comment(style="margin-right:20px;")
-                              a(href="#")(style="margin-left:10px;") 5
-              .row
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .next-post
-                    .row
-                      .col-lg-2.col-md-3.col-sm-3.col-xs-3
-                        .next-post-thumbnail.img-rounded
-                          img(src="./images/next1.jpg")
-                      .col-lg-10.col-md-9.col-sm-9.col-xs-9
-                        .next-post-title 
-                          a(href ="#") Justice Department tries to force Google to hand over user data
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .next-post
-                    .row
-                      .col-lg-2.col-md-3.col-sm-3.col-xs-3
-                        .next-post-thumbnail.img-rounded
-                          img(src="./images/next2.jpg")
-                      .col-lg-10.col-md-9.col-sm-9.col-xs-9
-                        .next-post-title
-                          a(href ="#") Justice Department tries to force Google to hand over user data
-          
-          //2
-          .col-lg-4.col-md-4.col-sm-12.col-xs-12
-            .categories
-              .row
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .categories-title 
-                    h3 Góp ý xây dựng diễn đàn
-              .row.categories-content
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .first-post
-                    .row
-                      .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                        .first-post-thumbnail.img-rounded
-                          img(src="./images/tit1.jpg")
-                        .first-post-title
-                          h4
-                            a(href ="#") Justice Department tries to force Google to hand over user data
-                        .first-post-content
-                          p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-                        .first-post-index
-                          p
-                              span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
-                                a(href="#")(style="margin-left:10px;") 4504
+                .col-lg-12.col-md-12.col-sm-12.col-xs-12(ng-repeat="post in catalory.posts | limitTo: 3 track by $index")
+                  .row(ng-if="$index == 0")
+                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                      .first-post
+                        .row
+                          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                            .first-post-thumbnail.img-rounded
+                              img(src="./images/tit1.jpg")
+                            .first-post-title
+                              h4
+                                a(href ="#")(ng-bind="catalory.posts[$index].title")
+                            .first-post-content
+                              p(ng-if="catalory.posts[$index].content.length >= 100" ng-bind-html="catalory.posts[$index].content.substring(0,100) + '...' | unsafe")
+                              p(ng-if="catalory.posts[$index].content.length <  100" ng-bind-html="catalory.posts[$index].content | unsafe")
+                            .first-post-index
+                              p
+                                span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
+                                  a(href="#")(style="margin-left:10px;") 4504
+                                  
+                                span.glyphicon.glyphicon-time(style="margin-right:20px;")
+                                  a(href="#")(style="margin-left:10px;")(ng-bind="catalory.posts[$index].date_create | date:'dd/MM/yyyy'")
                                 
-                              span.glyphicon.glyphicon-time(style="margin-right:20px;")
-                                a(href="#")(style="margin-left:10px;") 12:33PM
+                                span.glyphicon.glyphicon-time(style="margin-right:20px;")
+                                  a(href="#")(style="margin-left:10px;") 12:33PM
                               
-                              span.glyphicon.glyphicon-comment(style="margin-right:20px;")
-                                a(href="#")(style="margin-left:10px;") 5
+                                span.glyphicon.glyphicon-comment(style="margin-right:20px;")
+                                  a(href="#")(style="margin-left:10px;") 5
               .row
                 .col-lg-12.col-md-12.col-sm-12.col-xs-12
                   .next-post
@@ -131,390 +82,6 @@
                       .col-lg-10.col-md-9.col-sm-9.col-xs-9
                         .next-post-title
                           a(href ="#") Justice Department tries to force Google to hand over user data
-          //3
-          .col-lg-4.col-md-4.col-sm-12.col-xs-12
-            .categories
-              .row
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .categories-title 
-                    h3 Góp ý xây dựng diễn đàn
-              .row.categories-content
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .first-post
-                    .row
-                      .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                        .first-post-thumbnail.img-rounded
-                          img(src="./images/tit1.jpg")
-                        .first-post-title
-                          h4
-                            a(href ="#") Justice Department tries to force Google to hand over user data
-                        .first-post-content
-                          p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-                        .first-post-index
-                          p
-                              span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
-                                a(href="#")(style="margin-left:10px;") 4504
-                                
-                              span.glyphicon.glyphicon-time(style="margin-right:20px;")
-                                a(href="#")(style="margin-left:10px;") 12:33PM
-                              
-                              span.glyphicon.glyphicon-comment(style="margin-right:20px;")
-                                a(href="#")(style="margin-left:10px;") 5
-              .row
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .next-post
-                    .row
-                      .col-lg-2.col-md-3.col-sm-3.col-xs-3
-                        .next-post-thumbnail.img-rounded
-                          img(src="./images/next1.jpg")
-                      .col-lg-10.col-md-9.col-sm-9.col-xs-9
-                        .next-post-title 
-                        a(href ="#") Justice Department tries to force Google to hand over user data
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .next-post
-                    .row
-                      .col-lg-2.col-md-3.col-sm-3.col-xs-3
-                        .next-post-thumbnail.img-rounded
-                          img(src="./images/next2.jpg")
-                      .col-lg-10.col-md-9.col-sm-9.col-xs-9
-                        .next-post-title
-                        a(href ="#") Justice Department tries to force Google to hand over user data
-          
-
-
-
-          //4 
-        //- .row             
-        //-   .col-lg-4.col-md-4.col-sm-12.col-xs-12
-        //-     .categories
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .categories-title 
-        //-             h2 Technology4
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .first-post
-        //-             .row
-        //-               .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-                 .first-post-thumbnail
-        //-                 .first-post-title
-        //-                   h4 Justice Department tries to force Google to hand over user data
-        //-                 .first-post-content
-        //-                   p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-        //-                 .first-post-index
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-          
-        //-   .col-lg-4.col-md-4.col-sm-12.col-xs-12
-        //-     .categories
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .categories-title 
-        //-             h2 Technology5
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .first-post
-        //-             .row
-        //-               .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-                 .first-post-thumbnail
-        //-                 .first-post-title
-        //-                   h4 Justice Department tries to force Google to hand over user data
-        //-                 .first-post-content
-        //-                   p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-        //-                 .first-post-index
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-
-        //-   .col-lg-4.col-md-4.col-sm-12.col-xs-12
-        //-     .categories
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .categories-title 
-        //-             h2 Technology6
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .first-post
-        //-             .row
-        //-               .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-                 .first-post-thumbnail
-        //-                 .first-post-title
-        //-                   h4 Justice Department tries to force Google to hand over user data
-        //-                 .first-post-content
-        //-                   p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-        //-                 .first-post-index
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        //- .row
-        //-   .col-lg-6.col-md-6.col-sm-12.col-xs-12
-        //-     .categories
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .categories-title 
-        //-             h2 Technology7
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .first-post
-        //-             .row
-        //-               .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-                 .first-post-thumbnail
-        //-                 .first-post-title
-        //-                   h4 Justice Department tries to force Google to hand over user data
-        //-                 .first-post-content
-        //-                   p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-        //-                 .first-post-index
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        //-   .col-lg-6.col-md-6.col-sm-12.col-xs-12
-        //-     .categories
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .categories-title 
-        //-             h2 Technology8
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .first-post
-        //-             .row
-        //-               .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-                 .first-post-thumbnail
-        //-                 .first-post-title
-        //-                   h4 Justice Department tries to force Google to hand over user data
-        //-                 .first-post-content
-        //-                   p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-        //-                 .first-post-index
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        
-        //- .row
-        //-   //9
-        //-   .col-lg-4.col-md-4.col-sm-12.col-xs-12
-        //-     .categories
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .categories-title 
-        //-             h2 Technology9
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .first-post
-        //-             .row
-        //-               .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-                 .first-post-thumbnail
-        //-                 .first-post-title
-        //-                   h4 Justice Department tries to force Google to hand over user data
-        //-                 .first-post-content
-        //-                   p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-        //-                 .first-post-index
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-          
-        //-   .col-lg-4.col-md-4.col-sm-12.col-xs-12
-        //-     .categories
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .categories-title 
-        //-             h2 Technology10
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .first-post
-        //-             .row
-        //-               .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-                 .first-post-thumbnail
-        //-                 .first-post-title
-        //-                   h4 Justice Department tries to force Google to hand over user data
-        //-                 .first-post-content
-        //-                   p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-        //-                 .first-post-index
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        //-   .col-lg-4.col-md-4.col-sm-12.col-xs-12
-        //-     .categories
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .categories-title 
-        //-             h2 Technology11
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .first-post
-        //-             .row
-        //-               .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-                 .first-post-thumbnail
-        //-                 .first-post-title
-        //-                   h4 Justice Department tries to force Google to hand over user data
-        //-                 .first-post-content
-        //-                   p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-        //-                 .first-post-index
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        //- .row
-        //-   //12
-        //-   .col-lg-6.col-md-6.col-sm-12.col-xs-12
-        //-     .categories
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .categories-title 
-        //-             h2 Technology12
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .first-post
-        //-             .row
-        //-               .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-                 .first-post-thumbnail
-        //-                 .first-post-title
-        //-                   h4 Justice Department tries to force Google to hand over user data
-        //-                 .first-post-content
-        //-                   p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-        //-                 .first-post-index
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-          
-        //-   .col-lg-6.col-md-6.col-sm-12.col-xs-12
-        //-     .categories
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .categories-title 
-        //-             h2 Technology13
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .first-post
-        //-             .row
-        //-               .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-                 .first-post-thumbnail
-        //-                 .first-post-title
-        //-                   h4 Justice Department tries to force Google to hand over user data
-        //-                 .first-post-content
-        //-                   p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-        //-                 .first-post-index
-        //-       .row
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
-        //-         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        //-           .next-post
-        //-             .row
-        //-               .col-lg-3.col-md-3.col-sm-3.col-xs-3
-        //-                 .next-post-thumbnail
-        //-               .col-lg-9.col-md-9.col-sm-9.col-xs-9
-        //-                 .next-post-title Justice Department tries to force Google to hand over user data
     .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.footer
       
@@ -545,24 +112,3 @@
         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
         hr
         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-      //- .col-lg-3.col-md-3-col-sm-12.col-xs-12
-      //-   h3 Contact Us
-      //-   .row
-      //-     form.form-inline(role='form')
-      //-     .form-group.col-lg-12.col-md-12-col-sm-12.col-xs-12
-      //-       label.sr-only.control-label
-      //-         | Name
-      //-         span.text-danger *
-           
-      //-       input.form-control(type='text' placeholder='Name*' style="width:300px")
-      //-     .form-group.col-lg-12.col-md-12-col-sm-12.col-xs-12
-            
-      //-       label.sr-only.control-label
-      //-         | Email
-      //-         span.text-danger *
-      //-       input.form-control(type='text' placeholder='Email*' style="width:300px")  
-      //-     textarea.form-control(rows='3' type='text' placeholder='Message' ).col-lg-12.col-md-12-col-sm-12.col-xs-12.text-center(style="width:300px; margin-left : 15px;")
-      //-     .form-group
-      //-       button.btn.btn-primary.col-lg-offset-4.col-md-offset-4.col-sm-offset-4.col-xs-offset-4.col-lg-3.col-md-3-col-sm-3.col-xs-3(type='submit' style="margin-top:10px;") Send
-  .row
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12.endfooter
