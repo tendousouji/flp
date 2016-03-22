@@ -96,6 +96,7 @@
 .categories {
   background-color: #fff;
   margin-top: 10px;
+  min-height: 620px;
 }
 h3 {
   text-align: center;

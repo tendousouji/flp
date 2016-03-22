@@ -50,6 +50,9 @@
         for (var i = groups.length - 1; i >= 0; i--) {
           $scope.activeId.push(0);
         }
+
+        //check scopr structure
+        console.log($scope);
         
       });
 
