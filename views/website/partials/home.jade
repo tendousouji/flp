@@ -91,7 +91,9 @@
               .row
                 .col-lg-12.col-md-12.col-sm-12.col-xs-12
                   .categories-title
-                    h3(ng-bind="catalory.name")
+                    a.title(ng-href="{{group.slug+'/'+catalory.slug}}", ng-click="scrollTop()")
+                      h3(ng-bind="catalory.name")
+
               .row.categories-content
                 .col-lg-12.col-md-12.col-sm-12.col-xs-12(ng-repeat="post in catalory.posts | limitTo: 3 track by $index")
                   .row(ng-if="$index == 0")
@@ -103,7 +105,7 @@
                               img(src="./images/tit1.jpg")
                             .first-post-title
                               h4
-                                a(href ="#")(ng-bind="catalory.posts[$index].title")
+                                a.title(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
                             .first-post-content
                               //- p(ng-if="catalory.posts[$index].content.length >= 100" ng-bind-html="catalory.posts[$index].content | limitTo:100 | unsafe")
                               //- p(ng-if="catalory.posts[$index].content.length <  100" ng-bind-html="catalory.posts[$index].content | unsafe")
@@ -129,4 +131,4 @@
                               img(src="./images/next1.jpg")
                           .col-lg-10.col-md-9.col-sm-9.col-xs-9
                             .next-post-title 
-                              a(href ="#")(ng-bind="catalory.posts[$index].title")
+                              a.title(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
