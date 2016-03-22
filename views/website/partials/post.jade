@@ -1,140 +1,134 @@
-﻿.row.category-title-bar
-  .container.category-title-text(ng-bind="post.catalory.name")
+﻿.post
+    .row
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-title
+        
+        .col-lg-3.col-md-3.col-sm-3.col-xs-3.post-title-main
+          
+          h2 Business
 
-.container
-  .row.post-intro
-    .col-lg-2.col-md-2.col-sm-12.col-xs-12.post-intro-author
-      .author-image 
-      .author-name(ng-bind="post.author.full_name")
-    .col-lg-10.col-md-10.col-sm-12.col-xs-12.post-intro-details
-      .row.post-intro-date-type
-        .col-lg-2.col-md-2.col-sm-12.col-xs-12.post-intro-date(ng-bind="post.date_create | date:'longDate'")
-        .col-lg-2.col-md-2.col-sm-12.col-xs-12.post-intro-type post: art, design
-      .row.post-intro-title(ng-bind="post.title")
+        .col-lg-9.col-md-9.col-sm-9.col-xs-9.post-title-child
+          
+          h2 All what you like to know about Business
+    .row
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-thumnail
+        
+        img(src='./images/post.jpg')
+    .row
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-content-title
+        
+        h3 This is Photoshop's version of Lorem Ipsum Proin gravida nibh vel velit auctor aliquet
+    .row
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-content
+        
+        p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+        p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+    .row
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-index
+        
+        
+        span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
+          a(href="#")(style="margin-left:10px;") 4504
+          
+        span.glyphicon.glyphicon-time(style="margin-right:20px;")
+          a(href="#")(style="margin-left:10px;") 12:33PM
+        
+        span.glyphicon.glyphicon-comment(style="margin-right:20px;")
+          a(href="#")(style="margin-left:10px;") 5
+    .row
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-comment
+        
+        .row
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            h2 Comment
+        //
 
-  .row.post-like-rating
-    .col-lg-6.col-md-6.col-sm-12.col-xs-12.post-like
-      .post-like-watch
-        i.fa.fa-eye
-        span 9875
-      .post-like-love
-        i.fa.fa-heart
-        span 78k
+        //
 
-    .col-lg-6.col-md-6.col-sm-12.col-xs-12.post-rating
-      .post-rating-title
-        i.fa.fa-caret-left
-        .post-rating-title-box 3
-      .post-rating-star
-        i.fa.fa-star.active
-        i.fa.fa-star.active
-        i.fa.fa-star.active
-        i.fa.fa-star.active
-        i.fa.fa-star
 
-  //- public/javascripts/website/filter/index.js
-  //- public/javascripts/website/filter/unsafe.js
-  .row.post-content
-    p(ng-bind-html="post.content | unsafe")
 
-  .row.about-author
-    .about-author-image
-    .about-author-content
-      .about-author-name(ng-bind="post.author.full_name")
-      .about-author-position editor
-      .about-author-description Dunt, et egestas magna molestie. Etiam bibendum dolor malesuada erat tincidunt, et egestas magna molestie.
-      .row.about-author-social
-        .col-lg-12.col-md-12.col-sm-12.col-xs-12
-          .author-social-link.row
-            .col-lg-1.col-md-1.col-sm-1.col-xs-1.author-social-logo.text-center#facebook 
-              i.fa.fa-facebook
-            .col-lg-1.col-md-1.col-sm-1.col-xs-1.author-social-logo.text-center#google
-              i.fa.fa-google-plus
-            .col-lg-1.col-md-1.col-sm-1.col-xs-1.author-social-logo.text-center#twitter
-              i.fa.fa-twitter
-            .col-lg-1.col-md-1.col-sm-1.col-xs-1.author-social-logo.text-center#linkedin
-              i.fa.fa-linkedin
 
-  .row.comments-section
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12.comments-number
-      i.fa.fa-comments-o
-      span 34
-      span comments
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12.comments-post
-      .row.first-comments
-        .col-lg-3.col-md-3.col-sm-12.col-xs-12(style="padding: 0; margin: 0;")
-          .commentor-image
-        .col-lg-9.col-md-9.col-sm-12.col-xs-12.comments-details
-          .comments-author-name sam isbister
-          .comments-author-content Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-          .comments-author-datetime
-            span.comment-datetime 1 day ago
-            span.seperate-slash /
-            span.report-btn report
 
-        .col-lg-12.col-md-12.col-sm-12.col-xs-12
-          .row.second-comments
-            .col-lg-1.col-md-1.col-sm-0.col-xs-0
-            .col-lg-3.col-md-3.col-sm-12.col-xs-12(style="padding: 0; margin: 0;")
-              .commentor-image
-            .col-lg-8.col-md-8.col-sm-12.col-xs-12.comments-details
-              .comments-author-name sam isbister
-              .comments-author-content Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-              .comments-author-datetime
-                span.comment-datetime 1 day ago
-                span.seperate-slash /
-                span.report-btn report
-          .row.second-comments
-            .col-lg-1.col-md-1.col-sm-0.col-xs-0
-            .col-lg-3.col-md-3.col-sm-12.col-xs-12(style="padding: 0; margin: 0;")
-              .commentor-image
-            .col-lg-8.col-md-8.col-sm-12.col-xs-12.comments-details
-              .comments-author-name sam isbister
-              .comments-author-content Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-              .comments-author-datetime
-                span.comment-datetime 1 day ago
-                span.seperate-slash /
-                span.report-btn report
+        ul.media-list(style="margin-left:20px;")
+          li.media
+            a.pull-left(href='#')
+              img.media-object( alt='64x64', src='./images/user1.png', style='width: 110px; height: 110px;')
+            .media-body
+              h4.media-heading Media heading
+              span 47 minutes ago
+              p
+                | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+              a(href='#').btn.btn-default(role="button") Reply
 
-      .row.first-comments
-        .col-lg-3.col-md-3.col-sm-12.col-xs-12(style="padding: 0; margin: 0;")
-          .commentor-image
-        .col-lg-9.col-md-9.col-sm-12.col-xs-12.comments-details
-          .comments-author-name sam isbister
-          .comments-author-content Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-          .comments-author-datetime
-            span.comment-datetime 1 day ago
-            span.seperate-slash /
-            span.report-btn report
 
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12.send-comment-form
-      .send-comment-title.row
-        i.fa.fa-comment-o
-        span leave your comments
-      .send-comment-name.row
-        .col-lg-1.col-md-1.col-sm-1.col-xs-1.send-comment-icon
-          i.fa.fa-user
-        .col-lg-11.col-md-11.col-sm-11.col-xs-11.send-comment-input
-          input(placeholder="enter your name")
-      .send-comment-email.row
-        .col-lg-1.col-md-1.col-sm-1.col-xs-1.send-comment-icon
-          i.fa.fa-envelope
-        .col-lg-11.col-md-11.col-sm-11.col-xs-11.send-comment-input
-          input(placeholder="enter your mail")
-      .send-comment-website.row
-        .col-lg-1.col-md-1.col-sm-1.col-xs-1.send-comment-icon
-          i.fa.fa-link
-        .col-lg-11.col-md-11.col-sm-11.col-xs-11.send-comment-input
-          input(placeholder="enter your website")
-      .send-comment-message.row
-        .col-lg-1.col-md-1.col-sm-1.col-xs-1.send-comment-icon
-          i.fa.fa-comment-o
-        .col-lg-11.col-md-11.col-sm-11.col-xs-11.send-comment-input
-          textarea(placeholder="enter your message" rows="6")
-      button.send-comment-btn(ng-click="comment()") send Comment
-
-script.
-  $(document).ready(function (){
-    var comment_padding = (212 - ($('.comments-author-name').outerHeight()+$('.comments-author-content').outerHeight()+$('.comments-author-datetime').outerHeight()))/2;
-    $('.comments-details').css('padding-top', comment_padding);
-  });
+              // Nested media object
+              .media
+                a.pull-left(href='#')
+                  img.media-object(alt='64x64', src='./images/user1.png', style='width: 110px; height: 110px;')
+                .media-body
+                  h4.media-heading Nested media heading
+                  span 47 minutes ago
+                  p
+                    | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                  a(href='#').btn.btn-default(role="button" ) Reply
+                  // Nested media object
+                  //- .media
+                  //-   a.pull-left(href='#')
+                  //-     img.media-object( alt='64x64', src='./images/user2.png', style='width: 110px; height: 110px;')
+                  //-   .media-body
+                  //-     h4.media-heading Nested media heading
+                  //-     span 47 minutes ago
+                  //-     p
+                  //-       | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                  //-     a(href='#').btn.btn-default(role="button") Reply
+              // Nested media object
+              .media
+                a.pull-left(href='#')
+                  img.media-object( alt='64x64', src='./images/user1.png', style='width: 110px; height: 110px;')
+                .media-body
+                  h4.media-heading Nested media heading
+                  span 47 minutes ago
+                  p
+                   | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                  a(href='#').btn.btn-default(role="button") Reply
+            .media
+              a.pull-left(href='#')
+                  img.media-object( alt='64x64', src='./images/user3.png', style='width: 110px; height: 110px;')
+                .media-body
+                  h4.media-heading Media heading
+                  span 47 minutes ago
+                  p
+                    | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                  a(href='#').btn.btn-default(role="button") Reply
+    .row
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12.leavecomment
+        
+        h2 Leave a Comment
+        .row
+          .col-lg-offset-2.col-md-offset-2.col-sm-offset-2.col-xs-offset-2.col-lg-4.col-md-4.col-sm-8.col-xs-8
+            .row
+              form.form-inline(role='form')
+              .form-group.col-lg-12.col-md-12-col-sm-12.col-xs-12
+                label.sr-only.control-label
+                  | Name
+                  span.text-danger *
+               
+                input.form-control(type='text' placeholder='Name' style="width:80%")
+              .form-group.col-lg-12.col-md-12-col-sm-12.col-xs-12
+                
+                label.sr-only.control-label
+                  | Email
+                  span.text-danger *
+                input.form-control(type='text' placeholder='Email' style="width:80%") 
+              .form-group.col-lg-12.col-md-12-col-sm-12.col-xs-12
+                
+                label.sr-only.control-label
+                  | Email
+                  span.text-danger *
+                input.form-control(type='text' placeholder='Site' style="width:80%")  
+              
+          .col-lg-6.col-md-6.col-sm-12.col-xs-12
+           .col-lg-offset-0.col-md-offset-0.col-sm-offset-1.col-xs-offset-1.col-lg-12.col-md-12.col-sm-11.col-xs-11.text-center
+              textarea.form-control(rows='4' type='text' placeholder='Message' )(style="width:68%; margin-left : 15px;").text-left
+            .col-lg-offset-7.col-md-offset-7.col-sm-offset-4.col-xs-offset-4.col-lg-3.col-md-4-col-sm-3.col-xs-3
+              .form-group
+                button.btn.btn-primary(type='submit' style="margin-top:10px;") Send
