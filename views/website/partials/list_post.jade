@@ -1,59 +1,203 @@
-﻿.row.category-title-bar
-  .container.category-title-text(ng-bind="catalory.name")
-
-.container
+﻿
+.container-fluid
+  
   .row
-    .col-lg-8.col-md-8.col-sm-12.col-xs-12.main-content
+    .listpost(style="margin-top:180px;")
       .row
-        .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-review-list
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+          .span12(style="margin-left:22px;")
+            .title-bar(style="margin-top:5px;color:white;")
+              span Catalory
+              p(style="margin-top:15px;")
+                | All what you like to know about Business, the latest news from business around the
+      .row
+        .col-lg-9.col-md-9.col-sm-12.col-xs-12
+          .text
+            .row
+                //1
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                .row
+                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
+                    .first-list-1
+                      .row
+                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                          .image-first-list-1
+                            .city
+                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
+                                h2 London
+                              img.img-responsive.img-rounded(src="images/a.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
+                              p(style="font-size:15px;")
+                                | London is the capital city of England.
+                                | It is the most populous city in the United Kingdom,
+                                | with a metropolitan area of over 13 million inhabitants.
 
-          .row.post-review(ng-repeat="post in posts")
-            .col-lg-6.col-md-6.col-sm-12.col-xs-12.post-review-thumbnail
-              .post-review-image
-                .hover-overlay
-                span 370x340
-            .col-lg-6.col-md-6.col-sm-12.col-xs-12.post-review-text
-              .post-review-details.row
-                .col-lg-8.col-md-8.col-sm-8.col-xs-8.posts-author-date
-                  span.post-date(ng-bind="post.date_create | date:'dd/MM/yyyy'")
-                  span -
-                  span.post-author(ng-bind="post.author.full_name")
-                .col-lg-4.col-md-4.col-sm-4.col-xs-4.text-right.posts-comment
-                  span.post-watch
-                    i.fa.fa-eye
-                    span(ng-bind="post.views.length")
-                  span -
-                  span.post-comment
-                    i.fa.fa-comments-o
-                    span(ng-bind="post.comments.length")
-              .post-review-description.row
-                .post-review-title(ng-bind="post.title")
-                .review-text(ng-bind="post.description")
-              .read-more.row
-                span read more
-                i.fa.fa-arrows-h
+                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
+                    .next-list-1
+                      .row
+                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                          .image-next-list-1
+                            .city
+                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
+                                h2 London
+                              img.img-responsive.img-rounded(src="images/b.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
+                              p(style="font-size:15px;")
+                                | London is the capital city of England.
+                                | It is the most populous city in the United Kingdom,
+                                | with a metropolitan area of over 13 million inhabitants.
 
-    .col-lg-4.col-md-4.col-sm-12.col-xs-12.relative-content
-      .row.content-box
-        .col-lg-12.col-md-12.col-sm-12.col-xs-12.category-list
-          .row
-            .col-lg-12.col-md-12.col-sm-12.col-xs-12.content-box-title
-              .underline
-              span Category
-            .col-lg-12.col-md-12.col-sm-12.col-xs-12.category-items
-              .row.categories(ng-repeat="catalory in topCatalories")
-                .hover-line
-                .col-lg-8.col-md-8.col-sm-8.col-xs-8.categories-title(ng-bind="catalory.name")
-                .col-lg-4.col-md-4.col-sm-4.col-xs-4.categories-number
-                  .number-box(ng-bind="catalory.posts.length")
-      .row.content-box
-        .col-lg-12.col-md-12.col-sm-12.col-xs-12.category-list
-          .row
-            .col-lg-12.col-md-12.col-sm-12.col-xs-12.content-box-title
-              .underline
-              span top rating articals
-            .col-lg-12.col-md-12.col-sm-12.col-xs-12.articals
-              .row.articals-items(ng-repeat="post in topPosts track by $index")
-                .seperate-line
-                .col-lg-2.col-md-2.col-sm-2.col-xs-2.articals-order(ng-bind="($index + 1) + '.'")
-                .col-lg-10.col-md-10.col-sm-10.col-xs-10.articals-content(ng-bind="post.title")  
+                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
+                    .last-list-1
+                      .row
+                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                          .image-last-list-1
+                             .city
+                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
+                                h2 London
+                              img.img-responsive.img-rounded(src="images/c.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
+                              p(style="font-size:15px;")
+                                | London is the capital city of England.
+                                | It is the most populous city in the United Kingdom,
+                                | with a metropolitan area of over 13 million inhabitants.
+              .col-lg-12.col-md-12.col-sm-9.col-xs-9.del
+                //2
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                .row
+                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
+                    .first-list-1
+                      .row
+                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                          .image-first-list-1
+                            .city
+                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
+                                h2 London
+                              img.img-responsive.img-rounded(src="images/d.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
+                              p(style="font-size:15px;")
+                                | London is the capital city of England.
+                                | It is the most populous city in the United Kingdom,
+                                | with a metropolitan area of over 13 million inhabitants.
+
+                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
+                    .next-list-1
+                      .row
+                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                          .image-next-list-1
+                            .city
+                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
+                                h2 London
+                              img.img-responsive.img-rounded(src="images/e.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
+                              p(style="font-size:15px;")
+                                | London is the capital city of England.
+                                | It is the most populous city in the United Kingdom,
+                                | with a metropolitan area of over 13 million inhabitants.
+                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
+                    .last-list-1
+                      .row
+                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                          .image-last-list-1
+                            .city
+                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
+                                h2 London
+                              img.img-responsive.img-rounded(src="images/f.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
+                              p(style="font-size:15px;")
+                                | London is the capital city of England.
+                                | It is the most populous city in the United Kingdom,
+                                | with a metropolitan area of over 13 million inhabitants.
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12.del
+                //3
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                .row
+                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
+                    .first-list-1
+                      .row
+                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                          .image-first-list-1
+                           .city
+                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
+                                h2 London
+                              img.img-responsive.img-rounded(src="images/g.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
+                              p(style="font-size:15px;")
+                                | London is the capital city of England.
+                                | It is the most populous city in the United Kingdom,
+                                | with a metropolitan area of over 13 million inhabitants.
+
+                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
+                    .next-list-1
+                      .row
+                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                          .image-next-list-1
+                             .city
+                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
+                                h2 London
+                              img.img-responsive.img-rounded(src="images/h.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
+                              p(style="font-size:15px;")
+                                | London is the capital city of England.
+                                | It is the most populous city in the United Kingdom,
+                                | with a metropolitan area of over 13 million inhabitants.
+                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
+                    .last-list-1
+                      .row
+                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                          .image-last-list-1
+                             .city
+                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
+                                h2 London
+                              img.img-responsive.img-rounded(src="images/i.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
+                              p(style="font-size:15px;")
+                                | London is the capital city of England.
+                                | It is the most populous city in the United Kingdom,
+                                | with a metropolitan area of over 13 million inhabitants.
+            
+        .col-lg-3.col-md-3.col-sm-12.col-xs-12
+          .list-view
+  .row
+    .col-lg-12.col-md-12.col-sm-12.col-xs-12.footer
+      
+      .col-lg-4.col-md-4-col-sm-12.col-xs-12
+      
+       
+        h2 Responsive
+        p 
+        |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        |  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        | proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      .col-lg-4.col-md-4-col-sm-12.col-xs-12
+        
+        h2 Recent Posts
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+        hr
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+        hr
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+      .col-lg-4.col-md-4-col-sm-12.col-xs-12
+
+        h2 Latest Tweets
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+        hr
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+        hr
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+      //- .col-lg-3.col-md-3-col-sm-12.col-xs-12
+      //-   h3 Contact Us
+      //-   .row
+      //-     form.form-inline(role='form')
+      //-     .form-group.col-lg-12.col-md-12-col-sm-12.col-xs-12
+      //-       label.sr-only.control-label
+      //-         | Name
+      //-         span.text-danger *
+           
+      //-       input.form-control(type='text' placeholder='Name*' style="width:300px")
+      //-     .form-group.col-lg-12.col-md-12-col-sm-12.col-xs-12
+            
+      //-       label.sr-only.control-label
+      //-         | Email
+      //-         span.text-danger *
+      //-       input.form-control(type='text' placeholder='Email*' style="width:300px")  
+      //-     textarea.form-control(rows='3' type='text' placeholder='Message' ).col-lg-12.col-md-12-col-sm-12.col-xs-12.text-center(style="width:300px; margin-left : 15px;")
+      //-     .form-group
+      //-       button.btn.btn-primary.col-lg-offset-4.col-md-offset-4.col-sm-offset-4.col-xs-offset-4.col-lg-3.col-md-3-col-sm-3.col-xs-3(type='submit' style="margin-top:10px;") Send
+  .row
+    .col-lg-12.col-md-12.col-sm-12.col-xs-12.endfooter
+
