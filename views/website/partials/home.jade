@@ -29,8 +29,6 @@
     .col-lg-12.col-md-12.col-sm-12.col-xs-12(ng-repeat="(groupId,group) in groups track by $index")
       .groups
         .row
-<<<<<<< HEAD
-=======
           // 1 -category
           //- .col-lg-4.col-md-4.col-sm-12.col-xs-12(ng-repeat="catalory in group.catalories track by $index")
             .categories
@@ -83,7 +81,6 @@
                               a(href ="#")(ng-bind="catalory.posts[2].title")
           
           //2
->>>>>>> master
           .col-lg-4.col-md-4.col-sm-12.col-xs-12(ng-repeat="catalory in group.catalories track by $index")
             .categories
               .row
@@ -103,12 +100,9 @@
                               h4
                                 a(href ="#")(ng-bind="catalory.posts[$index].title")
                             .first-post-content
-<<<<<<< HEAD
-=======
                               //- p(ng-if="catalory.posts[$index].content.length >= 100" ng-bind-html="catalory.posts[$index].content | limitTo:100 | unsafe")
                               //- p(ng-if="catalory.posts[$index].content.length <  100" ng-bind-html="catalory.posts[$index].content | unsafe")
                               //- p {{catalory.posts[$index].content.length > 100 ? catalory.posts[$index].content.substring(0,100) + '...' : catalory.posts[$index].content}}
->>>>>>> master
                               p(ng-if="catalory.posts[$index].content.length >= 100" ng-bind-html="catalory.posts[$index].content.substring(0,100) + '...' | unsafe")
                               p(ng-if="catalory.posts[$index].content.length <  100" ng-bind-html="catalory.posts[$index].content | unsafe")
                             .first-post-index
@@ -119,62 +113,6 @@
                                 span.glyphicon.glyphicon-time(style="margin-right:20px;")
                                   a(href="#")(style="margin-left:10px;")(ng-bind="catalory.posts[$index].date_create | date:'dd/MM/yyyy'")
                                 
-<<<<<<< HEAD
-                                span.glyphicon.glyphicon-time(style="margin-right:20px;")
-                                  a(href="#")(style="margin-left:10px;") 12:33PM
-                              
-                                span.glyphicon.glyphicon-comment(style="margin-right:20px;")
-                                  a(href="#")(style="margin-left:10px;") 5
-              .row
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .next-post
-                    .row
-                      .col-lg-2.col-md-3.col-sm-3.col-xs-3
-                        .next-post-thumbnail.img-rounded
-                          img(src="./images/next1.jpg")
-                      .col-lg-10.col-md-9.col-sm-9.col-xs-9
-                        .next-post-title 
-                          a(href ="#") Justice Department tries to force Google to hand over user data
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .next-post
-                    .row
-                      .col-lg-2.col-md-3.col-sm-3.col-xs-3
-                        .next-post-thumbnail.img-rounded
-                          img(src="./images/next2.jpg")
-                      .col-lg-10.col-md-9.col-sm-9.col-xs-9
-                        .next-post-title
-                          a(href ="#") Justice Department tries to force Google to hand over user data
-    .row
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12.footer
-      
-      .col-lg-4.col-md-4-col-sm-12.col-xs-12
-      
-       
-        h2 Responsive
-        p 
-        |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        |  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        | proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-      .col-lg-4.col-md-4-col-sm-12.col-xs-12
-        
-        h2 Recent Posts
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-        hr
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-        hr
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-      .col-lg-4.col-md-4-col-sm-12.col-xs-12
-
-        h2 Latest Tweets
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-        hr
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-        hr
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-=======
                                 span.glyphicon.glyphicon-comment(style="margin-right:20px;")
                                   a(href="#")(style="margin-left:10px;")(ng-bind="catalory.posts[$index].comments.length")
                   .row(ng-if="$index != 0")
@@ -187,4 +125,3 @@
                           .col-lg-10.col-md-9.col-sm-9.col-xs-9
                             .next-post-title 
                               a(href ="#")(ng-bind="catalory.posts[$index].title")
->>>>>>> master
