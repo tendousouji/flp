@@ -73,7 +73,6 @@
   color: #fff;
 }
 .slider {
-  margin-top: 200px;
   z-index: 1;
   width: 100%;
   background-color: #000;
@@ -215,7 +214,7 @@ hr {
   height: 200px;
 }
 .post {
-  margin-top: 180px;
+  margin-top: 20px;
   min-height: 800px;
 }
 .post-thumnail {
@@ -310,7 +309,4 @@ hr {
 }
 .leavecomment h2 {
   margin-left: 20px;
-}
-.login-form {
-  z-index: 100;
 }
