@@ -20,8 +20,10 @@
                     .image-post-inlist-area
                       .post-inlist-content
                         .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
-                          h4(ng-if="post.title.length >= 25" ng-bind="post.title.substring(0,23) + '...'")
-                          h4(ng-if="post.title.length < 25" ng-bind="post.title")
+                          h4
+                            a(ng-if="post.title.length >= 25" ng-bind="post.title.substring(0,23) + '...'" ng-href="{{group.slug+'/'+catalory.slug+'/'+post.slug}}", ng-click="scrollTop()")
+                          h4
+                            a(ng-if="post.title.length < 25" ng-bind="post.title" ng-href="{{group.slug+'/'+catalory.slug+'/'+post.slug}}", ng-click="scrollTop()")
                         img.img-responsive.img-rounded(src="",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;" ng-bind="post.img_url")
                         p(style="font-size:15px;")(ng-if="post.content.length >= 100" ng-bind-html="post.content.substring(0,90) + '...' | unsafe")
                         p(style="font-size:15px;")(ng-if="post.content.length <  100" ng-bind-html="post.content | unsafe")
