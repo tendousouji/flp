@@ -294,6 +294,7 @@ hr {
 }
 .post-content-title h3 {
   margin-left: 10px;
+  text-align: center;
 }
 .leavecomment {
   min-height: 250px;
