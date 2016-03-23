@@ -7,148 +7,32 @@
         .col-lg-12.col-md-12.col-sm-12.col-xs-12
           .span12(style="margin-left:22px;")
             .title-bar(style="margin-top:5px;color:white;")
-              span Catalory
-              p(style="margin-top:15px;")
-                | All what you like to know about Business, the latest news from business around the
-      .row
+              span(ng-bind="catalory.name")
+              p(style="margin-top:15px;")(ng-bind="catalory.description")
+      .row.text
         .col-lg-9.col-md-9.col-sm-12.col-xs-12
-          .text
-            .row
-                //1
-              .col-lg-12.col-md-12.col-sm-12.col-xs-12
+          .row
+              //1
+            .col-lg-4.col-md-4.col-sm-6.col-xs-12(ng-repeat="post in posts")
+              .post-inlist-area
                 .row
-                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
-                    .first-list-1
-                      .row
-                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                          .image-first-list-1
-                            .city
-                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
-                                h2 London
-                              img.img-responsive.img-rounded(src="images/a.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
-                              p(style="font-size:15px;")
-                                | London is the capital city of England.
-                                | It is the most populous city in the United Kingdom,
-                                | with a metropolitan area of over 13 million inhabitants.
+                  .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    .image-post-inlist-area
+                      .post-inlist-content
+                        .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
+                          h4
+                            a(ng-if="post.title.length >= 25" ng-bind="post.title.substring(0,23) + '...'" ng-href="{{group.slug+'/'+catalory.slug+'/'+post.slug}}", ng-click="scrollTop()")
+                          h4
+                            a(ng-if="post.title.length < 25" ng-bind="post.title" ng-href="{{group.slug+'/'+catalory.slug+'/'+post.slug}}", ng-click="scrollTop()")
+                        img.img-responsive.img-rounded(src="",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;" ng-bind="post.img_url")
+                        p(style="font-size:15px;")(ng-if="post.content.length >= 100" ng-bind-html="post.content.substring(0,90) + '...' | unsafe")
+                        p(style="font-size:15px;")(ng-if="post.content.length <  100" ng-bind-html="post.content | unsafe")
 
-                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
-                    .next-list-1
-                      .row
-                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                          .image-next-list-1
-                            .city
-                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
-                                h2 London
-                              img.img-responsive.img-rounded(src="images/b.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
-                              p(style="font-size:15px;")
-                                | London is the capital city of England.
-                                | It is the most populous city in the United Kingdom,
-                                | with a metropolitan area of over 13 million inhabitants.
-
-                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
-                    .last-list-1
-                      .row
-                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                          .image-last-list-1
-                             .city
-                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
-                                h2 London
-                              img.img-responsive.img-rounded(src="images/c.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
-                              p(style="font-size:15px;")
-                                | London is the capital city of England.
-                                | It is the most populous city in the United Kingdom,
-                                | with a metropolitan area of over 13 million inhabitants.
-              .col-lg-12.col-md-12.col-sm-9.col-xs-9.del
-                //2
-              .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                .row
-                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
-                    .first-list-1
-                      .row
-                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                          .image-first-list-1
-                            .city
-                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
-                                h2 London
-                              img.img-responsive.img-rounded(src="images/d.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
-                              p(style="font-size:15px;")
-                                | London is the capital city of England.
-                                | It is the most populous city in the United Kingdom,
-                                | with a metropolitan area of over 13 million inhabitants.
-
-                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
-                    .next-list-1
-                      .row
-                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                          .image-next-list-1
-                            .city
-                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
-                                h2 London
-                              img.img-responsive.img-rounded(src="images/e.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
-                              p(style="font-size:15px;")
-                                | London is the capital city of England.
-                                | It is the most populous city in the United Kingdom,
-                                | with a metropolitan area of over 13 million inhabitants.
-                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
-                    .last-list-1
-                      .row
-                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                          .image-last-list-1
-                            .city
-                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
-                                h2 London
-                              img.img-responsive.img-rounded(src="images/f.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
-                              p(style="font-size:15px;")
-                                | London is the capital city of England.
-                                | It is the most populous city in the United Kingdom,
-                                | with a metropolitan area of over 13 million inhabitants.
-              .col-lg-12.col-md-12.col-sm-12.col-xs-12.del
-                //3
-              .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                .row
-                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
-                    .first-list-1
-                      .row
-                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                          .image-first-list-1
-                           .city
-                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
-                                h2 London
-                              img.img-responsive.img-rounded(src="images/g.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
-                              p(style="font-size:15px;")
-                                | London is the capital city of England.
-                                | It is the most populous city in the United Kingdom,
-                                | with a metropolitan area of over 13 million inhabitants.
-
-                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
-                    .next-list-1
-                      .row
-                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                          .image-next-list-1
-                             .city
-                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
-                                h2 London
-                              img.img-responsive.img-rounded(src="images/h.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
-                              p(style="font-size:15px;")
-                                | London is the capital city of England.
-                                | It is the most populous city in the United Kingdom,
-                                | with a metropolitan area of over 13 million inhabitants.
-                  .col-lg-4.col-md-4.col-sm-12.col-xs-12
-                    .last-list-1
-                      .row
-                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                          .image-last-list-1
-                             .city
-                              .w3-container.w3-blue(style='width:350px;margin-left:-26px;margin-top:-26px;')
-                                h2 London
-                              img.img-responsive.img-rounded(src="images/i.jpg",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;")
-                              p(style="font-size:15px;")
-                                | London is the capital city of England.
-                                | It is the most populous city in the United Kingdom,
-                                | with a metropolitan area of over 13 million inhabitants.
-            
+        // top-catagory, .....
         .col-lg-3.col-md-3.col-sm-12.col-xs-12
           .list-view
+
+  // footer
   .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.footer
       
