@@ -175,7 +175,7 @@ a:hover {
   margin: 5px;
   padding: 25px;
   padding-top: -10px;
-  width: 350px;
+  width: 100%;
   height: 250px;
   border: 2px solid #87cefa;
 }
@@ -314,4 +314,60 @@ hr {
 }
 .post-content h4 {
   color: #00f;
+}
+.content-box-title {
+  padding: 0;
+  position: relative;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 35px;
+}
+.underline {
+  position: absolute;
+  height: 100%;
+  width: 75px;
+  border-bottom: 5px solid #d70204;
+}
+.category-items {
+  margin-top: 30px;
+}
+.categories {
+  background: #f6f6f6;
+  position: relative;
+}
+.categories:hover .hover-line {
+  height: 100%;
+}
+.hover-line {
+  position: absolute;
+  border: 2px solid #d70204;
+  width: 0px;
+  height: 15%;
+  transition: all 0.3s ease;
+}
+.categories-title {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 15px 0;
+  padding-left: 25px;
+}
+.categories-title:hover {
+  cursor: pointer;
+}
+.categories-number {
+  padding: 9px 0;
+}
+.number-box {
+  border: 2px solid #d70204;
+  width: 30px;
+  font-size: 20px;
+  line-height: 14px;
+  padding: 6px 0;
+  text-align: center;
+  font-weight: bold;
+  color: #d70204;
+  margin: 0 auto;
 }
