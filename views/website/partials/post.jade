@@ -15,7 +15,16 @@
         h3(ng-bind="post.title")
     .row
       .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-content
-        p(ng-bind-html="post.content | unsafe")
+        //p(ng-bind-html="post.content | unsafe")
+        ul.media-list(style="margin-left:20px; margin-top:15px;")
+          li.media
+            a.pull-left(href='#')
+              img.media-object( alt='64x64', src='./images/contentuser.jpg', style='width: 150px; height: 150px;')
+            .media-body
+              h4.media-heading(style="margin-left:20px;")  Nguyen Thao
+              span(style="margin-left:20px;")  22/7/2016
+              p(style="margin-left:20px;") 
+                | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
 
     .row
       .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-index
