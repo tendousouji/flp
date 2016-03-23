@@ -3,35 +3,25 @@
       .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-title
         
         .col-lg-3.col-md-3.col-sm-3.col-xs-3.post-title-main
-          
-          h2 Business
+          h2(ng-bind="post.catalory.name")
 
         .col-lg-9.col-md-9.col-sm-9.col-xs-9.post-title-child
-          
-          h2 All what you like to know about Business
+          h2(ng-bind="post.title")
     .row
       .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-thumnail
         
         img(src='./images/post.jpg')
-    .row
-      .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-content-title
-        
-        h3 This is Photoshop's version of Lorem Ipsum Proin gravida nibh vel velit auctor aliquet
+
     .row
       .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-content
-        
-        p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-        p Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+        p(ng-bind-html="post.content | unsafe")
+
     .row
       .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-index
-        
-        
         span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
           a(href="#")(style="margin-left:10px;") 4504
-          
         span.glyphicon.glyphicon-time(style="margin-right:20px;")
-          a(href="#")(style="margin-left:10px;") 12:33PM
-        
+          a(href="#")(style="margin-left:10px;")(ng-bind="post.date_create | date:'longDate'")
         span.glyphicon.glyphicon-comment(style="margin-right:20px;")
           a(href="#")(style="margin-left:10px;") 5
     .row
