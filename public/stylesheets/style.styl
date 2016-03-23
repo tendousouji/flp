@@ -93,8 +93,6 @@
   //border: 2px solid green
   background-color:#ffffff
   margin-top: 10px
-  min-height: 620px
-  
 .first-post
   //border: 2px solid black
 .next-post
@@ -310,10 +308,69 @@ hr
     color:orange
   min-height :250px
   background-color:#fcfced
-  border-top:1px solid #d9dbda
-    
-      
-      
+  border-top:1px solid #d9dbda   
   h2
     margin-left : 20px
-  margin-bottom :-20px  
+    margin-bottom :-20px 
+// .top
+//   width:100%
+//   height:170px
+//   position: fixed
+//   top:0
+//   background-color:#ffffff
+//   z-index: 3
+.content-box
+  border: 2px solid #ebefef
+  border-top: 1px solid #ebefef
+  border-bottom: 1px solid #ebefef
+  height: 100%
+  padding: 35px 25px
+
+.content-box-title
+  padding: 0
+  position: relative
+  font-size: 20px
+  line-height: 20px
+  text-transform: uppercase
+  font-weight: bold
+  height: 35px
+.underline
+  position: absolute
+  height: 100%
+  width: 75px
+  border-bottom: 5px solid #d70204
+.category-items
+  margin-top: 30px
+.categories
+  background: #f6f6f6
+  position: relative
+  &:hover
+    .hover-line
+      height: 100%
+.hover-line
+  position: absolute
+  border: 2px solid #d70204
+  width: 0px
+  height: 15%
+  transition: all 0.3s ease
+.categories-title
+  text-transform: uppercase
+  font-size: 12px
+  font-weight: bold
+  padding: 15px 0
+  //text-align: center
+  padding-left: 25px
+  &:hover
+    cursor: pointer
+.categories-number
+  padding: 9px 0
+.number-box
+  border: 2px solid #d70204
+  width: 30px
+  font-size: 20px
+  line-height: 14px
+  padding: 6px 0
+  text-align: center
+  font-weight: bold
+  color: #d70204
+  margin: 0 auto
