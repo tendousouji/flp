@@ -98,7 +98,6 @@
 .categories {
   background-color: #fff;
   margin-top: 10px;
-  min-height: 620px;
 }
 h3 {
   text-align: center;
@@ -315,6 +314,13 @@ hr {
 .post-content h4 {
   color: #00f;
 }
+.content-box {
+  border: 2px solid #ebefef;
+  border-top: 1px solid #ebefef;
+  border-bottom: 1px solid #ebefef;
+  height: 100%;
+  padding: 35px 25px;
+}
 .content-box-title {
   padding: 0;
   position: relative;
@@ -370,4 +376,7 @@ hr {
   font-weight: bold;
   color: #d70204;
   margin: 0 auto;
+}
+.del {
+  height: 20px;
 }
