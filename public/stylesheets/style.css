@@ -1,5 +1,5 @@
 .header {
-  height: 80px;
+  min-height: 40px;
   width: 100%;
 }
 #search {
@@ -7,11 +7,12 @@
   margin-top: 5px;
 }
 .menubar {
-  margin-top: 20px;
+  min-height: 50px;
+  margin-top: 40px;
 }
 .menubar-item {
   z-index: 2;
-  height: 50px;
+  min-height: 25px;
   line-height: 50px;
   text-align: center;
   font-size: 16px;
@@ -73,7 +74,7 @@
   color: #fff;
 }
 .slider {
-  margin-top: 200px;
+  min-height: 300px;
   z-index: 1;
   width: 100%;
   background-color: #000;
@@ -310,8 +311,8 @@ hr {
 .leavecomment h2 {
   margin-left: 20px;
 }
-.login-form {
-  z-index: 100;
+.post-content h4 {
+  color: #00f;
 }
 .content-box {
   border: 2px solid #ebefef;
@@ -378,14 +379,4 @@ hr {
 }
 .del {
   height: 20px;
-}
-.top {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 1002;
-}
-.dark-bg {
-  background: #36424a;
-  border-bottom: 1px solid #f1f2f7;
 }
