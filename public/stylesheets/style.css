@@ -380,3 +380,8 @@ hr {
 .del {
   height: 20px;
 }
+.header-1 {
+  border: 2px solid #ffc0cb;
+  height: 50px;
+  background-color: #00f;
+}
