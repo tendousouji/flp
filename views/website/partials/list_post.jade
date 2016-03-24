@@ -2,7 +2,7 @@
 .container-fluid
   
   .row
-    .listpost(style="margin-top:200px;")
+    .listpost(style="margin-top:170px;")
       .row
         .col-lg-12.col-md-12.col-sm-12.col-xs-12
           .span12(style="margin-left:22px;")
@@ -12,17 +12,19 @@
       .row.text
         .col-lg-9.col-md-9.col-sm-12.col-xs-12
           .col-lg-4.col-md-4.col-sm-6.col-xs-12(ng-repeat="post in posts")
-            .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="margin-top: 5px; padding-left: 0px; padding-right: 0px; border: 1px solid black; height: 220px")
-              .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="background-color: #00ff00")
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="margin-top: 5px; padding-left: 0px; padding-right: 0px; border: 1px solid #48D1CC; height: 220px; margin-right: 200px;")
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="background-color: #1E90FF;height:50px;")
                 h4
                   a(ng-if="post.title.length >= 25" ng-bind="post.title.substring(0,23) + '...'" ng-href="{{group.slug+'/'+catalory.slug+'/'+post.slug}}", ng-click="scrollTop()")
                 h4
                   a(ng-if="post.title.length < 25" ng-bind="post.title" ng-href="{{group.slug+'/'+catalory.slug+'/'+post.slug}}", ng-click="scrollTop()")
-              .col-lg-4.col-md-4.col-sm-12.col-xs-12(style="padding: 5px 5px")
-                img.img-responsive.img-rounded(src="uploads/all_new_htc_one_streaks-wallpaper-1366x768.jpg",style="width: 100px; height: 100px; float: left; marrgin-left: 10px" ng-bind="post.img_url")
-              .col-lg-8.col-md-8.col-sm-12.col-xs-12(style="margin: 0px 0px; padding: 0px 0px")
-                p(style="font-size: 12px;")(ng-if="post.content.length >= 100" ng-bind-html="post.content.substring(0,90) + '...' | unsafe")
-                p(style="font-size: 12px;")(ng-if="post.content.length <  100" ng-bind-html="post.content | unsafe")
+                 //.col-lg-4.col-md-4.col-sm-12.col-xs-12(style="padding: 5px 5px")
+                .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="height:20px;")
+                img.img-responsive.img-rounded(src="uploads/all_new_htc_one_streaks-wallpaper-1366x768.jpg",style="width: 100px; height: 100px; float: left; marrgin-left: 10px; padding:3px;" ng-bind="post.img_url")
+                //.col-lg-8.col-md-8.col-sm-12.col-xs-12(style="margin: 0px 0px; padding: 0px 0px;color: white;")
+                p(style="font-size: 12px;padding-left:90px;")(ng-if="post.content.length >= 100" ng-bind-html="post.content.substring(0,90) + '...' | unsafe")
+                p(style="font-size: 12px;padding-left:90px;")(ng-if="post.content.length <  100" ng-bind-html="post.content | unsafe")
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="height:100px;")
               .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="height: 77px; padding-top: 30px")
                 span.post-date(ng-bind="post.date_create | date:'dd/MM/yyyy'")
                 span -
@@ -41,7 +43,6 @@
                         img.img-responsive.img-rounded(src="",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;" ng-bind="post.img_url")
                         p(style="font-size:15px;")(ng-if="post.content.length >= 100" ng-bind-html="post.content.substring(0,90) + '...' | unsafe")
                         p(style="font-size:15px;")(ng-if="post.content.length <  100" ng-bind-html="post.content | unsafe")
-            
 
         // top-catagory, .....
         .col-lg-3.col-md-3.col-sm-12.col-xs-12

@@ -19,5 +19,7 @@
       CataloryService.find({}, { catalory: { slug: $routeParams.catalory_slug } }, {}).then(function (catalories) {
         $scope.catalory = catalories[0] || {};
       });
+
+      console.log($scope);
     }]);
 });
