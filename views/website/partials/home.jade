@@ -1,6 +1,6 @@
 ﻿//- home.jade to bind data
 .container-fluid
-  .row
+  .row(style="margin-top:-20px;")
     .col-lg-12.col-md-12.col-sm-12.col-xs-12
       .slider
         // slideshow
@@ -13,15 +13,15 @@
           // Wrapper for slides
           .carousel-inner(role='listbox')
             .item.active
-              img(src='images/1.jpg', alt='aaa', style="width:100%;")
+              img(src='images/1.jpg', alt='aaa', style="width:100%; height:100%;")
               //- .carousel-caption
               //-   | Teacher Training
             .item
-              img(src='images/2.jpg', alt='bbb', style="width:100%;")
+              img(src='images/2.jpg', alt='bbb', style="width:100%; height:100%;")
               //- .carousel-caption
               //-   | Presentations
             .item
-              img(src='images/3.jpg', alt='ccc', style="width:100%;")
+              img(src='images/3.jpg', alt='ccc', style="width:100%; height:100%;")
               //- .carousel-caption
               //-   | Method Learning
             a.left.carousel-control(href='#home-slideshow', role='button', data-slide='prev')

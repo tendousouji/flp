@@ -9,7 +9,7 @@
           h2(ng-bind="post.title")
     .row
       .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-thumnail
-        img(src='./images/post.jpg')
+        img(src='./images/post.jpg' style="width:inherit")
     .row
       .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-content-title
         h3(ng-bind="post.title")
@@ -40,14 +40,6 @@
         .row
           .col-lg-12.col-md-12.col-sm-12.col-xs-12
             h2 Comment
-        //
-
-        //
-
-
-
-
-
         ul.media-list(style="margin-left:20px;")
           li.media
             a.pull-left(href='#')
