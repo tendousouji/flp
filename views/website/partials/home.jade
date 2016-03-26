@@ -106,7 +106,7 @@
                             .first-post-title
                               h4
                                 a.title(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
-                            .first-post-content
+                            .first-post-content(style="height: 100px;")
                               //- p(ng-if="catalory.posts[$index].content.length >= 100" ng-bind-html="catalory.posts[$index].content | limitTo:100 | unsafe")
                               //- p(ng-if="catalory.posts[$index].content.length <  100" ng-bind-html="catalory.posts[$index].content | unsafe")
                               //- p {{catalory.posts[$index].content.length > 100 ? catalory.posts[$index].content.substring(0,100) + '...' : catalory.posts[$index].content}}

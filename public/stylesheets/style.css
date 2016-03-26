@@ -394,7 +394,5 @@ hr {
   border-bottom: 1px solid #f1f2f7;
 }
 .title {
-  margin-right: -8px;
-  width: 362px;
-  height: 230px;
+  margin-right: -5px;
 }
