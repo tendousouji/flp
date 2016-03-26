@@ -1,14 +1,11 @@
 .header {
+  float: center;
   min-height: 40px;
   width: 100%;
 }
 #search {
   position: absolute;
   margin-top: 5px;
-}
-.menubar {
-  min-height: 50px;
-  margin-top: 40px;
 }
 .menubar-item {
   z-index: 2;
@@ -74,11 +71,10 @@
   color: #fff;
 }
 .slider {
-  margin-top: 200px;
-  z-index: 1;
+  margin-top: -2px;
+  border-top: 2px solid #00a2d7;
   width: 100%;
   background-color: #000;
-  margin-bottom: 20px;
 }
 .col-centerd {
   float: none;
@@ -395,4 +391,63 @@ hr {
 }
 .title {
   margin-left: -1px;
+}
+.navbar-inverse .navbar-nav li a {
+  color: #333;
+}
+.navbar-inverse {
+  background-color: #fff;
+  color: #000;
+}
+.navbar-inverse {
+  border-color: #fff;
+}
+#main-menu {
+  border: 1px solid #fff;
+}
+#main-menu ul li a:hover {
+  border-top: 1px solid #000;
+  color: #000;
+  background-color: #ffa500;
+}
+/*.navbar-inverse .navbar-nav
+  .open
+    a
+      color:blue
+      background-color : #93F7F1
+   
+.navbar-inverse .navbar-nav
+    .open
+      a:focus
+        color:blue
+        background-color : #93F7F1
+.navbar-inverse .navbar-nav
+    .open
+      a:hover
+        color:blue
+        background-color : #93F7F1*/
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #7d7878;
+}
+.navbar-nav li .dropdown-menu {
+  margin-left: -10px;
+  color: #000;
+}
+.navbar-nav li .dropdown-menu a {
+  height: 45px;
+  padding-top: 10px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+.navbar-inverse .navbar-nav li a:focus,
+.navbar-inverse .navbar-nav li a:hover {
+  border-top: 1px solid #000;
+  color: #000;
+  background-color: #ffa500;
+}
+.menu {
+  min-height: 50px;
+  float: center;
+  width: 100%;
+  margin-top: 0px;
 }
