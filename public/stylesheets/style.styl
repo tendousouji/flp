@@ -1,4 +1,5 @@
 ﻿.header
+  float:center
   min-height:40px
   width: 100%
   
@@ -10,12 +11,12 @@
     position: absolute
     margin-top: 5px
 
-.menubar
-  min-height: 50px
-  // border: 2px solid blue
-  //border-top: 2px solid #000000
-  margin-top: 40px
-  //background: #fafafa
+// .menubar
+//   min-height: 50px
+//   // border: 2px solid blue
+//   //border-top: 2px solid #000000
+//   margin-top: 40px
+//   //background: #fafafa
 .menubar-item
   z-index: 2
   // border: 2px solid red
@@ -73,12 +74,13 @@
     color: #ffffff
     
 .slider
-  margin-top :200px
-  z-index: 1
+  
+  margin-top :-2px
+  border-top: 2px solid #00A2D7
+  
   width: 100%
   // border: 2px solid blue
   background-color: #000000
-  margin-bottom: 20px
 .col-centerd
   float: none
   margin: 0 auto
@@ -381,3 +383,77 @@ hr
   border-bottom: 1px solid #f1f2f7
 .title
   margin-left: -1px
+  
+
+// sua thanh menu
+.navbar-inverse .navbar-nav 
+  li 
+    a
+      color: #333
+.navbar-inverse
+  background-color:white
+  color:black
+.navbar-inverse 
+    
+    border-color: #FFFFFF
+
+    
+#main-menu
+  
+  border: 1px solid white
+  ul 
+    li 
+      a:hover
+        border-top: 1px solid black
+        color:black
+        background-color : orange
+
+        
+/*.navbar-inverse .navbar-nav
+  .open
+    a
+      color:blue
+      background-color : #93F7F1
+   
+.navbar-inverse .navbar-nav
+    .open
+      a:focus
+        color:blue
+        background-color : #93F7F1
+.navbar-inverse .navbar-nav
+    .open
+      a:hover
+        color:blue
+        background-color : #93F7F1*/
+
+.navbar-inverse .navbar-toggle .icon-bar 
+    background-color: #7D7878
+
+
+  
+.navbar-nav
+  li
+    .dropdown-menu
+      //margin-top :0px
+      margin-left:-10px
+      //background-color:rgba(222, 239, 247, 0.41)
+      color:black
+      //border-top: 1px solid black
+      a 
+        height :45px
+        padding-top:10px
+        margin-top: -5px
+        margin-bottom: -5px
+    
+   
+.navbar-inverse .navbar-nav li a:focus, .navbar-inverse .navbar-nav li a:hover 
+              
+  border-top: 1px solid black
+  color:black
+  background-color : orange
+   
+.menu
+  min-height: 50px
+  float:center
+  width: 100%
+  margin-top:-0px
