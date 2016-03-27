@@ -1,6 +1,6 @@
 ﻿//- home.jade to bind data
 .container-fluid
-  .row(style="margin-top:-20px;")
+  .row(style="margin-top:80px;")
     .col-lg-12.col-md-12.col-sm-12.col-xs-12
       .slider
         // slideshow
@@ -85,7 +85,7 @@
                           .col-lg-10.col-md-9.col-sm-9.col-xs-9
                             .next-post-title
                               a(href ="#")(ng-bind="catalory.posts[2].title")
-          //2111212
+          //2
           .col-lg-4.col-md-4.col-sm-12.col-xs-12(ng-repeat="catalory in group.catalories track by $index")
             .categories
               .row
@@ -106,7 +106,7 @@
                             .first-post-title
                               h4
                                 a.title(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
-                            .first-post-content(style="height: 100px;")
+                            .first-post-content(style="height:100px;")
                               //- p(ng-if="catalory.posts[$index].content.length >= 100" ng-bind-html="catalory.posts[$index].content | limitTo:100 | unsafe")
                               //- p(ng-if="catalory.posts[$index].content.length <  100" ng-bind-html="catalory.posts[$index].content | unsafe")
                               //- p {{catalory.posts[$index].content.length > 100 ? catalory.posts[$index].content.substring(0,100) + '...' : catalory.posts[$index].content}}
@@ -132,7 +132,6 @@
                           .col-lg-10.col-md-9.col-sm-9.col-xs-9
                             .next-post-title 
                               a.title(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
-
   .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.footer
       

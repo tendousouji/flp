@@ -1,5 +1,6 @@
 ﻿.header
-  min-height:40px
+  float:center
+  min-height:30px
   width: 100%
   
   // border: 2px solid yellow
@@ -10,12 +11,12 @@
     position: absolute
     margin-top: 5px
 
-.menubar
-  min-height: 50px
-  // border: 2px solid blue
-  //border-top: 2px solid #000000
-  margin-top: 40px
-  //background: #fafafa
+// .menubar
+//   min-height: 50px
+//   // border: 2px solid blue
+//   //border-top: 2px solid #000000
+//   margin-top: 40px
+//   //background: #fafafa
 .menubar-item
   z-index: 2
   // border: 2px solid red
@@ -73,12 +74,13 @@
     color: #ffffff
     
 .slider
-  margin-top :200px
-  z-index: 1
+  min-height : 100px
+  margin-top :-2px
+  border-top: 2px solid #00A2D7
+  
   width: 100%
   // border: 2px solid blue
   background-color: #000000
-  margin-bottom: 20px
 .col-centerd
   float: none
   margin: 0 auto
@@ -380,54 +382,87 @@ hr
   background: rgba(54,66,74,1)
   border-bottom: 1px solid #f1f2f7
 .title
-
-  margin-right: -5px
-  //margin-left: 3px
-  // padding: -10px
-  //width: 100%
-// body
-//   font-family: 'PT Sans', sans-serif
-//   font-size: 13px
-//   font-weight: 400
-//   color: #4f5d6e
-//   position: relative
-//   background: rgb(26, 49, 95)
-//   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(26, 49, 95, 1)), color-stop(10%, rgba(26, 49, 95, 1)), color-stop(24%, rgba(29, 108, 141, 1)), color-stop(37%, rgba(41, 136, 151, 1)), color-stop(77%, rgba(39, 45, 100, 1)), color-stop(90%, rgba(26, 49, 95, 1)), color-stop(100%, rgba(26, 49, 95, 1)))
-//   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1a315f', endColorstr='#1a315f', GradientType=0)
-// }
-
-// .body-wrap
-//   min-height: 700px
-// .body-wrap
-//   position: relative
-//   z-index: 0
-// .body-wrap:before,
-// .body-wrap:after
-//   content: ''
-//   position: absolute
-//   top: 0
-//   left: 0
-//   right: 0
-//   z-index: -1
-//   height: 260px
-//   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(26, 49, 95, 1)), color-stop(100%, rgba(26, 49, 95, 0)))
-//   background: linear-gradient(to bottom, rgba(26, 49, 95, 1) 0%, rgba(26, 49, 95, 0) 100%)
-//   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1a315f', endColorstr='#001a315f', GradientType=0)
-// .body-wrap:after
-//   top: auto
-//   bottom: 0
-//   background: linear-gradient(to bottom, rgba(26, 49, 95, 0) 0%, rgba(26, 49, 95, 1) 100%)
-//   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#001a315f', endColorstr='#1a315f', GradientType=0)
-  
-// nav
-//   margin-top: 60px
-//   box-shadow: 5px 4px 5px #000
-// #idmenu
-//   margin-left: 400px
-//   margin-top: -10px !important
-
-#idmain
-  position:fixed
-  z-index:4
   margin-left: -1px
+  
 
+// sua thanh menu
+.navbar-inverse .navbar-nav 
+  li 
+    a
+      color: #333
+.navbar-inverse
+  background-color:white
+  color:black
+.navbar-inverse 
+    
+    border-color: #FFFFFF
+
+    
+#main-menu
+  
+  border: 1px solid white
+  ul 
+    li 
+      a:hover
+        border-top: 1px solid black
+        color:black
+        background-color : orange
+
+        
+/*.navbar-inverse .navbar-nav
+  .open
+    a
+      color:blue
+      background-color : #93F7F1
+   
+.navbar-inverse .navbar-nav
+    .open
+      a:focus
+        color:blue
+        background-color : #93F7F1
+.navbar-inverse .navbar-nav
+    .open
+      a:hover
+        color:blue
+        background-color : #93F7F1*/
+
+.navbar-inverse .navbar-toggle .icon-bar 
+    background-color: #7D7878
+
+
+  
+.navbar-nav
+  li
+    .dropdown-menu
+      //margin-top :0px
+      margin-left:-10px
+      //background-color:rgba(222, 239, 247, 0.41)
+      color:black
+      //border-top: 1px solid black
+      a 
+        height :45px
+        padding-top:10px
+        margin-top: -5px
+        margin-bottom: -5px
+    
+   
+.navbar-inverse .navbar-nav li a:focus, .navbar-inverse .navbar-nav li a:hover 
+              
+  border-top: 1px solid black
+  color:black
+  background-color : orange
+   
+.menu
+  min-height: 50px
+  float:center
+  width: 100%
+  //margin-top:-5px
+.modal
+  background-color: #B4B2B5
+.modal-backdrop.fade.in
+  z-index: 0
+.header1
+  height : 80px
+  background-color:white
+.home1
+  padding-top: 60px

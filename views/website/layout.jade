@@ -40,25 +40,25 @@ html(ng-controller="BaseCtrl")
     link(href='http://fonts.googleapis.com/css?family=Oswald:400,700', rel='stylesheet', type='text/css')
 
 
+
   body(ng-cloak)
     .container-fluid#main-container 
-      .top(style="width:100%;height:130px;position:fixed;top:0;z-index:3;background-color:#ffffff;")        
+      //.top(style="width:100%;height:160px;position:fixed;top:0;z-index:3;background-color:#ffffff;")  
+      .header1.navbar-fixed-top      
         .row.header
-          .col-lg-4.col-md-4.col-sm-3.col-xs-12
+          .col-lg-4.col-md-4.col-sm-6.col-xs-12
             .logo(style="margin-top :2px;")
-               img.img-rounded.img-responsive(src="/images/logo5.jpg", style="width:400px;height:50px;")
+               img.img-rounded.img-responsive(src="/images/logo2.png", style="width:400px;height:40px;")
          
-          .col-lg-2.col-md-2.col-sm-3.col-xs-12.text-center.col-md-offset-4
-            .login-form(style="margin-top:13px;")
+          .col-lg-offset-4.col-lg-2.col-md-2.col-sm-6.col-xs-6.text-center
+            .login-form(style="margin-top:6px;")
               .row
-
-                .col-lg-3.col-md-3.col-sm-3.col-xs-3
-                  //button.btn.btn-primary(type='submit', href='#nav-collapse3', aria-expanded='false', aria-controls='nav-collapse3') Login
-                  a.btn.btn-default.btn-outline.btn-circle(data-toggle='collapse', href='#nav-collapse3', aria-expanded='false', aria-controls='nav-collapse3') Login
-                  #nav-collapse3.collapse.nav.navbar-nav.nav-collapse
-                    form.navbar-form.navbar-right(role="Login")
-                      .form-group
-                        .modal-dialog(style='width:500px;z-index:1004;margin-left:-500px;')
+                
+                .col-lg-3.col-md-3.col-sm-3.col-xs-3(style="margin-right:10px")
+                  form.navbar-form(role='input')
+                    button.btn.btn-default(type='submit', data-toggle='modal', data-target='#login') Login
+                    #login.modal.fade(role='dialog')
+                      .modal-dialog(style="width:500px;")
                           .modal-content
                             .modal-header
                               h3.text-center Login
@@ -80,10 +80,10 @@ html(ng-controller="BaseCtrl")
                                       input(type='checkbox', value='remember-me')
                                       |  Remember me
                                     button.btn.btn-primary.btn-lg.btn-block(type='submit') Login
-                
-
+                               
                 .col-lg-3.col-md-3.col-sm-3.col-xs-3
-                  button.btn.btn-primary(type='submit', data-toggle='modal', data-target='#register') Register
+                  form.navbar-form(role='input')     
+                    button.btn.btn-primary(type='submit', data-toggle='modal', data-target='#register') Register
               
                   #register.modal.fade(role='dialog')
                     .modal-dialog(style="width:500px;")
@@ -150,7 +150,7 @@ html(ng-controller="BaseCtrl")
                             .modal-footer
                               button.btn.btn-primary.col-md-3.col-md-offset-3(type='submit') Login
                               button.btn.btn-default.col-md-3(type='submit') Cancel
-          .col-lg-2.col-md-2.col-sm-12.col-xs-12.del
+          .col-lg-2.col-md-2.col-sm-6.col-xs-6
             #search
               form.navbar-form(role='search')
                 .input-group
@@ -158,75 +158,101 @@ html(ng-controller="BaseCtrl")
                   .input-group-btn
                     button.btn.btn-default(type='submit')
                       i.glyphicon.glyphicon-search
-         .col-lg-2.col-md-2.col-sm-12.col-xs-12.del   
-        .row
-            .col-lg-12.col-md-12.col-sm-12.col-xs-12
-              .row.menubar
-                .body-wrap
-                  .container
-                    .nav.navbar.navbar-inverse#idmain
-                      .container-fluid
-                        // Brand and toggle get grouped for better mobile display
-                        .navbar-header
-                          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-                            span.sr-only Toggle navigation
-                            span.icon-bar
-                            span.icon-bar
-                            span.icon-bar
-                        // Collect the nav links, forms, and other content for toggling
-                        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-                          ul.nav.navbar-nav
-                            li.active(style="width:150px; text-align:center;")
-                              a(href='#') Home
-                            li.dropdown(style="width:150px; text-align:center;")
-                              a.dropdown-toggle(href='#', data-toggle='dropdown')
-                                | ETCF
-                                b.caret
-                              ul.dropdown-menu(style="margin-left:100px;margin-top:-10px;")
-                                li
-                                  a(href='#') Assessment tools
-                                li
-                                  a(href='#') Background and Overview
-                                li
-                                  a(href='#') Complete versions
-                                li
-                                  a(href='#') Domain 1 - Language
-                                li
-                                  a(href='#') Domain 2 - Teaching
-                                li
-                                  a(href='#') Domain 3 - Learners
-                                li
-                                  a(href='#') Domain 4 - Attitudes and Values
-                                li
-                                  a(href='#') Domain 5 - Learning from Practice
-                                li
-                                  a(href='#') For Trainers - How to use ETCF
-                                li
-                                  a(href='#')   ETCF Presentation 
-                            li.dropdown(style="width:150px; text-align:center;")
-                              a.dropdown-toggle(href='#', data-toggle='dropdown')
-                                |  Gallery
-                                b.caret
-                              ul.dropdown-menu(style="margin-left:100px;margin-top:-10px;")
-                                li
-                                  a(href='#') Da Nang RFLC
-                                li
-                                  a(href='#') Ha Noi Pedagogical University 2
-                            li.active(style="width:300px; text-align:center;")
-                              a(href='#') Symposium Presentations
-                            li.dropdown(style="width:170px; text-align:center;")
-                              a.dropdown-toggle(href='#', data-toggle='dropdown')
-                                |  Video Materials
-                                b.caret
-                              ul.dropdown-menu(style="margin-left:100px;margin-top:-10px;")
-                                li
-                                  a(href='#') Articles with videos
-                                li
-                                  a(href='#') Shaping the way we teach English
-                            li.active(style="width:150px; text-align:center;")
-                              a(href='#') News
-                                
-
+         //.col-lg-2.col-md-2.col-sm-0.col-xs-0
+        .row.menu
+        
+        
+          nav.navbar.navbar-inverse
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#main-menu')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            //.navbar-header.col-md-offset-2
+              a.navbar-brand(href='') example.com
+            .col-md-offset-3#main-menu.navbar-collapse.collapse
+              ul.nav.navbar-nav
+                li
+                  a(href='')
+                    b
+                      | Home
+                li.dropdown
+                  a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                    b
+                      | ETCF 
+                    span.caret
+                  ul.dropdown-menu
+                    li
+                      a(href='#') Assessment tools
+                    li
+                      a(href='#') Background and Overview
+                    li
+                      a(href='#') Complete version
+                    //li.divider(role='separator')
+                    li
+                      a(href='#') Domain 1-Language
+                    li
+                      a(href='#') Domain 2-Teaching
+                    li
+                      a(href='#') Domain 3-Learners
+                    li
+                      a(href='#') Domain 4-Attitudes and Values
+                    li
+                      a(href='#') Domain 5-Learning form Practice
+                    //li.divider(role='separator')
+                    li
+                      a(href='#') For Trainers-How to use ETCF
+                    li
+                      a(href='#') ETCF presentations
+                //- li.dropdown
+                //-   a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                //-     b USER
+                //-     span.caret
+                //-   ul.dropdown-menu
+                //-     li
+                //-       a(href='#') Edit Profile
+                //-     li.divider(role='separator')
+                //-     li
+                //-       a(href='#') Password reset
+                //-     li.divider(role='separator')
+                //-     li
+                //-       a(href='#') Login
+                //-     li.divider(role='separator')
+                //-     li
+                //-       a(href='#') Register
+                li.dropdown
+                  a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                    b
+                      | Gallery
+                    span.caret
+                  ul.dropdown-menu
+                    li
+                      a(href='#') Da Nang RFLC
+                    //li.divider(role='separator')
+                    li
+                      a(href='#') Ha Noi Pedagogical University 2
+                li(style="min-width :200px;")
+                  a(href="")
+                    b
+                      | Symposium Presentations
+                
+                    
+                li.dropdown
+                  a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                    b
+                      | Video Materials
+                    span.caret
+                  ul.dropdown-menu
+                    li
+                      a(href='#') Articles with video
+                    //li.divider(role='separator')
+                    li
+                      a(href='#') Shaping the way we teach English
+                li
+                  a(href='#') 
+                    b
+                      | News
+    .home1
       block content
 
     script(src="/libs/requirejs/require.js", data-main="/javascripts/website/main.js")
@@ -277,16 +303,17 @@ script.
 
 
   });
-script.
-  $(document).ready(function(){
-    $('ul.nav li.dropdown').hover(function() {
-      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-    }, function() {
-      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-      });
-  });
 
 script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
-script(src='js/bootstrap.min.js')  
-//aaaaa
-////ddfdf
+script(src='js/bootstrap.min.js')
+//aagsdhdghsgd
+  
+script.
+  $(function(){
+    $('.dropdown').hover(function() {
+        $(this).addClass('open');
+    },
+    function() {
+        $(this).removeClass('open');
+    });
+  });
