@@ -396,3 +396,7 @@ hr {
 .title {
   margin-right: -5px;
 }
+#idmain {
+  position: fixed;
+  z-index: 4;
+}

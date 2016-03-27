@@ -52,30 +52,33 @@ html(ng-controller="BaseCtrl")
             .login-form(style="margin-top:13px;")
               .row
                 .col-lg-3.col-md-3.col-sm-3.col-xs-3
-                  button.btn.btn-default(type='submit', data-toggle='modal', data-target='#login',style="margin-left:-10px;") Login
-                  #login.modal.fade(role='dialog')
-                    .modal-dialog(style="width:500px;")
-                        .modal-content
-                          .modal-header
-                            h3.text-center Login
-                          .modal-body
-                            .row
-                              form.login-form(action='index.html')
-                                .login-wrap
-                                  p.login-img
-                                    i.icon_lock_alt
-                                  .input-group
-                                    span.input-group-addon
-                                      i.icon_profile
-                                    input.form-control(type='text', placeholder='Username', autofocus='')
-                                  .input-group
-                                    span.input-group-addon
-                                      i.icon_key_alt
-                                    input.form-control(type='password', placeholder='Password')
-                                  label.checkbox
-                                    input(type='checkbox', value='remember-me')
-                                    |  Remember me
-                                  button.btn.btn-primary.btn-lg.btn-block(type='submit') Login
+                  //button.btn.btn-primary(type='submit', href='#nav-collapse3', aria-expanded='false', aria-controls='nav-collapse3') Login
+                  a.btn.btn-default.btn-outline.btn-circle(data-toggle='collapse', href='#nav-collapse3', aria-expanded='false', aria-controls='nav-collapse3') Login
+                  #nav-collapse3.collapse.nav.navbar-nav.nav-collapse
+                    form.navbar-form.navbar-right(role="Login")
+                      .form-group
+                        .modal-dialog(style='width:500px;z-index:1004;margin-left:-500px;')
+                          .modal-content
+                            .modal-header
+                              h3.text-center Login
+                            .modal-body
+                              .row
+                                form.login-form(action='index.html')
+                                  .login-wrap
+                                    p.login-img
+                                      i.icon_lock_alt
+                                    .input-group
+                                      span.input-group-addon
+                                        i.icon_profile
+                                      input.form-control(type='text', placeholder='Username', autofocus='')
+                                    .input-group
+                                      span.input-group-addon
+                                        i.icon_key_alt
+                                      input.form-control(type='password', placeholder='Password')
+                                    label.checkbox
+                                      input(type='checkbox', value='remember-me')
+                                      |  Remember me
+                                    button.btn.btn-primary.btn-lg.btn-block(type='submit') Login
                 .col-lg-3.col-md-3.col-sm-3.col-xs-3
                   button.btn.btn-primary(type='submit', data-toggle='modal', data-target='#register') Register
               
@@ -158,7 +161,7 @@ html(ng-controller="BaseCtrl")
               .row.menubar
                 .body-wrap
                   .container
-                    .nav.navbar.navbar-inverse(role='navigation')
+                    .nav.navbar.navbar-inverse#idmain
                       .container-fluid
                         // Brand and toggle get grouped for better mobile display
                         .navbar-header
