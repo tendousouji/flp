@@ -1,14 +1,11 @@
 .header {
-  min-height: 40px;
+  float: center;
+  min-height: 30px;
   width: 100%;
 }
 #search {
   position: absolute;
   margin-top: 5px;
-}
-.menubar {
-  min-height: 50px;
-  margin-top: 40px;
 }
 .menubar-item {
   z-index: 2;
@@ -74,11 +71,10 @@
   color: #fff;
 }
 .slider {
-  min-height: 300px;
-  z-index: 1;
+  margin-top: 50px;
+  border-top: 2px solid #00a2d7;
   width: 100%;
   background-color: #000;
-  margin-bottom: 20px;
 }
 .col-centerd {
   float: none;
@@ -116,6 +112,9 @@ p {
 .first-post-content {
   font-size: 16px;
 }
+.first-post-title h4 {
+  margin-left: 10px;
+}
 .next-post-thumbnail {
   width: 70px;
   height: 70px;
@@ -132,7 +131,7 @@ p {
   padding: 0;
   height: 50px;
   padding-left: 10px;
-  line-height: 50px;
+  line-height: 30px;
 }
 .categories-content {
   margin-top: 5px;
@@ -215,7 +214,7 @@ hr {
   height: 200px;
 }
 .post {
-  margin-top: 20px;
+  margin-top: 180px;
   min-height: 800px;
 }
 .post-thumnail {
@@ -311,8 +310,8 @@ hr {
 .leavecomment h2 {
   margin-left: 20px;
 }
-.post-content h4 {
-  color: #00f;
+.login-form {
+  z-index: 100;
 }
 .content-box {
   border: 2px solid #ebefef;
