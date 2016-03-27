@@ -44,13 +44,14 @@ html(ng-controller="BaseCtrl")
     .container-fluid#main-container 
       .top(style="width:100%;height:130px;position:fixed;top:0;z-index:3;background-color:#ffffff;")        
         .row.header
-          .col-lg-4.col-md-4.col-sm-12.col-xs-12
+          .col-lg-4.col-md-4.col-sm-3.col-xs-12
             .logo(style="margin-top :2px;")
-              img.img-rounded.img-responsive(src="/images/logo 4.jpg", style="width:400px;height:90px;magin-left:10px;")
+               img.img-rounded.img-responsive(src="/images/logo5.jpg", style="width:400px;height:50px;")
          
-          .col-lg-2.col-md-2.col-sm-12.col-xs-12.text-center.col-md-offset-4
+          .col-lg-2.col-md-2.col-sm-3.col-xs-12.text-center.col-md-offset-4
             .login-form(style="margin-top:13px;")
               .row
+
                 .col-lg-3.col-md-3.col-sm-3.col-xs-3
                   //button.btn.btn-primary(type='submit', href='#nav-collapse3', aria-expanded='false', aria-controls='nav-collapse3') Login
                   a.btn.btn-default.btn-outline.btn-circle(data-toggle='collapse', href='#nav-collapse3', aria-expanded='false', aria-controls='nav-collapse3') Login
@@ -79,6 +80,8 @@ html(ng-controller="BaseCtrl")
                                       input(type='checkbox', value='remember-me')
                                       |  Remember me
                                     button.btn.btn-primary.btn-lg.btn-block(type='submit') Login
+                
+
                 .col-lg-3.col-md-3.col-sm-3.col-xs-3
                   button.btn.btn-primary(type='submit', data-toggle='modal', data-target='#register') Register
               
