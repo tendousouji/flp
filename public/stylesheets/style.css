@@ -1,6 +1,6 @@
 .header {
   float: center;
-  min-height: 40px;
+  min-height: 30px;
   width: 100%;
 }
 #search {
@@ -71,7 +71,7 @@
   color: #fff;
 }
 .slider {
-  margin-top: -2px;
+  margin-top: 50px;
   border-top: 2px solid #00a2d7;
   width: 100%;
   background-color: #000;
@@ -392,6 +392,9 @@ hr {
 .title {
   margin-left: -1px;
 }
+.navbar-inverse .navbar-nav {
+  margin-right: 70px;
+}
 .navbar-inverse .navbar-nav li a {
   color: #333;
 }
@@ -446,8 +449,18 @@ hr {
   background-color: #ffa500;
 }
 .menu {
-  min-height: 50px;
+  min-height: 30px;
   float: center;
   width: 100%;
-  margin-top: 0px;
+  margin-bottom: -5px;
+}
+.modal {
+  background-color: #b4b2b5;
+}
+.modal-backdrop.fade.in {
+  z-index: 0;
+}
+.header1 {
+  min-height: 80px;
+  background-color: #fff;
 }
