@@ -18,6 +18,16 @@
       
       CataloryService.find({}, { catalory: { slug: $routeParams.catalory_slug } }, {}).then(function (catalories) {
         $scope.catalory = catalories[0] || {};
+        for (var i = catalories.length - 1; i >= 0; i--) {
+          if ($routeParams.catalory_slug == catalories[i].slug) {
+            $scope.catalory = catalories[i] || {};
+          }
+        }
       });
+
+      $scope.group = {};
+      $scope.group.slug = $routeParams.group_slug;
+      console.log("scope_group: ", $scope.group.slug);
+
     }]);
 });
