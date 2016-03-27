@@ -2,7 +2,7 @@
 .container-fluid
   
   .row
-    .listpost(style="margin-top:170px;")
+    .listpost(style="margin-top:50px;")
       .row
         .col-lg-12.col-md-12.col-sm-12.col-xs-12
           .span12(style="margin-left:22px;")
@@ -35,14 +35,16 @@
                   .col-lg-12.col-md-12.col-sm-12.col-xs-12
                     .image-post-inlist-area
                       .post-inlist-content
-                        .w3-container.w3-blue(style='width:119%;margin-left:-26px;margin-top:-26px;')
-                          h4
-                            a(ng-if="post.title.length >= 25" ng-bind="post.title.substring(0,23) + '...'" ng-href="{{group.slug+'/'+catalory.slug+'/'+post.slug}}", ng-click="scrollTop()")
-                          h4
-                            a(ng-if="post.title.length < 25" ng-bind="post.title" ng-href="{{group.slug+'/'+catalory.slug+'/'+post.slug}}", ng-click="scrollTop()")
-                        img.img-responsive.img-rounded(src="",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;" ng-bind="post.img_url")
-                        p(style="font-size:15px;")(ng-if="post.content.length >= 100" ng-bind-html="post.content.substring(0,90) + '...' | unsafe")
-                        p(style="font-size:15px;")(ng-if="post.content.length <  100" ng-bind-html="post.content | unsafe")
+                        .row
+                          //.w3-container.w3-blue(style='width:119%;margin-left:-26px;margin-top:-26px;')
+                          .col-lg-12.col-md-12.col-sm-12.col-xs-12.header-1
+                            h4
+                              a(ng-if="post.title.length >= 25" ng-bind="post.title.substring(0,23) + '...'" ng-href="{{group.slug+'/'+catalory.slug+'/'+post.slug}}", ng-click="scrollTop()")
+                            h4
+                              a(ng-if="post.title.length < 25" ng-bind="post.title" ng-href="{{group.slug+'/'+catalory.slug+'/'+post.slug}}", ng-click="scrollTop()")
+                          img.img-responsive.img-rounded(src="",style="width:100px;height:100px;float:left;margin-top:2px;padding: 10px;margin-left:-20px;" ng-bind="post.img_url")
+                          p(style="font-size:15px;")(ng-if="post.content.length >= 100" ng-bind-html="post.content.substring(0,90) + '...' | unsafe")
+                          p(style="font-size:15px;")(ng-if="post.content.length <  100" ng-bind-html="post.content | unsafe")
 
         // top-catagory, .....
         .col-lg-3.col-md-3.col-sm-12.col-xs-12

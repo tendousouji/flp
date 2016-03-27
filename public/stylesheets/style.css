@@ -71,7 +71,8 @@
   color: #fff;
 }
 .slider {
-  margin-top: 50px;
+  min-height: 100px;
+  margin-top: -2px;
   border-top: 2px solid #00a2d7;
   width: 100%;
   background-color: #000;
@@ -379,11 +380,10 @@ hr {
 .del {
   height: 20px;
 }
-.top {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 1002;
+.header-1 {
+  border: 2px solid #ffc0cb;
+  height: 50px;
+  background-color: #00f;
 }
 .dark-bg {
   background: #36424a;
@@ -391,9 +391,6 @@ hr {
 }
 .title {
   margin-left: -1px;
-}
-.navbar-inverse .navbar-nav {
-  margin-right: 70px;
 }
 .navbar-inverse .navbar-nav li a {
   color: #333;
@@ -449,10 +446,9 @@ hr {
   background-color: #ffa500;
 }
 .menu {
-  min-height: 30px;
+  min-height: 50px;
   float: center;
   width: 100%;
-  margin-bottom: -5px;
 }
 .modal {
   background-color: #b4b2b5;
@@ -461,6 +457,9 @@ hr {
   z-index: 0;
 }
 .header1 {
-  min-height: 80px;
+  height: 80px;
   background-color: #fff;
+}
+.home1 {
+  padding-top: 60px;
 }
