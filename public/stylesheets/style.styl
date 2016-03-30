@@ -217,34 +217,42 @@ hr
 .footer-list-post
   border: 2px solid pink
   height: 200px
+
+  
 .post
-  //margin-top:120px
-  min-height :800px
+  
+  margin-top:68px
+  height :800px
   //background-color : gray
   @media (min-width: 320px)
-    margin-top:190px
+    margin-top:61px
+  
+  @media (min-width: 768px)
+    margin-top:161px
   @media (min-width: 1024px)
-    margin-top:120px
+    margin-top:106px
+  @media (min-width: 1366px)
+    margin-top:68px
 .post-thumnail
-  margin-top:10px
-  min-height:600px
-  //background-color: #f2f2a2
+  margin-top:1px
+  max-height:600px
+  background-color: white
 .post-content-title
   min-height : 70px
   //background-color :#93d6d3
 .post-content 
   
   min-height:180px
-  //background-color: #e9fcd6
+  background-color: white
   p
     color :30px
     margin-left :50px
-.post-index
+/*.post-index
   
   min-height :30px
-  //background-color:#3fba76
+  background-color:white
   span
-    margin-left 50px
+    margin-left 50px*/
 .post-comment
   ul 
     .media
@@ -275,7 +283,7 @@ hr
   //margin-top:20px
   margin-top :20px
   min-height :600px
-  background-color:#edede6
+  background-color:white
 .title-bar 
     background: #FF7200
     height: 55px
@@ -283,16 +291,25 @@ hr
     overflow: hidden
     margin-bottom: 15px
 
-.post-title 
-  min-height:60px
+.post-title
   
+  height:60px
+  width:100%
 .post-title-main
-  background-color: black
-  min-height:60px
+  h4 
+    //margin-top:-2px
+    line-height:16px
+  h5
+    //margin-top:-2px
+    line-height:16px
+  text-align:left
+  background-color:black
+  height:60px
+  
   color :white
   //font-size :30px
 .post-title-child
-  min-height:60px
+  height:60px
   font-size:25px
   color:white
   background-color: orange
@@ -303,6 +320,7 @@ hr
   border-bottom:2px solid #b9bfbc
   //font-size:25px
   padding: 10px 0 0 20px
+  background-color:white
 .leavecomment
   h2
     margin-top:15px
@@ -316,7 +334,7 @@ hr
       
   h2
     margin-left : 20px
-  margin-bottom :-20px  
+  margin-bottom :10px  
 .login-form
   z-index:100
 .content-box
@@ -487,15 +505,24 @@ hr
   height:50px
   float:center
   width: 100%
-  margin-bottom:-5px
+  //margin-bottom:-5px
 .modal
   background-color: white
 .modal-backdrop.fade.in
   z-index: 0
 .header1
+  background-color:black
+  max-height:160px
   //border-bottom: 2px solid #00A2D7
-  height : 1px
-  background-color:white
+  @media (min-width: 320px)
+    height : 67px
+  
+  @media (min-width: 768px)
+    height:160px
+  @media (min-width: 1024px)
+    height:111px
+  @media (min-width: 1366px)
+    height:67px
 #btnLogin #btnRegister
   @media (max-width: 480px)
     width:5px
@@ -508,3 +535,14 @@ hr
     text-indent: -999999px
    
     background-size: 110px auto
+.listpost 
+  
+  @media (min-width: 320px)
+    margin-top : 62px
+  
+  @media (min-width: 768px)
+    margin-top : 155px
+  @media (min-width: 1024px)
+    margin-top : 106px
+  @media (min-width: 1366px)
+    margin-top : 62px

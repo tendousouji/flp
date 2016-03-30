@@ -214,43 +214,56 @@ hr {
   height: 200px;
 }
 .post {
-  min-height: 800px;
+  margin-top: 68px;
+  height: 800px;
 }
 @media (min-width: 320px) {
   .post {
-    margin-top: 190px;
+    margin-top: 61px;
+  }
+}
+@media (min-width: 768px) {
+  .post {
+    margin-top: 161px;
   }
 }
 @media (min-width: 1024px) {
   .post {
-    margin-top: 120px;
+    margin-top: 106px;
+  }
+}
+@media (min-width: 1366px) {
+  .post {
+    margin-top: 68px;
   }
 }
 .post-thumnail {
-  margin-top: 10px;
-  min-height: 600px;
+  margin-top: 1px;
+  max-height: 600px;
+  background-color: #fff;
 }
 .post-content-title {
   min-height: 70px;
 }
 .post-content {
   min-height: 180px;
+  background-color: #fff;
 }
 .post-content p {
   color: 30px;
   margin-left: 50px;
 }
-.post-index {
-  min-height: 30px;
-}
-.post-index span {
-  margin-left: 50px;
-}
+/*.post-index
+  
+  min-height :30px
+  background-color:white
+  span
+    margin-left 50px*/
 .post-comment {
   border-top: 2px solid #efefe1;
   margin-top: 20px;
   min-height: 600px;
-  background-color: #edede6;
+  background-color: #fff;
 }
 .post-comment ul .media .media-body span {
   margin-left: 15px;
@@ -284,15 +297,23 @@ hr {
   margin-bottom: 15px;
 }
 .post-title {
-  min-height: 60px;
+  height: 60px;
+  width: 100%;
 }
 .post-title-main {
+  text-align: left;
   background-color: #000;
-  min-height: 60px;
+  height: 60px;
   color: #fff;
 }
+.post-title-main h4 {
+  line-height: 16px;
+}
+.post-title-main h5 {
+  line-height: 16px;
+}
 .post-title-child {
-  min-height: 60px;
+  height: 60px;
   font-size: 25px;
   color: #fff;
   background-color: #ffa500;
@@ -300,6 +321,7 @@ hr {
 .post-content-title {
   border-bottom: 2px solid #b9bfbc;
   padding: 10px 0 0 20px;
+  background-color: #fff;
 }
 .post-content-title h3 {
   margin-left: 10px;
@@ -309,7 +331,7 @@ hr {
   min-height: 250px;
   background-color: #fcfced;
   border-top: 1px solid #d9dbda;
-  margin-bottom: -20px;
+  margin-bottom: 10px;
 }
 .leavecomment h2 {
   margin-top: 15px;
@@ -472,7 +494,6 @@ hr {
   height: 50px;
   float: center;
   width: 100%;
-  margin-bottom: -5px;
 }
 .modal {
   background-color: #fff;
@@ -481,8 +502,28 @@ hr {
   z-index: 0;
 }
 .header1 {
-  height: 1px;
-  background-color: #fff;
+  background-color: #000;
+  max-height: 160px;
+}
+@media (min-width: 320px) {
+  .header1 {
+    height: 67px;
+  }
+}
+@media (min-width: 768px) {
+  .header1 {
+    height: 160px;
+  }
+}
+@media (min-width: 1024px) {
+  .header1 {
+    height: 111px;
+  }
+}
+@media (min-width: 1366px) {
+  .header1 {
+    height: 67px;
+  }
 }
 @media (max-width: 480px) {
   #btnLogin #btnRegister {
@@ -496,4 +537,24 @@ hr {
   height: 100%;
   text-indent: -999999px;
   background-size: 110px auto;
+}
+@media (min-width: 320px) {
+  .listpost {
+    margin-top: 62px;
+  }
+}
+@media (min-width: 768px) {
+  .listpost {
+    margin-top: 155px;
+  }
+}
+@media (min-width: 1024px) {
+  .listpost {
+    margin-top: 106px;
+  }
+}
+@media (min-width: 1366px) {
+  .listpost {
+    margin-top: 62px;
+  }
 }
