@@ -1,12 +1,14 @@
 .post
   .row
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-title
-      
-      .col-lg-3.col-md-3.col-sm-5.col-xs-6.post-title-main
-        h2.lead(ng-bind="post.catalory.name")
+    .post-title
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12
+        
+        .col-lg-3.col-md-3.col-sm-5.col-xs-6.post-title-main
+          b
+            h4.lead(ng-bind="post.catalory.name")
 
-      .col-lg-9.col-md-9.col-sm-7.col-xs-6.post-title-child
-        h2.lead(ng-bind="post.title")
+        .col-lg-9.col-md-9.col-sm-7.col-xs-6.post-title-child
+          h5.lead(ng-bind="post.title")
   .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-thumnail
       img(src='./images/post.jpg' style="width:inherit")
@@ -14,26 +16,26 @@
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-content-title
       h3(ng-bind="post.title")
   .row
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-content
-      //p(ng-bind-html="post.content | unsafe")
-      ul.media-list(style="margin-left:20px; margin-top:15px;")
-        li.media
-          a.pull-left(href='#')
-            img.media-object( alt='64x64', src='./images/contentuser.jpg', style='width: 150px; height: 150px;')
-          .media-body
-            h4.media-heading(style="margin-left:20px;")  Nguyen Thao
-            span(style="margin-left:20px;")  22/7/2016
+    .post-content
+      .row
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+          //p(ng-bind-html="post.content | unsafe")
+          ul.media-list(style="margin-left:20px; margin-top:15px;")
+            li.media
+              a.pull-left(href='#')
+                img.media-object( alt='64x64', src='./images/contentuser.jpg', style='width:inherit;')
+              .media-body
+                h4.media-heading(style="margin-left:20px;")  Nguyen Thao
+                span(style="margin-left:20px;")  22/7/2016
             p(style="margin-left:20px;") 
-              | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-
-  .row
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-index
-      span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
-        a(href="#")(style="margin-left:10px;") 4504
-      span.glyphicon.glyphicon-time(style="margin-right:20px;")
-        a(href="#")(style="margin-left:10px;")(ng-bind="post.date_create | date:'longDate'")
-      span.glyphicon.glyphicon-comment(style="margin-right:20px;")
-        a(href="#")(style="margin-left:10px;") 5
+                | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="margin-left:25px;")
+          span.glyphicon.glyphicon-eye-open(style="margin-left:-5px;")
+            a(href="#")(style="margin-left:2px;") 4504
+          span.glyphicon.glyphicon-time(style="margin-left:7px;")
+            a(href="#")(style="margin-left:2px;")(ng-bind="post.date_create | date:'longDate'")
+          span.glyphicon.glyphicon-comment(style="margin-left:7px;")
+            a(href="#")(style="margin-left:2px;") 5
   .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-comment
       
@@ -43,7 +45,7 @@
       ul.media-list(style="margin-left:20px;")
         li.media
           a.pull-left(href='#')
-            img.media-object( alt='64x64', src='./images/user1.png', style='width: 110px; height: 110px;')
+            img.media-object( alt='64x64', src='./images/user1.png', style='width:inherit;')
           .media-body
             h4.media-heading Media heading
             span 47 minutes ago
@@ -55,7 +57,7 @@
             // Nested media object
             .media
               a.pull-left(href='#')
-                img.media-object(alt='64x64', src='./images/user1.png', style='width: 110px; height: 110px;')
+                img.media-object(alt='64x64', src='./images/user1.png', style='width:inherit;')
               .media-body
                 h4.media-heading Nested media heading
                 span 47 minutes ago
@@ -75,7 +77,7 @@
             // Nested media object
             .media
               a.pull-left(href='#')
-                img.media-object( alt='64x64', src='./images/user1.png', style='width: 110px; height: 110px;')
+                img.media-object( alt='64x64', src='./images/user1.png', style='width:inherit;')
               .media-body
                 h4.media-heading Nested media heading
                 span 47 minutes ago
@@ -84,7 +86,7 @@
                 a(href='#').btn.btn-default(role="button") Reply
           .media
             a.pull-left(href='#')
-                img.media-object( alt='64x64', src='./images/user3.png', style='width: 110px; height: 110px;')
+                img.media-object( alt='64x64', src='./images/user3.png', style='width:inherit;')
               .media-body
                 h4.media-heading Media heading
                 span 47 minutes ago
@@ -124,54 +126,54 @@
           .col-lg-offset-7.col-md-offset-7.col-sm-offset-4.col-xs-offset-4.col-lg-3.col-md-4-col-sm-3.col-xs-3
             .form-group
               button.btn.btn-primary(type='submit' style="margin-top:10px;") Send
-.row
-  .col-lg-12.col-md-12.col-sm-12.col-xs-12.footer
-    
-    .col-lg-4.col-md-4-col-sm-12.col-xs-12
-    
-     
-      h2 Responsive
-      p 
-      |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      |  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      | proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-    .col-lg-4.col-md-4-col-sm-12.col-xs-12
+  .row.footer
+    .col-lg-12.col-md-12.col-sm-12.col-xs-12
       
-      h2 Recent Posts
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-      hr
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-      hr
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-    .col-lg-4.col-md-4-col-sm-12.col-xs-12
+      .col-lg-4.col-md-4-col-sm-12.col-xs-12
+      
+       
+        h2 Responsive
+        p 
+        |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        |  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        | proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      .col-lg-4.col-md-4-col-sm-12.col-xs-12
+        
+        h2 Recent Posts
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+        hr
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+        hr
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+      .col-lg-4.col-md-4-col-sm-12.col-xs-12
 
-      h2 Latest Tweets
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-      hr
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-      hr
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-    //- .col-lg-3.col-md-3-col-sm-12.col-xs-12
-    //-   h3 Contact Us
-    //-   .row
-    //-     form.form-inline(role='form')
-    //-     .form-group.col-lg-12.col-md-12-col-sm-12.col-xs-12
-    //-       label.sr-only.control-label
-    //-         | Name
-    //-         span.text-danger *
-         
-    //-       input.form-control(type='text' placeholder='Name*' style="width:300px")
-    //-     .form-group.col-lg-12.col-md-12-col-sm-12.col-xs-12
-          
-    //-       label.sr-only.control-label
-    //-         | Email
-    //-         span.text-danger *
-    //-       input.form-control(type='text' placeholder='Email*' style="width:300px")  
-    //-     textarea.form-control(rows='3' type='text' placeholder='Message' ).col-lg-12.col-md-12-col-sm-12.col-xs-12.text-center(style="width:300px; margin-left : 15px;")
-    //-     .form-group
-    //-       button.btn.btn-primary.col-lg-offset-4.col-md-offset-4.col-sm-offset-4.col-xs-offset-4.col-lg-3.col-md-3-col-sm-3.col-xs-3(type='submit' style="margin-top:10px;") Send
-.row
-  .col-lg-12.col-md-12.col-sm-12.col-xs-12.endfooter
+        h2 Latest Tweets
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+        hr
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+        hr
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+      //- .col-lg-3.col-md-3-col-sm-12.col-xs-12
+      //-   h3 Contact Us
+      //-   .row
+      //-     form.form-inline(role='form')
+      //-     .form-group.col-lg-12.col-md-12-col-sm-12.col-xs-12
+      //-       label.sr-only.control-label
+      //-         | Name
+      //-         span.text-danger *
+           
+      //-       input.form-control(type='text' placeholder='Name*' style="width:300px")
+      //-     .form-group.col-lg-12.col-md-12-col-sm-12.col-xs-12
+            
+      //-       label.sr-only.control-label
+      //-         | Email
+      //-         span.text-danger *
+      //-       input.form-control(type='text' placeholder='Email*' style="width:300px")  
+      //-     textarea.form-control(rows='3' type='text' placeholder='Message' ).col-lg-12.col-md-12-col-sm-12.col-xs-12.text-center(style="width:300px; margin-left : 15px;")
+      //-     .form-group
+      //-       button.btn.btn-primary.col-lg-offset-4.col-md-offset-4.col-sm-offset-4.col-xs-offset-4.col-lg-3.col-md-3-col-sm-3.col-xs-3(type='submit' style="margin-top:10px;") Send
+  .row
+    .col-lg-12.col-md-12.col-sm-12.col-xs-12.endfooter
