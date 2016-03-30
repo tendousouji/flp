@@ -475,7 +475,7 @@ hr {
   margin-bottom: -5px;
 }
 .modal {
-  background-color: #b4b2b5;
+  background-color: #fff;
 }
 .modal-backdrop.fade.in {
   z-index: 0;
