@@ -21,8 +21,8 @@
           a.pull-left(href='#')
             img.media-object( alt='64x64', src='./images/contentuser.jpg', style='width: 150px; height: 150px;')
           .media-body
-            h4.media-heading(style="margin-left:20px;")  Nguyen Thao
-            span(style="margin-left:20px;")  22/7/2016
+            h4.media-heading(style="margin-left:20px;" ng-bind="post.author.full_name")
+            span(style="margin-left:20px;" ng-bind="post.date_create | date:'dd/MM/yyyy'")
             p(style="margin-left:20px;" ng-bind-html="post.content | unsafe")
 
   .row
