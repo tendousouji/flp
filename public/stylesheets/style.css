@@ -71,10 +71,10 @@
   color: #fff;
 }
 .slider {
-  margin-top: 50px;
-  border-top: 2px solid #00a2d7;
+  margin-top: -27px;
+  border-bottom: 2px solid #00a2d7;
+  background-color: #808080;
   width: 100%;
-  background-color: #000;
 }
 .col-centerd {
   float: none;
@@ -214,8 +214,17 @@ hr {
   height: 200px;
 }
 .post {
-  margin-top: 180px;
   min-height: 800px;
+}
+@media (min-width: 320px) {
+  .post {
+    margin-top: 190px;
+  }
+}
+@media (min-width: 1024px) {
+  .post {
+    margin-top: 120px;
+  }
 }
 .post-thumnail {
   margin-top: 10px;
@@ -392,26 +401,35 @@ hr {
 .title {
   margin-left: -1px;
 }
-.navbar-inverse .navbar-nav {
-  margin-right: 70px;
-}
-.navbar-inverse .navbar-nav li a {
-  color: #333;
-}
-.navbar-inverse {
-  background-color: #fff;
-  color: #000;
-}
-.navbar-inverse {
-  border-color: #fff;
-}
+/*.navbar-inverse .navbar-nav
+  margin-right: 70px
+  li 
+    a
+      color: #333
+.navbar-inverse
+  background-color:white
+  color:black
+.navbar-inverse 
+    
+    border-color: #FFFFFF*/
 #main-menu {
-  border: 1px solid #fff;
+  border: 1px solid #000;
 }
 #main-menu ul li a:hover {
-  border-top: 1px solid #000;
+  color: #1ba2dc;
+}
+#main-menu ul #login_h a:hover {
+  color: #1ba2dc;
+}
+#main-menu ul #register_h a:hover {
+  color: #1ba2dc;
+}
+#main-menu ul #search_h a:hover {
+  color: #fff;
+}
+#main-menu .dropdown-menu li a:hover {
   color: #000;
-  background-color: #ffa500;
+  background-color: #1ba2dc;
 }
 /*.navbar-inverse .navbar-nav
   .open
@@ -429,11 +447,14 @@ hr {
       a:hover
         color:blue
         background-color : #93F7F1*/
-.navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #7d7878;
+/*.navbar-inverse .navbar-toggle .icon-bar 
+    background-color: #7D7878
+    mar*/
+.navbar-collapse {
+  padding-right: 15px;
+  padding-left: 20px;
 }
 .navbar-nav li .dropdown-menu {
-  margin-left: -10px;
   color: #000;
 }
 .navbar-nav li .dropdown-menu a {
@@ -442,25 +463,37 @@ hr {
   margin-top: -5px;
   margin-bottom: -5px;
 }
-.navbar-inverse .navbar-nav li a:focus,
-.navbar-inverse .navbar-nav li a:hover {
-  border-top: 1px solid #000;
-  color: #000;
-  background-color: #ffa500;
-}
+/*.navbar-inverse .navbar-nav li a:focus, .navbar-inverse .navbar-nav li a:hover 
+              
+  border-top: 1px solid black
+  color:black
+  background-color : orange*/
 .menu {
-  min-height: 30px;
+  height: 50px;
   float: center;
   width: 100%;
   margin-bottom: -5px;
 }
 .modal {
-  background-color: #b4b2b5;
+  background-color: #fff;
 }
 .modal-backdrop.fade.in {
   z-index: 0;
 }
 .header1 {
-  min-height: 80px;
+  height: 1px;
   background-color: #fff;
+}
+@media (max-width: 480px) {
+  #btnLogin #btnRegister {
+    width: 5px;
+    font-size: 5px;
+  }
+}
+.logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -999999px;
+  background-size: 110px auto;
 }
