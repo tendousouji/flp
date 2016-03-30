@@ -232,31 +232,37 @@ html(ng-controller="BaseCtrl")
                         | News
                 ul.nav.navbar-nav.navbar-right
                   li
-                    form.navbar-form(role='input')
-                      button.btn.btn-default(type='submit',style="margin-right:-20px;", data-toggle='modal', data-target='#login') Login
+                    //- a(href="")
+                    button.btn.btn-default(type='submit', data-toggle='modal',style="margin-right:-13px;margin-top:8px;" data-target='#login') Login
                     #login.modal.fade(role='dialog')
-                        .modal-dialog(style="width:500px;")
-                            .modal-content
-                              .modal-header
-                                h3.text-center Login
-                              .modal-body
-                                .row
-                                  form.login-form(action='index.html')
-                                    .login-wrap
-                                      p.login-img
-                                        i.icon_lock_alt
-                                      .input-group
-                                        span.input-group-addon
-                                          i.icon_profile
-                                        input.form-control(type='text', placeholder='Username', autofocus='')
-                                      .input-group
-                                        span.input-group-addon
-                                          i.icon_key_alt
-                                        input.form-control(type='password', placeholder='Password')
-                                      label.checkbox
-                                        input(type='checkbox', value='remember-me')
-                                        |  Remember me
-                                      button.btn.btn-primary.btn-lg.btn-block(type='submit') Login
+                      .modal-dialog(style="max-width:500px;")
+                          .modal-content
+                            .modal-header
+                              h3.text-center Login
+                            .modal-body
+                              .row
+                                form.form-inline(role='form')
+                                  .form-group
+                                    .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                            
+                                      label.sr-only.control-label
+                                        | Email
+                                        span.text-danger *
+                                     
+                                      input.form-control(type='text' placeholder='Email *')
+                                  .form-group
+                                    .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                                      label.sr-only.control-label
+                                        | Password
+                                        span.text-danger *
+                                      input.form-control(type='password' placeholder='Password *')
+                                  .checkbox.col-lg-offset-1.col-md-offset-1.col-sm-offset-1.col-xs-offset-1
+                                    label
+                                      input(type='checkbox')
+                                      |  Remember password
+                            .modal-footer
+                              button.btn.btn-primary.col-lg-offset-3.col-lg-3.col-md-3.col-sm-3.col-xs-3(type='submit') Login
+                              button.btn.btn-default.col-lg-offset-3.col-lg-3.col-md-3.col-sm-3.col-xs-3(type='submit') Cancel
                     li
                       form.navbar-form(role='input')     
                         button.btn.btn-primary(type='submit',style="margin-right:230px;" ,data-toggle='modal', data-target='#register') Register
