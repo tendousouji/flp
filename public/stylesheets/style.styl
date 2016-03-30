@@ -219,17 +219,32 @@ hr
   height: 200px
 @media screen and (min-width: 320px)
   .post
-    margin-top :190px
+    margin-top :120px
+    min-height :800px
+@media screen and (min-width: 768px)
+  .post
+    margin-top :130px
     min-height :800px
 @media screen and (min-width: 1024px)
   .post
-    margin-top :100px
+    margin-top :150px
     min-height :800px
-
-
-.post-thumnail
-  margin-top:10px
-  min-height:600px
+@media screen and (min-width: 100px)
+  .post-thumnail
+    margin-top:10px
+    height:100px
+@media screen and (min-width: 320px)
+  .post-thumnail
+    margin-top:10px
+    height:230px
+@media screen and (min-width: 760px)
+  .post-thumnail
+    margin-top:10px
+    height:350px
+@media screen and (min-width: 1024px)
+  .post-thumnail
+    margin-top:10px
+    height:600px
   //background-color: #f2f2a2
 .post-content-title
   min-height : 70px
@@ -285,26 +300,26 @@ hr
     overflow: hidden
     margin-bottom: 15px
 
-.post-title 
-  min-height:60px
+// .post-title 
+//   min-height:60px
   
-.post-title-main
-  background-color: black
-  min-height:60px
-  color :white
-  //font-size :30px
-.post-title-child
-  min-height:60px
-  font-size:25px
-  color:white
-  background-color: orange
-.post-content-title
-  h3
-    margin-left:10px
-    text-align: center
-  border-bottom:2px solid #b9bfbc
-  //font-size:25px
-  padding: 10px 0 0 20px
+// .post-title-main
+//   background-color: black
+//   min-height:60px
+//   color :white
+//   //font-size :30px
+// .post-title-child
+//   min-height:60px
+//   font-size:25px
+//   color:white
+//   background-color: orange
+// .post-content-title
+//   h3
+//     margin-left:10px
+//     text-align: center
+//   border-bottom:2px solid #b9bfbc
+//   //font-size:25px
+//   padding: 10px 0 0 20px
 .leavecomment
   h2
     margin-top:15px
@@ -472,13 +487,63 @@ hr
   .header1
     height: 20px
     //background-color:white
-@media screen and (min-width: 320px)
+@media screen and (min-width: 768px)
   .header1
     height: 40px
+
 @media screen and (min-width: 320px)
   .listpost  
     margin-top: 190px
 @media screen and (min-width: 1024px)
   .listpost  
     margin-top: 110px
-    
+@media screen and (min-width: 1024px)
+  .listpost  
+    margin-top: 110px
+// @media screen and (min-width: 320px)
+//   #id
+//     height: 100%
+//     width: 100%
+// @media screen and (min-width: 768px)
+//   #id
+//     height: 100%
+// @media screen and (min-width: 320px)
+//   #id-main
+//     margin-top: 50px
+// .post-title
+//   height:60px
+//   width:100%
+// .post-title-main
+//   line-height:-4px
+//   text-align:left
+//   background-color: black
+//   height:60px
+//   color :white
+//   //font-size :30px
+// .post-title-child
+//   height:60px
+//   font-size:25px
+//   color:white
+//   background-color: orange
+
+.post-title
+  //margin-top: 20px
+  height:60px
+  width:100%
+.post-title-main
+  h4 
+    //margin-top:-2px
+    line-height:16px
+  h5
+    //margin-top:-2px
+    line-height:16px
+  text-align:left
+  background-color: black
+  height:60px
+  color :white
+  //font-size :30px
+.post-title-child
+  height:60px
+  font-size:25px
+  color:white
+  background-color: orange
