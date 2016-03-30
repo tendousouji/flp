@@ -213,9 +213,17 @@ hr {
   border: 2px solid #ffc0cb;
   height: 200px;
 }
-.post {
-  margin-top: 180px;
-  min-height: 800px;
+@media screen and (min-width: 320px) {
+  .post {
+    margin-top: 190px;
+    min-height: 800px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .post {
+    margin-top: 100px;
+    min-height: 800px;
+  }
 }
 .post-thumnail {
   margin-top: 10px;
@@ -460,7 +468,23 @@ hr {
 .modal-backdrop.fade.in {
   z-index: 0;
 }
-.header1 {
-  min-height: 80px;
-  background-color: #fff;
+@media screen and (min-width: 320px) {
+  .header1 {
+    height: 20px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .header1 {
+    height: 40px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .listpost {
+    margin-top: 190px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .listpost {
+    margin-top: 110px;
+  }
 }

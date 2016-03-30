@@ -217,10 +217,15 @@ hr
 .footer-list-post
   border: 2px solid pink
   height: 200px
-.post
-  margin-top:180px
-  min-height :800px
-  //background-color : gray
+@media screen and (min-width: 320px)
+  .post
+    margin-top :190px
+    min-height :800px
+@media screen and (min-width: 1024px)
+  .post
+    margin-top :100px
+    min-height :800px
+
 
 .post-thumnail
   margin-top:10px
@@ -463,8 +468,17 @@ hr
   background-color: #B4B2B5
 .modal-backdrop.fade.in
   z-index: 0
-.header1
-  min-height : 80px
-  background-color:white
-
-  
+@media screen and (min-width: 320px)
+  .header1
+    height: 20px
+    //background-color:white
+@media screen and (min-width: 320px)
+  .header1
+    height: 40px
+@media screen and (min-width: 320px)
+  .listpost  
+    margin-top: 190px
+@media screen and (min-width: 1024px)
+  .listpost  
+    margin-top: 110px
+    

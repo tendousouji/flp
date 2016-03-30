@@ -1,15 +1,18 @@
 .post
   .row
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-title
-      
-      .col-lg-3.col-md-3.col-sm-3.col-xs-3.post-title-main
-        h2(ng-bind="post.catalory.name")
+    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+      .span12
+            .title-bar(style="color:white;")
+              span.lead(ng-bind="post.catalory.name")
+              p.lead(ng-bind="post.title")
+      //- .col-lg-3.col-md-3.col-sm-3.col-xs-3.post-title-main
+      //-   h2.lead(style="padding-top:10px;")(ng-bind="post.catalory.name")
 
-      .col-lg-9.col-md-9.col-sm-9.col-xs-9.post-title-child
-        h2(ng-bind="post.title")
+      //- .col-lg-9.col-md-9.col-sm-9.col-xs-9.post-title-child
+      //-   h2.lead(style="padding-top:10px;")(ng-bind="post.title")
   .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-thumnail
-      img(src='./images/post.jpg' style="width:inherit")
+      img(src='./images/post.jpg' style="width:inherit;margin-top:-10px;")
   .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-content-title
       h3(ng-bind="post.title")

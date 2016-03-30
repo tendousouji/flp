@@ -2,13 +2,13 @@
 .container-fluid
   
   .row
-    .listpost(style="margin-top:170px;")
+    .listpost
       .row
         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-          .span12(style="margin-left:22px;")
-            .title-bar(style="margin-top:5px;color:white;")
-              span(ng-bind="catalory.name" style="z-index: 1")
-              p(style="margin-top:15px;")(ng-bind="catalory.description")
+          .span12
+            .title-bar(style="color:white;")
+              span.lead(ng-bind="catalory.name" style="z-index: 1")
+              p.lead(ng-bind="catalory.description")
       .row.text
         .col-lg-9.col-md-9.col-sm-12.col-xs-12
           .col-lg-4.col-md-4.col-sm-6.col-xs-12.title(ng-repeat="post in posts")
