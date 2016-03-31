@@ -3,16 +3,22 @@
   
   .row
     .listpost
-      .row
         .col-lg-12.col-md-12.col-sm-12.col-xs-12
-          .span12
-            .title-bar(style="color:white;")
-              span.lead(ng-bind="catalory.name" style="z-index: 1")
-              p.lead(ng-bind="catalory.description")
+        
+          .col-lg-3.col-md-3.col-sm-5.col-xs-6.post-title-main
+            h4.lead(style="padding-top:12px")(ng-bind="catalory.name")
+
+          .col-lg-9.col-md-9.col-sm-7.col-xs-6.post-title-child
+            h5.lead(style="padding-top:5px;")(ng-bind="catalory.description")
+        //- .col-lg-12.col-md-12.col-sm-12.col-xs-12
+        //-   .span12
+        //-     .title-bar(style="color:white;")
+        //-       span.lead(ng-bind="catalory.name" style="z-index: 1")
+        //-       p.lead(ng-bind="catalory.description")
       .row.text
         .col-lg-9.col-md-9.col-sm-12.col-xs-12
-          .col-lg-4.col-md-4.col-sm-6.col-xs-12.title(ng-repeat="post in posts")
-            .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="margin-top: 5px; padding-left: 0px; padding-right: 0px; border: 1px solid #48D1CC; height: 220px; margin-right: 200px;")
+          .col-lg-4.col-md-6.col-sm-6.col-xs-12.title.lead(ng-repeat="post in posts")
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="margin-top: 5px; padding-left: 0px; padding-right: 0px; border: 1px solid #48D1CC; height: 220px; margin-right: 200px;width:100%;")
               .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="background-color: #1E90FF;height:50px;")
                 h4
                   a(ng-if="post.title.length >= 25" ng-bind="post.title.substring(0,23) + '...'" ng-href="{{group.slug+'/'+catalory.slug+'/'+post.slug}}", ng-click="scrollTop()")
@@ -22,10 +28,10 @@
                 .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="height:20px;")
                 img.img-responsive.img-rounded(src="uploads/all_new_htc_one_streaks-wallpaper-1366x768.jpg",style="width: 100px; height: 100px; float: left; marrgin-left: 10px; padding:3px;" ng-bind="post.img_url")
                 //.col-lg-8.col-md-8.col-sm-12.col-xs-12(style="margin: 0px 0px; padding: 0px 0px;color: white;")
-                p(style="font-size: 12px;padding-left:90px;")(ng-if="post.content.length >= 100" ng-bind-html="post.content.substring(0,90) + '...' | unsafe")
-                p(style="font-size: 12px;padding-left:90px;")(ng-if="post.content.length <  100" ng-bind-html="post.content | unsafe")
-              .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="height:100px;")
-              .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="height: 77px; padding-top: 30px")
+                p.lead(style="font-size: 12px;padding-left:90px;")(ng-if="post.content.length >= 100" ng-bind-html="post.content.substring(0,90) + '...' | unsafe")
+                p.lead(style="font-size: 12px;padding-left:90px;")(ng-if="post.content.length <  100" ng-bind-html="post.content | unsafe")
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12.lead(style="height:100px;")
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12.lead(style="height: 77px; padding-top: 20px")
                 span.post-date(ng-bind="post.date_create | date:'dd/MM/yyyy'")
                 span -
                 span.post-author(ng-bind="post.author.full_name")
