@@ -128,7 +128,7 @@
                         .row
                           .col-lg-2.col-md-3.col-sm-3.col-xs-3
                             .next-post-thumbnail.img-rounded
-                              img(src="./images/next1.jpg")
+                              img(src="" style="background:url('{{catalory.posts[$index].img_url}}')")
                           .col-lg-10.col-md-9.col-sm-9.col-xs-9
                             .next-post-title 
                               a.title(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
