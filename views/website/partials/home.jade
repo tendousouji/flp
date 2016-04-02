@@ -102,7 +102,7 @@
                         .row
                           .col-lg-12.col-md-12.col-sm-12.col-xs-12
                             .first-post-thumbnail.img-rounded
-                              img(src="./images/tit1.jpg")
+                              img(src="" style="background:url('{{catalory.posts[$index].img_url}}')")
                             .first-post-title
                               h4
                                 a.title(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
