@@ -239,9 +239,8 @@ html(ng-controller="BaseCtrl")
                       | News
                 ul.nav.navbar-nav.navbar-right
                     
-                  li#login_h(style="margin-top:-6px;margin-right:-25px;")
-                    a(href="")
-                      button.btn.btn-default(type='submit', data-toggle='modal', data-target='#login') Login
+                  li#login_h(style="margin-top:9px;margin-right:5px;")
+                    button.btn.btn-default(type='submit', data-toggle='modal', data-target='#login') Login
                   #login.modal.fade(role='dialog')
                     .modal-dialog(style="max-width:500px;")
                         .modal-content
@@ -270,11 +269,9 @@ html(ng-controller="BaseCtrl")
                                     |  Remember password
                           .modal-footer
                             button.btn.btn-primary.col-lg-offset-3.col-lg-3.col-md-3.col-sm-3.col-xs-3(type='submit') Login
-                            button.btn.btn-default.col-lg-offset-3.col-lg-3.col-md-3.col-sm-3.col-xs-3(type='submit') Cancel
-                  li#register_h(style="margin-top:-6px;margin-right:-38px;")
-                    a(href="") 
-                      button.btn.btn-primary#btnRegister(type='submit', data-toggle='modal', data-target='#register') Register
-              
+                            button.btn.btn-default.col-lg-offset-3.col-lg-3.col-md-3.col-sm-3.col-xs-3(type='submit' data-dismiss="modal") Cancel
+                  li#register_h(style="margin-top:9px;margin-right:-9px;")
+                    button.btn.btn-primary#btnRegister(type='submit', data-toggle='modal', data-target='#register') Register
                   #register.modal.fade(role='dialog')
                     .modal-dialog(style="max-width:500px;")
                         .modal-content
@@ -318,11 +315,11 @@ html(ng-controller="BaseCtrl")
                                         .row
                                           label.col-md-12.sign-in-label-birthday Birthday
                                           .col-md-3
-                                            input.form-control(type='text', placeholder='year')
+                                            input.form-control(type='text', placeholder='day')
                                           .col-md-6
                                             input.form-control(type='text', placeholder='month')
                                           .col-md-3
-                                            input.form-control(type='text', placeholder='day')
+                                            input.form-control(type='text', placeholder='year')
                                     .form-group
                                       .col-md-12
                                         label.control-label.sign-in-label Country
@@ -339,17 +336,16 @@ html(ng-controller="BaseCtrl")
                                           
                             .modal-footer
                               button.btn.btn-primary.col-md-3.col-md-offset-3(type='submit') Register
-                              button.btn.btn-default.col-md-3(type='submit') Cancel
-                  li(style="margin-top:-14px;margin-right:-8px;margin-bottom:-8px;")
-                    a(href="")
-                      form.navbar-form(role='search')#search_h
-                        .input-group
-                          input.form-control(type='text', placeholder='Search', name='q')
-                          .input-group-btn
-                            button.btn.btn-default(type='submit')
-                              i.glyphicon.glyphicon-search
+                              button.btn.btn-default.col-md-3(type='submit' data-dismiss="modal") Cancel
+                  li(style="margin-top:1.3px;")
+                    form.navbar-form(role='search')
+                      .input-group
+                        input.form-control(type='text', placeholder='Search', name='q')
+                        .input-group-btn
+                          button.btn.btn-default(type='submit')
+                            i.glyphicon.glyphicon-search
 
-      
+    
       block content
 
     script(src="/libs/requirejs/require.js", data-main="/javascripts/website/main.js")

@@ -1,185 +1,121 @@
 ﻿//- home.jade to bind data
-.container-fluid
-  .row(style="margin-top:90px;")
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12
-      .slider
-        // slideshow
-        #home-slideshow.carousel.slide(data-ride='carousel')
-          // Indicators
-          ol.carousel-indicators
-            li.active(data-target='#home-slideshow', data-slide-to='0')
-            li(data-target='#home-slideshow', data-slide-to='1')
-            li(data-target='#home-slideshow', data-slide-to='2')
-          // Wrapper for slides
-          .carousel-inner(role='listbox')
-            .item.active
-              img(src='images/1.jpg', alt='aaa', style="width:100%; height:100%;")
-              //- .carousel-caption
-              //-   | Teacher Training
-            .item
-              img(src='images/2.jpg', alt='bbb', style="width:100%; height:100%;")
-              //- .carousel-caption
-              //-   | Presentations
-            .item
-              img(src='images/3.jpg', alt='ccc', style="width:100%; height:100%;")
-              //- .carousel-caption
-              //-   | Method Learning
-            a.left.carousel-control(href='#home-slideshow', role='button', data-slide='prev')
-              span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
-              span.sr-only Previous
-            a.right.carousel-control(href='#home-slideshow', role='button', data-slide='next')
-              span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
-              span.sr-only Next
 
-  .row
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12(ng-repeat="(groupId,group) in groups track by $index")
-      .groups
-        .row
-          // 1 -category
-          //- .col-lg-4.col-md-4.col-sm-12.col-xs-12(ng-repeat="catalory in group.catalories track by $index")
-            .categories
-              .row
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .categories-title
-                    h3(ng-bind="catalory.name")
-              .row.categories-content
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .row
-                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                      .first-post
-                        .row
-                          .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                            .first-post-thumbnail.img-rounded
-                              img(src="./images/tit1.jpg")
-                            .first-post-title
-                              h4
-                                a(href ="#")(ng-bind="catalory.posts[1].title")
-                            .first-post-content
-                              p(ng-bind="catalory.posts[1].content | limitTo:100")
-                            .first-post-index
-                              p
-                                span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
-                                  a(href="#")(style="margin-left:10px;") 4504
-                                  
-                                span.glyphicon.glyphicon-time(style="margin-right:20px;")
-                                  a(href="#")(style="margin-left:10px;")(ng-bind="catalory.posts[1].date_create | date:'dd/MM/yyyy'")
-                                
-                                span.glyphicon.glyphicon-comment(style="margin-right:20px;")
-                                  a(href="#")(style="margin-left:10px;")(ng-bind="catalory.posts[1].comments.length")
-                  .row
-                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                      .next-post
-                        .row
-                          .col-lg-2.col-md-3.col-sm-3.col-xs-3
-                            .next-post-thumbnail.img-rounded
-                              img(src="./images/next1.jpg")
-                          .col-lg-10.col-md-9.col-sm-9.col-xs-9
-                            .next-post-title 
-                              a(href ="#")(ng-bind="catalory.posts[2].title")
-                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                      .next-post
-                        .row
-                          .col-lg-2.col-md-3.col-sm-3.col-xs-3
-                            .next-post-thumbnail.img-rounded
-                              img(src="./images/next2.jpg")
-                          .col-lg-10.col-md-9.col-sm-9.col-xs-9
-                            .next-post-title
-                              a(href ="#")(ng-bind="catalory.posts[2].title")
-          //2
-          .col-lg-4.col-md-4.col-sm-12.col-xs-12(ng-repeat="catalory in group.catalories track by $index")
-            .categories
-              .row
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .categories-title
-                    a.title(ng-href="{{group.slug+'/'+catalory.slug}}", ng-click="scrollTop()")
-                      h3(ng-bind="catalory.name")
+.row(style="margin-top:90px;")
+  .col-lg-12.col-md-12.col-sm-12.col-xs-12
+    .slider
+      // slideshow
+      #home-slideshow.carousel.slide(data-ride='carousel')
+        // Indicators
+        ol.carousel-indicators
+          li.active(data-target='#home-slideshow', data-slide-to='0')
+          li(data-target='#home-slideshow', data-slide-to='1')
+          li(data-target='#home-slideshow', data-slide-to='2')
+        // Wrapper for slides
+        .carousel-inner(role='listbox')
+          .item.active
+            img(src='images/1.jpg', alt='aaa', style="width:100%; height:100%;")
+            //- .carousel-caption
+            //-   | Teacher Training
+          .item
+            img(src='images/2.jpg', alt='bbb', style="width:100%; height:100%;")
+            //- .carousel-caption
+            //-   | Presentations
+          .item
+            img(src='images/3.jpg', alt='ccc', style="width:100%; height:100%;")
+            //- .carousel-caption
+            //-   | Method Learning
+          a.left.carousel-control(href='#home-slideshow', role='button', data-slide='prev')
+            span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+            span.sr-only Previous
+          a.right.carousel-control(href='#home-slideshow', role='button', data-slide='next')
+            span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+            span.sr-only Next
 
-              .row.categories-content
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12(ng-repeat="post in catalory.posts | limitTo: 3 track by $index")
-                  .row(ng-if="$index == 0")
-                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                      .first-post
-                        .row
-                          .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                            .first-post-thumbnail.img-rounded
-                              img(src="./images/tit1.jpg")
-                            .first-post-title
-                              h4
-                                a.title(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
-                            .first-post-content(style="height:100px;")
-                              //- p(ng-if="catalory.posts[$index].content.length >= 100" ng-bind-html="catalory.posts[$index].content | limitTo:100 | unsafe")
-                              //- p(ng-if="catalory.posts[$index].content.length <  100" ng-bind-html="catalory.posts[$index].content | unsafe")
-                              //- p {{catalory.posts[$index].content.length > 100 ? catalory.posts[$index].content.substring(0,100) + '...' : catalory.posts[$index].content}}
-                              p(ng-if="catalory.posts[$index].content.length >= 100" ng-bind-html="catalory.posts[$index].content.substring(0,100) + '...' | unsafe")
-                              p(ng-if="catalory.posts[$index].content.length <  100" ng-bind-html="catalory.posts[$index].content | unsafe")
-                            .first-post-index
-                              p
-                                span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
-                                  a(href="#")(style="margin-left:10px;") 4504
-                                  
-                                span.glyphicon.glyphicon-time(style="margin-right:20px;")
-                                  a(href="#")(style="margin-left:10px;")(ng-bind="catalory.posts[$index].date_create | date:'dd/MM/yyyy'")
-                                
-                                span.glyphicon.glyphicon-comment(style="margin-right:20px;")
-                                  a(href="#")(style="margin-left:10px;")(ng-bind="catalory.posts[$index].comments.length")
-                  .row(ng-if="$index != 0")
-                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                      .next-post
-                        .row
-                          .col-lg-2.col-md-3.col-sm-3.col-xs-3
-                            .next-post-thumbnail.img-rounded
-                              img(src="./images/next1.jpg")
-                          .col-lg-10.col-md-9.col-sm-9.col-xs-9
-                            .next-post-title 
-                              a.title(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
-  .row
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12.footer
-      
-      .col-lg-4.col-md-4-col-sm-12.col-xs-12
-      
-       
-        h2 Responsive
-        p 
-        |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        |  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        | proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-      .col-lg-4.col-md-4-col-sm-12.col-xs-12
+.row
+  .col-lg-12.col-md-12.col-sm-12.col-xs-12(ng-repeat="(groupId,group) in groups track by $index")
+    .groups
+      .row
+        //category
         
-        h2 Recent Posts
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-        hr
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-        hr
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-      .col-lg-4.col-md-4-col-sm-12.col-xs-12
+        //2
+        .col-lg-4.col-md-4.col-sm-12.col-xs-12(ng-repeat="catalory in group.catalories track by $index")
+          .categories
+            .row
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                .categories-title
+                  a.title(ng-href="{{group.slug+'/'+catalory.slug}}", ng-click="scrollTop()")
+                    h4.lead(ng-bind="catalory.name")
 
-        h2 Latest Tweets
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-        hr
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-        hr
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-      //- .col-lg-3.col-md-3-col-sm-12.col-xs-12
-      //-   h3 Contact Us
-      //-   .row
-      //-     form.form-inline(role='form')
-      //-     .form-group.col-lg-12.col-md-12-col-sm-12.col-xs-12
-      //-       label.sr-only.control-label
-      //-         | Name
-      //-         span.text-danger *
-           
-      //-       input.form-control(type='text' placeholder='Name*' style="width:300px")
-      //-     .form-group.col-lg-12.col-md-12-col-sm-12.col-xs-12
-            
-      //-       label.sr-only.control-label
-      //-         | Email
-      //-         span.text-danger *
-      //-       input.form-control(type='text' placeholder='Email*' style="width:300px")  
-      //-     textarea.form-control(rows='3' type='text' placeholder='Message' ).col-lg-12.col-md-12-col-sm-12.col-xs-12.text-center(style="width:300px; margin-left : 15px;")
-      //-     .form-group
-      //-       button.btn.btn-primary.col-lg-offset-4.col-md-offset-4.col-sm-offset-4.col-xs-offset-4.col-lg-3.col-md-3-col-sm-3.col-xs-3(type='submit' style="margin-top:10px;") Send
-  .row
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12.endfooter
+            .row.categories-content
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12(ng-repeat="post in catalory.posts | limitTo: 3 track by $index")
+                .row(ng-if="$index == 0")
+                  .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    .first-post
+                      .row
+                        .col-lg-3.col-md-3.col-sm-3.col-xs-3
+                          .first-post-thumbnail.img-rounded
+                            img(src="./images/tit1.jpg" style="width:inherit;")
+                        .col-lg-9.col-md-9.col-sm-9.col-xs-9
+                          .row
+                            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                              .first-post-title
+                                h5.lead
+                                  a.title(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
+                          .row
+                            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                              .first-post-content
+                               
+                                p(ng-if="catalory.posts[$index].content.length >= 80" ng-bind-html="catalory.posts[$index].content.substring(0,80) + '...' | unsafe")
+                                p(ng-if="catalory.posts[$index].content.length <  100" ng-bind-html="catalory.posts[$index].content | unsafe")
+                          .row
+                            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                              .first-post-index
+                                p
+                                  span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
+                                    a(href="#")(style="margin-left:10px;") 4504
+                                    
+                                  span.glyphicon.glyphicon-time(style="margin-right:20px;")
+                                    a(href="#")(style="margin-left:10px;")(ng-bind="catalory.posts[$index].date_create | date:'dd/MM/yyyy'")
+                                  
+                                  span.glyphicon.glyphicon-comment(style="margin-right:20px;")
+                                    a(href="#")(style="margin-left:10px;")(ng-bind="catalory.posts[$index].comments.length")
+                .row(ng-if="$index != 0")
+                  .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    .next-post
+                      .row
+                        .col-lg-2.col-md-3.col-sm-3.col-xs-3
+                          .next-post-thumbnail.img-rounded
+                            img(src="./images/next11.png" style="width:40px;")
+                        .col-lg-10.col-md-9.col-sm-9.col-xs-9
+                          .next-post-title 
+                            a.title(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
+.row
+  .col-lg-12.col-md-12.col-sm-12.col-xs-12.footer
+    
+    .col-lg-4.col-md-4-col-sm-12.col-xs-12
+    
+     
+      h2 Responsive
+      p 
+      |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      |  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      | proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+    .col-lg-4.col-md-4-col-sm-12.col-xs-12
+      
+      h2 Recent Posts
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+      hr
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+      hr
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    .col-lg-4.col-md-4-col-sm-12.col-xs-12
+
+      h2 Latest Tweets
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+      hr
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+      hr
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
