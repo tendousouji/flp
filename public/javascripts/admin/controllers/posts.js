@@ -50,9 +50,13 @@
       MainService.getPosts().then(function(posts){
         // set addtional filed
         posts.forEach(function(post){
-          post.author_name = post.author.username;
-          post.category_name = post.catalory.name;
-          post.type_name = post.type.name;
+          if (post.author.username == null|| post.catalory == null ||post.type.name == null) {
+
+          } else{
+            post.author_name = post.author.username;
+            post.category_name = post.catalory.name;
+            post.type_name = post.type.name;
+          }
         });
 
         // build ng-table

@@ -11,7 +11,7 @@
           h5.lead(ng-bind="post.title")
   .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-thumnail
-      img(src='./images/post.jpg' style="width:inherit")
+      img(src='{{post.img_url}}' style="width:inherit")
   .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-content-title
       h3(ng-bind="post.title")
