@@ -32,9 +32,9 @@
                 p.lead(style="font-size: 12px;padding-left:90px;")(ng-if="post.content.length <  100" ng-bind-html="post.content | unsafe")
               .col-lg-12.col-md-12.col-sm-12.col-xs-12.lead(style="height:100px;")
               .col-lg-12.col-md-12.col-sm-12.col-xs-12.lead(style="height: 77px; padding-top: 20px")
-                span.post-date(ng-bind="post.date_create | date:'dd/MM/yyyy'")
+                span.post-date.lead(ng-bind="post.date_create | date:'dd/MM/yyyy'")
                 span -
-                span.post-author(ng-bind="post.author.full_name")
+                span.post-author.lead(ng-bind="post.author.full_name")
             //- .col-lg-4.col-md-4.col-sm-6.col-xs-12(ng-repeat="post in posts")
               .post-inlist-area
                 .row

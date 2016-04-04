@@ -111,9 +111,25 @@ p {
 }
 .first-post-content {
   font-size: 16px;
+  margin-top: -5px;
+  margin-left: -20px;
+}
+.first-post-title {
+  margin-top: -10px;
 }
 .first-post-title h4 {
   margin-left: 10px;
+  text-align: left;
+}
+#id2 {
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: -12px;
+}
+#id2:hover {
+  color: #ff8b00;
+  text-decoration: none;
+  transition: color 0.5s;
 }
 .next-post-thumbnail {
   width: 70px;
@@ -136,10 +152,10 @@ p {
 .categories-content {
   margin-top: 5px;
 }
-a {
-  color: #000;
+#id1 {
+  color: #00f;
 }
-a:hover {
+#id1:hover {
   color: #ff8b00;
   text-decoration: none;
   transition: color 0.5s;
@@ -231,44 +247,33 @@ hr {
     min-height: 800px;
   }
 }
-@media screen and (min-width: 100px) {
-  .post-thumnail {
-    margin-top: 10px;
-    height: 10px;
-  }
-}
 @media screen and (min-width: 310px) {
   .post-thumnail {
     margin-top: 10px;
-    height: 170px;
+    height: 100%;
   }
 }
 @media screen and (min-width: 470px) {
   .post-thumnail {
     margin-top: 10px;
-    height: 230px;
+    height: 100%;
   }
 }
 @media screen and (min-width: 760px) {
   .post-thumnail {
     margin-top: 10px;
-    height: 300px;
+    height: 100%;
   }
 }
 @media screen and (min-width: 1020px) {
   .post-thumnail {
     margin-top: 10px;
-    height: 400px;
-  }
-}
-@media screen and (min-width: 1360px) {
-  .post-thumnail {
-    margin-top: 10px;
-    height: 600px;
+    height: 100%;
   }
 }
 .post-content-title {
-  min-height: 70px;
+  margin-top: 20px;
+  height: 70px;
 }
 .post-content {
   min-height: 180px;
@@ -501,7 +506,8 @@ hr {
 }
 @media screen and (min-width: 310px) {
   .listpost {
-    margin-top: 100px;
+    margin-top: 150px;
+    height: 60px;
   }
 }
 @media screen and (min-width: 1020px) {
@@ -515,15 +521,33 @@ hr {
     height: 60px;
   }
 }
-@media screen and (min-width: 1020px) {
-  #list-port {
-    width: 240px;
-    height: 100%;
+@media screen and (min-width: 100px) {
+  .post-title {
+    margin-top: 150px;
   }
 }
-.post-title {
-  height: 60px;
-  width: 100%;
+@media screen and (min-width: 310px) {
+  .post-title {
+    margin-top: 30px;
+    height: 60px;
+  }
+}
+@media screen and (min-width: 760px) {
+  .post-title {
+    margin-top: 80px;
+    height: 60px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .post-title {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1360px) {
+  .post-title {
+    margin-top: 0px;
+    height: 60px;
+  }
 }
 .post-title-main {
   text-align: left;
@@ -542,4 +566,50 @@ hr {
   font-size: 25px;
   color: #fff;
   background-color: #ffa500;
+}
+@media screen and (min-width: 310px) {
+  .navbar-toggle {
+    float: left;
+    margin-top: -55px;
+  }
+}
+@media screen and (min-width: 470px) {
+  .navbar-toggle {
+    float: left;
+    margin-top: -55px;
+  }
+}
+@media screen and (min-width: 760px) {
+  .navbar-toggle {
+    float: left;
+    margin-top: -55px;
+  }
+}
+@media screen and (min-width: 310px) {
+  #home-slideshow {
+    margin-top: 100px;
+  }
+}
+@media screen and (min-width: 760px) {
+  #home-slideshow {
+    margin-top: 100px;
+  }
+}
+@media screen and (min-width: 970px) {
+  #home-slideshow {
+    margin-top: 0px;
+  }
+}
+.lead {
+  font-size: 14px;
+}
+@media screen and (min-width: 310px) {
+  #id-p {
+    margin-top: 35px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  #id-p {
+    margin-top: 0px;
+  }
 }

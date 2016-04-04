@@ -48,9 +48,16 @@ html(ng-controller="BaseCtrl")
         .row.header
           .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="background-color:#ffffff;")
             .row
-              .col-lg-4.col-md-4.col-sm-6.col-xs-12
+              .col-lg-3.col-md-12.col-sm-12.col-xs-12
                 .logo(style="margin-top :2px;")
                    img.img-rounded.img-responsive(src="/images/logo2.png", style="width:400px;height:40px;")
+              .col-lg-offset-6.col-lg-3.col-md-offset-6.col-md-6.col-sm-offset-6.col-sm-6.col-xs-offset-6.col-xs-6
+                    form.navbar-form#id-search(role='search')
+                      .input-group
+                        input.form-control(type='text', placeholder='Search', name='q')
+                        .input-group-btn
+                          button.btn.btn-default(type='submit')
+                            i.glyphicon.glyphicon-search
          
                 
   
@@ -233,7 +240,7 @@ html(ng-controller="BaseCtrl")
                 ul.nav.navbar-nav.navbar-right
                   li
                     //- a(href="")
-                    button.btn.btn-default(type='submit', data-toggle='modal',style="margin-right:-13px;margin-top:8px;" data-target='#login') Login
+                    button.btn.btn-default(type='submit', data-toggle='modal',style="margin-right:-10px;margin-top:8px;" data-target='#login') Login
                     #login.modal.fade(role='dialog')
                       .modal-dialog(style="max-width:500px;")
                           .modal-content
@@ -262,10 +269,10 @@ html(ng-controller="BaseCtrl")
                                       |  Remember password
                             .modal-footer
                               button.btn.btn-primary.col-lg-offset-3.col-lg-3.col-md-3.col-sm-3.col-xs-3(type='submit') Login
-                              button.btn.btn-default.col-lg-offset-3.col-lg-3.col-md-3.col-sm-3.col-xs-3(type='submit') Cancel
-                    li
+                              button.btn.btn-default.col-lg-offset-3.col-lg-3.col-md-3.col-sm-3.col-xs-3(type='submit',data-dismiss="modal") Cancel
+                  li
                       form.navbar-form(role='input')     
-                        button.btn.btn-primary(type='submit',style="margin-right:230px;" ,data-toggle='modal', data-target='#register') Register
+                        button.btn.btn-primary(type='submit',style="margin-right:-18px;" ,data-toggle='modal', data-target='#register') Register
               
                       #register.modal.fade(role='dialog')
                           .modal-dialog(style="width:500px;")
@@ -331,15 +338,14 @@ html(ng-controller="BaseCtrl")
                                                 
                                   .modal-footer
                                     button.btn.btn-primary.col-md-3.col-md-offset-3(type='submit') Login
-                                    button.btn.btn-default.col-md-3(type='submit') Cancel
-                    li
-                       #search
-                          form.navbar-form(role='search')
-                            .input-group
-                              input.form-control(type='text',style="width:250px;margin-left:-235px;margin-top:-5px;", placeholder='Search', name='q')
-                              .input-group-btn
-                                button.btn.btn-default(type='submit',style="margin-top:-5px;")
-                                  i.glyphicon.glyphicon-search
+                                    button.btn.btn-default.col-md-3(type='submit',data-dismiss="modal") Cancel
+                  //- li
+                  //-   form.navbar-form(role='search')(style="margin-right:-60px;")
+                  //-     .input-group
+                  //-       input.form-control(type='text', placeholder='Search', name='q')
+                  //-       .input-group-btn
+                  //-         button.btn.btn-default(type='submit')
+                  //-           i.glyphicon.glyphicon-search
 
       .home1
         block content
