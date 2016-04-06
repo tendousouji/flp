@@ -77,7 +77,11 @@
   margin-bottom: 20px
   //min-height : 100px
   //padding-top: 40px
-  margin-top :-27px
+  @media(min-width:320px)
+    margin-top :-8px
+  @media(min-width:768px)
+    margin-top:-37px
+  
   border-bottom: 2px solid #00A2D7
   background-color:gray
   width: 100%
@@ -152,7 +156,7 @@ a
   color: black
 
 a:hover
-  color: #ff8b00
+  color: blue
   text-decoration: none
   transition: color 0.5s
 //LIST-POST
@@ -239,7 +243,7 @@ hr
     margin-top:67px
 .post-thumnail
   margin-top:10px
-  max-height:600px
+  max-height:1200px
   background-color: white
 .post-content-title
   min-height : 70px
@@ -368,9 +372,9 @@ hr
 .categories
   background: #f6f6f6
   position: relative
-  &:hover
+  /*&:hover
     .hover-line
-      height: 100%
+      height: 100%*/
 .hover-line
   position: absolute
   border: 2px solid #d70204
@@ -420,7 +424,7 @@ hr
     
 #main-menu
  
-  border: 1px solid black
+  border: 1px solid #252424
   ul
     li
       a:hover
@@ -508,7 +512,7 @@ hr
 .modal-backdrop.fade.in
   z-index: 0
 .header1
-  background-color:black
+  background-color:rgb(33, 33, 33)
   max-height:160px
   //border-bottom: 2px solid #00A2D7
   @media (min-width: 320px)
@@ -544,11 +548,13 @@ hr
   @media (min-width: 1366px)
     margin-top : 62px
 a:hover 
-    color: #00ABFF
+    color: #2400FF
 .categories-title
-  background-color: #E6CF67;
+  /*background-color: rgba(56, 177, 46, 0.71)*/
   
-  h4 
+  h4
+    a:hover
+      color:white
     font-weight: 500
     text-align: center
     line-height: 22px
@@ -589,7 +595,7 @@ a:hover
     margin-left: -15px
     margin-bottom: 5px
 .categories
-  min-height:296px
+  //min-height:260px
   margin-bottom: 20px
 .next-post-thumbnail
    
@@ -601,3 +607,19 @@ a:hover
 .first-post-thumbnail img 
     margin-left: 3px
     margin-bottom: 5px
+.categories-title
+  background-color: #FFA500
+  h4
+    a:hover
+      color:white
+.header1
+  .menu
+    .addsearch
+      margin-top: -15px
+      @media (min-width: 768px)
+        display:none
+nav.navbar.navbar-inverse 
+  margin-bottom: 1px
+#search0
+  @media(max-width:767px)
+    display: none

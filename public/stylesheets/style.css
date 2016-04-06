@@ -72,10 +72,19 @@
 }
 .slider {
   margin-bottom: 20px;
-  margin-top: -27px;
   border-bottom: 2px solid #00a2d7;
   background-color: #808080;
   width: 100%;
+}
+@media (min-width:320px) {
+  .slider {
+    margin-top: -8px;
+  }
+}
+@media (min-width:768px) {
+  .slider {
+    margin-top: -37px;
+  }
 }
 .col-centerd {
   float: none;
@@ -139,7 +148,7 @@ a {
   color: #000;
 }
 a:hover {
-  color: #ff8b00;
+  color: #00f;
   text-decoration: none;
   transition: color 0.5s;
 }
@@ -238,7 +247,7 @@ hr {
 }
 .post-thumnail {
   margin-top: 10px;
-  max-height: 600px;
+  max-height: 1200px;
   background-color: #fff;
 }
 .post-content-title {
@@ -371,9 +380,9 @@ hr {
 .categories {
   background: #f6f6f6;
   position: relative;
-}
-.categories:hover .hover-line {
-  height: 100%;
+/*&:hover
+    .hover-line
+      height: 100%*/
 }
 .hover-line {
   position: absolute;
@@ -424,7 +433,7 @@ hr {
     
     border-color: #FFFFFF*/
 #main-menu {
-  border: 1px solid #000;
+  border: 1px solid #252424;
 }
 #main-menu ul li a:hover {
   color: #1ba2dc;
@@ -491,7 +500,7 @@ hr {
   z-index: 0;
 }
 .header1 {
-  background-color: #000;
+  background-color: #212121;
   max-height: 160px;
 }
 @media (min-width: 320px) {
@@ -548,10 +557,10 @@ hr {
   }
 }
 a:hover {
-  color: #00abff;
+  color: #2400ff;
 }
 .categories-title {
-  background-color: #e6cf67;
+/*background-color: rgba(56, 177, 46, 0.71)*/
   border-left: 3px solid #f78940;
   border-bottom: 1px solid #c0c0d4;
   text-transform: uppercase;
@@ -569,6 +578,9 @@ a:hover {
   margin-bottom: -8px;
   margin-top: -5px;
   font-size: 16px;
+}
+.categories-title h4 a:hover {
+  color: #fff;
 }
 .first-post-index p span {
   font-size: 12px;
@@ -601,7 +613,6 @@ a:hover {
   margin-bottom: 5px;
 }
 .categories {
-  min-height: 296px;
   margin-bottom: 20px;
 }
 .next-post-thumbnail {
@@ -615,4 +626,26 @@ a:hover {
 .first-post-thumbnail img {
   margin-left: 3px;
   margin-bottom: 5px;
+}
+.categories-title {
+  background-color: #ffa500;
+}
+.categories-title h4 a:hover {
+  color: #fff;
+}
+.header1 .menu .addsearch {
+  margin-top: -15px;
+}
+@media (min-width: 768px) {
+  .header1 .menu .addsearch {
+    display: none;
+  }
+}
+nav.navbar.navbar-inverse {
+  margin-bottom: 1px;
+}
+@media (max-width:767px) {
+  #search0 {
+    display: none;
+  }
 }
