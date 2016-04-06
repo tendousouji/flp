@@ -121,9 +121,21 @@ h4,p
 
 .first-post-content
   font-size: 16px
+  margin-top: -5px
+  margin-left: -20px
 .first-post-title
+  margin-top:-10px
   h4
     margin-left: 10px
+    text-align:left
+#id2
+  color: #333
+  font-family: Arial,Helvetica,sans-serif
+  margin-left: -12px;
+#id2:hover
+  color: #ff8b00
+  text-decoration: none
+  transition: color 0.5s
 .next-post-thumbnail
   width: 70px
   height: 70px
@@ -144,10 +156,10 @@ h4,p
 .categories-content
   margin-top: 5px
 
-a
-  color: black
+#id1
+  color: blue
 
-a:hover
+#id1:hover
   color: #ff8b00
   text-decoration: none
   transition: color 0.5s
@@ -217,17 +229,38 @@ hr
 .footer-list-post
   border: 2px solid pink
   height: 200px
-.post
-  margin-top:180px
-  min-height :800px
-  //background-color : gray
-
-.post-thumnail
-  margin-top:10px
-  min-height:600px
+@media screen and (min-width: 320px)
+  .post
+    margin-top :120px
+    min-height :800px
+@media screen and (min-width: 768px)
+  .post
+    margin-top :130px
+    min-height :800px
+@media screen and (min-width: 1024px)
+  .post
+    margin-top :100px
+    min-height :800px
+@media screen and (min-width: 310px)
+  .post-thumnail
+    margin-top:10px
+    height:100%
+@media screen and (min-width: 470px)
+  .post-thumnail
+    margin-top:10px
+    height:100%
+@media screen and (min-width: 760px)
+  .post-thumnail
+    margin-top:10px
+    height:100%
+@media screen and (min-width: 1020px)
+  .post-thumnail
+    margin-top:10px
+    height:100%
   //background-color: #f2f2a2
 .post-content-title
-  min-height : 70px
+  margin-top: 20px
+  height : 70px
   //background-color :#93d6d3
 .post-content 
   
@@ -280,26 +313,26 @@ hr
     overflow: hidden
     margin-bottom: 15px
 
-.post-title 
-  min-height:60px
+// .post-title 
+//   min-height:60px
   
-.post-title-main
-  background-color: black
-  min-height:60px
-  color :white
-  //font-size :30px
-.post-title-child
-  min-height:60px
-  font-size:25px
-  color:white
-  background-color: orange
-.post-content-title
-  h3
-    margin-left:10px
-    text-align: center
-  border-bottom:2px solid #b9bfbc
-  //font-size:25px
-  padding: 10px 0 0 20px
+// .post-title-main
+//   background-color: black
+//   min-height:60px
+//   color :white
+//   //font-size :30px
+// .post-title-child
+//   min-height:60px
+//   font-size:25px
+//   color:white
+//   background-color: orange
+// .post-content-title
+//   h3
+//     margin-left:10px
+//     text-align: center
+//   border-bottom:2px solid #b9bfbc
+//   //font-size:25px
+//   padding: 10px 0 0 20px
 .leavecomment
   h2
     margin-top:15px
@@ -385,6 +418,7 @@ hr
 .title
   margin-left: -1px
   
+  
 
 // sua thanh menu
 .navbar-inverse .navbar-nav
@@ -463,8 +497,153 @@ hr
   background-color: #B4B2B5
 .modal-backdrop.fade.in
   z-index: 0
-.header1
-  min-height : 80px
-  background-color:white
-
-  
+@media screen and (min-width: 320px)
+  .header1
+    height: 20px
+    //background-color:white
+@media screen and (min-width: 768px)
+  .header1
+    height: 40px
+@media screen and (min-width: 100px)
+  .listpost  
+    margin-top: 150px
+@media screen and (min-width: 310px)
+  .listpost  
+    margin-top: 150px
+    height:60px
+@media screen and (min-width: 1020px)
+  .listpost  
+    margin-top: 150px
+@media screen and (min-width: 1360px)
+  .listpost  
+    margin-top:100px
+    height: 60px
+// @media screen and (min-width: 1020px)
+//   #list-port
+//     width: 240px
+//     height: 100%
+// @media screen and (min-width: 1020px)
+//   #list-port
+//     width: 240px
+//     height: 100%
+// @media screen and (min-width: 1360px)
+//   #list-port
+//     height: 220px
+// @media screen and (min-width: 1024px)
+//   .listpost  
+//     margin-top: 110px
+// @media screen and (min-width: 320px)
+//   #id
+//     height: 100%
+//     width: 100%
+// @media screen and (min-width: 768px)
+//   #id
+//     height: 100%
+// @media screen and (min-width: 320px)
+//   #id-main
+//     margin-top: 50px
+// .post-title
+//   height:60px
+//   width:100%
+// .post-title-main
+//   line-height:-4px
+//   text-align:left
+//   background-color: black
+//   height:60px
+//   color :white
+//   //font-size :30px
+// .post-title-child
+//   height:60px
+//   font-size:25px
+//   color:white
+//   background-color: orange
+@media screen and (min-width: 100px)
+  .post-title 
+    margin-top: 150px
+@media screen and (min-width: 310px)
+  .post-title  
+    margin-top: 30px
+    height:60px
+@media screen and (min-width: 760px)
+  .post-title  
+    margin-top:80px
+    height:60px
+@media screen and (min-width: 900px)
+  .post-title  
+    margin-top: 30px
+@media screen and (min-width: 1360px)
+  .post-title  
+    margin-top:0px
+    height: 60px
+// .post-title
+//   //margin-top: 20px
+//   height:60px
+//   width:100%
+.post-title-main
+  h4 
+    //margin-top:-2px
+    line-height:16px
+  h5
+    //margin-top:-2px
+    line-height:16px
+  text-align:left
+  background-color: black
+  height:60px
+  color :white
+  //font-size :30px
+.post-title-child
+  height:60px
+  font-size:25px
+  color:white
+  background-color: orange
+// @media screen and (min-width: 310px)
+//   #id-search
+//     float:right
+//     width:100%
+// @media screen and (min-width: 470px)
+//   #id-search
+//     float:right
+//     width:100%
+// @media screen and (min-width: 760px)
+//  #id-search
+//     float:right
+//     width:100%
+// @media screen and (min-width: 1280px)
+//  #id-search
+//     float:right
+//     width:100%
+@media screen and (min-width: 310px)
+  .navbar-toggle
+    // margin-left: -300px
+    // margin-right: 300px
+    float:left
+    margin-top: -55px
+@media screen and (min-width: 470px)
+  .navbar-toggle
+    // margin-left: -380px
+    // margin-right: 480px
+    float:left
+    margin-top: -55px
+@media screen and (min-width: 760px)
+  .navbar-toggle
+    // margin-left: -100px
+    // margin-right: 900px
+    float:left
+    margin-top: -55px
+@media screen and (min-width: 310px)
+  #home-slideshow
+    margin-top: 100px
+@media screen and (min-width: 760px)
+  #home-slideshow
+    margin-top: 100px
+@media screen and (min-width: 970px)
+  #home-slideshow
+    margin-top: 0px
+.lead
+  font-size: 14px
+@media screen and (min-width: 310px)
+  #id-p
+    margin-top:35px
+@media screen and (min-width: 1250px)
+  #id-p
+    margin-top:0px

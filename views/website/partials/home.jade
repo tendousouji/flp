@@ -1,6 +1,6 @@
 ﻿//- home.jade to bind data
 .container-fluid
-  .row(style="margin-top:90px;")
+  .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12
       .slider
         // slideshow
@@ -36,62 +36,13 @@
       .groups
         .row
           // 1 -category
-          //- .col-lg-4.col-md-4.col-sm-12.col-xs-12(ng-repeat="catalory in group.catalories track by $index")
-            .categories
-              .row
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .categories-title
-                    h3(ng-bind="catalory.name")
-              .row.categories-content
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                  .row
-                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                      .first-post
-                        .row
-                          .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                            .first-post-thumbnail.img-rounded
-                              img(src="./images/tit1.jpg")
-                            .first-post-title
-                              h4
-                                a(href ="#")(ng-bind="catalory.posts[1].title")
-                            .first-post-content
-                              p(ng-bind="catalory.posts[1].content | limitTo:100")
-                            .first-post-index
-                              p
-                                span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
-                                  a(href="#")(style="margin-left:10px;") 4504
-                                  
-                                span.glyphicon.glyphicon-time(style="margin-right:20px;")
-                                  a(href="#")(style="margin-left:10px;")(ng-bind="catalory.posts[1].date_create | date:'dd/MM/yyyy'")
-                                
-                                span.glyphicon.glyphicon-comment(style="margin-right:20px;")
-                                  a(href="#")(style="margin-left:10px;")(ng-bind="catalory.posts[1].comments.length")
-                  .row
-                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                      .next-post
-                        .row
-                          .col-lg-2.col-md-3.col-sm-3.col-xs-3
-                            .next-post-thumbnail.img-rounded
-                              img(src="./images/next1.jpg")
-                          .col-lg-10.col-md-9.col-sm-9.col-xs-9
-                            .next-post-title 
-                              a(href ="#")(ng-bind="catalory.posts[2].title")
-                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                      .next-post
-                        .row
-                          .col-lg-2.col-md-3.col-sm-3.col-xs-3
-                            .next-post-thumbnail.img-rounded
-                              img(src="./images/next2.jpg")
-                          .col-lg-10.col-md-9.col-sm-9.col-xs-9
-                            .next-post-title
-                              a(href ="#")(ng-bind="catalory.posts[2].title")
-          //2
+          
           .col-lg-4.col-md-4.col-sm-12.col-xs-12(ng-repeat="catalory in group.catalories track by $index")
             .categories
               .row
                 .col-lg-12.col-md-12.col-sm-12.col-xs-12
                   .categories-title
-                    a.title(ng-href="{{group.slug+'/'+catalory.slug}}", ng-click="scrollTop()")
+                    a.title#id1(ng-href="{{group.slug+'/'+catalory.slug}}", ng-click="scrollTop()")
                       h3(ng-bind="catalory.name")
 
               .row.categories-content
@@ -100,35 +51,37 @@
                     .col-lg-12.col-md-12.col-sm-12.col-xs-12
                       .first-post
                         .row
-                          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                          .col-lg-3.col-md-3.col-sm-3.col-xs-3
                             .first-post-thumbnail.img-rounded
-                              img(src="" style="background:url('{{catalory.posts[$index].img_url}}')")
+                              img.img-rounded.img-responsive(src="./images/tit1.jpg")
+                          .col-lg-8.col-md-6.col-sm-6.col-xs-6
                             .first-post-title
                               h4
-                                a.title(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
-                            .first-post-content(style="height:100px;")
+                                a.title#id2(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
+                            .first-post-content(style="height:80px;")
                               //- p(ng-if="catalory.posts[$index].content.length >= 100" ng-bind-html="catalory.posts[$index].content | limitTo:100 | unsafe")
                               //- p(ng-if="catalory.posts[$index].content.length <  100" ng-bind-html="catalory.posts[$index].content | unsafe")
                               //- p {{catalory.posts[$index].content.length > 100 ? catalory.posts[$index].content.substring(0,100) + '...' : catalory.posts[$index].content}}
-                              p(ng-if="catalory.posts[$index].content.length >= 100" ng-bind-html="catalory.posts[$index].content.substring(0,100) + '...' | unsafe")
-                              p(ng-if="catalory.posts[$index].content.length <  100" ng-bind-html="catalory.posts[$index].content | unsafe")
+                              p.lead(ng-if="catalory.posts[$index].content.length >= 100" ng-bind-html="catalory.posts[$index].content.substring(0,100) + '...' | unsafe")
+                              p.lead(ng-if="catalory.posts[$index].content.length <  100" ng-bind-html="catalory.posts[$index].content | unsafe")
+
                             .first-post-index
-                              p
-                                span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
-                                  a(href="#")(style="margin-left:10px;") 4504
-                                  
-                                span.glyphicon.glyphicon-time(style="margin-right:20px;")
-                                  a(href="#")(style="margin-left:10px;")(ng-bind="catalory.posts[$index].date_create | date:'dd/MM/yyyy'")
+                              p#id-p
+                                span.glyphicon.glyphicon-eye-open.lead(style="margin-right:20px;")
+                                  a.lead(href="#")(style="margin-left:5px;") 4504
+                
+                                span.glyphicon.glyphicon-time.lead(style="margin-right:20px;")
+                                  a.lead(href="#")(style="margin-left:5px;")(ng-bind="catalory.posts[$index].date_create | date:'dd/MM/yyyy'")
                                 
-                                span.glyphicon.glyphicon-comment(style="margin-right:20px;")
-                                  a(href="#")(style="margin-left:10px;")(ng-bind="catalory.posts[$index].comments.length")
+                                span.glyphicon.glyphicon-comment.lead(style="margin-right:20px;")
+                                  a.lead(href="#")(style="margin-left:5px;")(ng-bind="catalory.posts[$index].comments.length")
                   .row(ng-if="$index != 0")
                     .col-lg-12.col-md-12.col-sm-12.col-xs-12
                       .next-post
                         .row
                           .col-lg-2.col-md-3.col-sm-3.col-xs-3
                             .next-post-thumbnail.img-rounded
-                              img(src="" style="background:url('{{catalory.posts[$index].img_url}}')")
+                              img.img-responsive(src="./images/next1.jpg")
                           .col-lg-10.col-md-9.col-sm-9.col-xs-9
                             .next-post-title 
                               a.title(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
@@ -183,3 +136,4 @@
       //-       button.btn.btn-primary.col-lg-offset-4.col-md-offset-4.col-sm-offset-4.col-xs-offset-4.col-lg-3.col-md-3-col-sm-3.col-xs-3(type='submit' style="margin-top:10px;") Send
   .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.endfooter
+      

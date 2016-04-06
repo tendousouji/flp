@@ -1,15 +1,22 @@
 .post
   .row
-    .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-title
-      
-      .col-lg-3.col-md-3.col-sm-3.col-xs-3.post-title-main
-        h2(ng-bind="post.catalory.name")
+    .post-title
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12
+        
+        .col-lg-3.col-md-3.col-sm-5.col-xs-6.post-title-main
+          h4.lead(style="padding-top:5px;")(ng-bind="post.catalory.name")
 
-      .col-lg-9.col-md-9.col-sm-9.col-xs-9.post-title-child
-        h2(ng-bind="post.title")
+        .col-lg-9.col-md-9.col-sm-7.col-xs-6.post-title-child
+          h5.lead(ng-bind="post.title")
+
+      //- .col-lg-3.col-md-3.col-sm-3.col-xs-3.post-title-main
+      //-   h2.lead(style="padding-top:10px;")(ng-bind="post.catalory.name")
+
+      //- .col-lg-9.col-md-9.col-sm-9.col-xs-9.post-title-child
+      //-   h2.lead(style="padding-top:10px;")(ng-bind="post.title")
   .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-thumnail
-      img(src='./images/post.jpg' style="width:inherit")
+      img(src='./images/post.jpg' style="width:inherit;margin-top:-10px;")
   .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-content-title
       h3(ng-bind="post.title")
@@ -21,18 +28,18 @@
           a.pull-left(href='#')
             img.media-object( alt='64x64', src='./images/contentuser.jpg', style='width: 150px; height: 150px;')
           .media-body
-            h4.media-heading(style="margin-left:20px;" ng-bind="post.author.full_name")
-            span(style="margin-left:20px;" ng-bind="post.date_create | date:'dd/MM/yyyy'")
+            h4.media-heading(style="margin-left:20px;")  Nguyen Thao
+            span(style="margin-left:20px;")  22/7/2016
             p(style="margin-left:20px;" ng-bind-html="post.content | unsafe")
 
   .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-index
-      span.glyphicon.glyphicon-eye-open(style="margin-right:20px;")
-        a(href="#")(style="margin-left:10px;") 4504
-      span.glyphicon.glyphicon-time(style="margin-right:20px;")
-        a(href="#")(style="margin-left:10px;")(ng-bind="post.date_create | date:'longDate'")
-      span.glyphicon.glyphicon-comment(style="margin-right:20px;")
-        a(href="#")(style="margin-left:10px;") 5
+      span.glyphicon.glyphicon-eye-open
+        a(href="#") 4504
+      span.glyphicon.glyphicon-time
+        a(href="#")(style="text-align:center;")(ng-bind="post.date_create | date:'longDate'")
+      span.glyphicon.glyphicon-comment
+        a(href="#") 5
   .row
     .col-lg-12.col-md-12.col-sm-12.col-xs-12.post-comment
       

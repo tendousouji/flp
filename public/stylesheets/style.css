@@ -111,9 +111,25 @@ p {
 }
 .first-post-content {
   font-size: 16px;
+  margin-top: -5px;
+  margin-left: -20px;
+}
+.first-post-title {
+  margin-top: -10px;
 }
 .first-post-title h4 {
   margin-left: 10px;
+  text-align: left;
+}
+#id2 {
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: -12px;
+}
+#id2:hover {
+  color: #ff8b00;
+  text-decoration: none;
+  transition: color 0.5s;
 }
 .next-post-thumbnail {
   width: 70px;
@@ -136,10 +152,10 @@ p {
 .categories-content {
   margin-top: 5px;
 }
-a {
-  color: #000;
+#id1 {
+  color: #00f;
 }
-a:hover {
+#id1:hover {
   color: #ff8b00;
   text-decoration: none;
   transition: color 0.5s;
@@ -213,16 +229,51 @@ hr {
   border: 2px solid #ffc0cb;
   height: 200px;
 }
-.post {
-  margin-top: 180px;
-  min-height: 800px;
+@media screen and (min-width: 320px) {
+  .post {
+    margin-top: 120px;
+    min-height: 800px;
+  }
 }
-.post-thumnail {
-  margin-top: 10px;
-  min-height: 600px;
+@media screen and (min-width: 768px) {
+  .post {
+    margin-top: 130px;
+    min-height: 800px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .post {
+    margin-top: 100px;
+    min-height: 800px;
+  }
+}
+@media screen and (min-width: 310px) {
+  .post-thumnail {
+    margin-top: 10px;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 470px) {
+  .post-thumnail {
+    margin-top: 10px;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 760px) {
+  .post-thumnail {
+    margin-top: 10px;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .post-thumnail {
+    margin-top: 10px;
+    height: 100%;
+  }
 }
 .post-content-title {
-  min-height: 70px;
+  margin-top: 20px;
+  height: 70px;
 }
 .post-content {
   min-height: 180px;
@@ -273,28 +324,6 @@ hr {
   position: relative;
   overflow: hidden;
   margin-bottom: 15px;
-}
-.post-title {
-  min-height: 60px;
-}
-.post-title-main {
-  background-color: #000;
-  min-height: 60px;
-  color: #fff;
-}
-.post-title-child {
-  min-height: 60px;
-  font-size: 25px;
-  color: #fff;
-  background-color: #ffa500;
-}
-.post-content-title {
-  border-bottom: 2px solid #b9bfbc;
-  padding: 10px 0 0 20px;
-}
-.post-content-title h3 {
-  margin-left: 10px;
-  text-align: center;
 }
 .leavecomment {
   min-height: 250px;
@@ -460,7 +489,127 @@ hr {
 .modal-backdrop.fade.in {
   z-index: 0;
 }
-.header1 {
-  min-height: 80px;
-  background-color: #fff;
+@media screen and (min-width: 320px) {
+  .header1 {
+    height: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header1 {
+    height: 40px;
+  }
+}
+@media screen and (min-width: 100px) {
+  .listpost {
+    margin-top: 150px;
+  }
+}
+@media screen and (min-width: 310px) {
+  .listpost {
+    margin-top: 150px;
+    height: 60px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .listpost {
+    margin-top: 150px;
+  }
+}
+@media screen and (min-width: 1360px) {
+  .listpost {
+    margin-top: 100px;
+    height: 60px;
+  }
+}
+@media screen and (min-width: 100px) {
+  .post-title {
+    margin-top: 150px;
+  }
+}
+@media screen and (min-width: 310px) {
+  .post-title {
+    margin-top: 30px;
+    height: 60px;
+  }
+}
+@media screen and (min-width: 760px) {
+  .post-title {
+    margin-top: 80px;
+    height: 60px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .post-title {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1360px) {
+  .post-title {
+    margin-top: 0px;
+    height: 60px;
+  }
+}
+.post-title-main {
+  text-align: left;
+  background-color: #000;
+  height: 60px;
+  color: #fff;
+}
+.post-title-main h4 {
+  line-height: 16px;
+}
+.post-title-main h5 {
+  line-height: 16px;
+}
+.post-title-child {
+  height: 60px;
+  font-size: 25px;
+  color: #fff;
+  background-color: #ffa500;
+}
+@media screen and (min-width: 310px) {
+  .navbar-toggle {
+    float: left;
+    margin-top: -55px;
+  }
+}
+@media screen and (min-width: 470px) {
+  .navbar-toggle {
+    float: left;
+    margin-top: -55px;
+  }
+}
+@media screen and (min-width: 760px) {
+  .navbar-toggle {
+    float: left;
+    margin-top: -55px;
+  }
+}
+@media screen and (min-width: 310px) {
+  #home-slideshow {
+    margin-top: 100px;
+  }
+}
+@media screen and (min-width: 760px) {
+  #home-slideshow {
+    margin-top: 100px;
+  }
+}
+@media screen and (min-width: 970px) {
+  #home-slideshow {
+    margin-top: 0px;
+  }
+}
+.lead {
+  font-size: 14px;
+}
+@media screen and (min-width: 310px) {
+  #id-p {
+    margin-top: 35px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  #id-p {
+    margin-top: 0px;
+  }
 }

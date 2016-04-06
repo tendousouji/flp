@@ -82,7 +82,7 @@ router.post('/getPosts', function (req, res) {
       res.json({});
     }
     else{
-      res.json(posts);
+      res.json(posts)
     }
   });
 });
