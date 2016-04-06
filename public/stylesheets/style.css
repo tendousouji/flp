@@ -227,17 +227,32 @@ hr {
 }
 @media (min-width: 320px) {
   .post {
-    margin-top: 61px;
+    margin-top: 110px;
   }
 }
 @media (min-width: 768px) {
   .post {
-    margin-top: 160px;
+    margin-top: 165px;
+  }
+}
+@media (min-width: 856px) {
+  .post {
+    margin-top: 110px;
+  }
+}
+@media (min-width: 1023px) {
+  .post {
+    margin-top: 112px;
   }
 }
 @media (min-width: 1024px) {
   .post {
-    margin-top: 106px;
+    margin-top: 110px;
+  }
+}
+@media (min-width: 1261px) {
+  .post {
+    margin-top: 62px;
   }
 }
 @media (min-width: 1366px) {
@@ -246,7 +261,7 @@ hr {
   }
 }
 .post-thumnail {
-  margin-top: 10px;
+  margin-top: 0px;
   max-height: 1200px;
   background-color: #fff;
 }
@@ -510,12 +525,22 @@ hr {
 }
 @media (min-width: 768px) {
   .header1 {
-    height: 160px;
+    height: 156px;
+  }
+}
+@media (min-width: 856px) {
+  .header1 {
+    height: 105px;
   }
 }
 @media (min-width: 1024px) {
   .header1 {
-    height: 111px;
+    height: 107px;
+  }
+}
+@media (min-width: 1261px) {
+  .header1 {
+    height: 56px;
   }
 }
 @media (min-width: 1366px) {
@@ -538,7 +563,7 @@ hr {
 }
 @media (min-width: 320px) {
   .listpost {
-    margin-top: 62px;
+    margin-top: 105px;
   }
 }
 @media (min-width: 768px) {
@@ -546,9 +571,19 @@ hr {
     margin-top: 155px;
   }
 }
+@media (min-width: 856px) {
+  .listpost {
+    margin-top: 110px;
+  }
+}
 @media (min-width: 1024px) {
   .listpost {
     margin-top: 106px;
+  }
+}
+@media (min-width: 1261px) {
+  .listpost {
+    margin-top: 60px;
   }
 }
 @media (min-width: 1366px) {
