@@ -1,1 +1,287 @@
-﻿h1 Login Page
+﻿doctype html
+html(ng-controller="BaseCtrl")
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    title(ng-bind="title")
+    base(href="/")
+    script(src='/javascripts/jquery-2.1.4.min.js')
+    link(rel="shortcut icon",type="image/x-icon",href="mine.ico")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800")
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/libs/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    link(rel='stylesheet', href='css/bootstrap.css', type='text/css')
+    link(rel='stylesheet', href='css/font-awesome.min.css', type='text/css')
+    link(rel='stylesheet', href='css/style.css', type='text/css')
+    link(rel='stylesheet', href='css/responsive.css', type='text/css')
+    link(rel='stylesheet', href='css/perfect-scrollbar.css')
+    link(rel='stylesheet', href='css/owl.carousel.css', type='text/css')
+    link(rel='stylesheet', href='css/animate.css', type='text/css')
+    link(rel='stylesheet', href='css/colors/color.css', type='text/css')
+    link(rel='stylesheet', href='http://www.w3schools.com/lib/w3.css')
+
+    link(rel='stylesheet', href='css/bootstrap.css')
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/flexslider.css')
+    link(rel='stylesheet', href='css/ie.css')
+    link(rel='stylesheet', href='css/prettyPhoto.css')
+    link(rel='stylesheet', href='rs-plugin/css/settings.css', media='screen')
+    link(rel='stylesheet', href='rs-plugin/css/responsive.css', media='screen')
+    link(rel='stylesheet', href='css/elastislide.css')
+    link(rel='stylesheet', href='css/style.css')
+    link(rel='stylesheet', href='css/responsive.css')
+    // Fonts
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,600,800', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Oswald:400,700', rel='stylesheet', type='text/css')
+
+
+
+  body(ng-cloak)
+    .container-fluid#main-container 
+      //.top(style="width:100%;height:160px;position:fixed;top:0;z-index:3;background-color:#ffffff;")  
+      .header1.navbar-fixed-top      
+        .row.header
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="background-color:#ffffff;")
+            .row
+              .col-lg-3.col-md-12.col-sm-12.col-xs-12
+                .logo(style="margin-top :2px;")
+                   img.img-rounded.img-responsive(src="/images/logo2.png", style="width:400px;height:40px;")
+              .col-lg-offset-6.col-lg-3.col-md-offset-6.col-md-6.col-sm-offset-6.col-sm-6.col-xs-offset-6.col-xs-6
+                    form.navbar-form#id-search(role='search')
+                      .input-group
+                        input.form-control(type='text', placeholder='Search', name='q')
+                        .input-group-btn
+                          button.btn.btn-default(type='submit')
+                            i.glyphicon.glyphicon-search
+         
+        .row.menu1
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12(tyle="height: 50px;")
+        
+            nav.navbar.navbar-inverse
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='#main-menu')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              #main-menu.navbar-collapse.collapse
+                ul.nav.navbar-nav
+                  li
+                    a(href='')
+                      b
+                        | Home
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                      b
+                        | ETCF 
+                      span.caret
+                    ul.dropdown-menu
+                      li
+                        a(href='#') Assessment tools
+                      li
+                        a(href='#') Background and Overview
+                      li
+                        a(href='#') Complete version
+                      //li.divider(role='separator')
+                      li
+                        a(href='#') Domain 1-Language
+                      li
+                        a(href='#') Domain 2-Teaching
+                      li
+                        a(href='#') Domain 3-Learners
+                      li
+                        a(href='#') Domain 4-Attitudes and Values
+                      li
+                        a(href='#') Domain 5-Learning form Practice
+                      //li.divider(role='separator')
+                      li
+                        a(href='#') For Trainers-How to use ETCF
+                      li
+                        a(href='#') ETCF presentations
+                      
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                      b
+                        | Gallery
+                      span.caret
+                    ul.dropdown-menu
+                      li
+                        a(href='#') Da Nang RFLC
+                      //li.divider(role='separator')
+                      li
+                        a(href='#') Ha Noi Pedagogical University 2
+                  li(style="min-width :200px;")
+                    a(href="")
+                      b
+                        | Symposium Presentations
+                  
+                      
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                      b
+                        | Video Materials
+                      span.caret
+                    ul.dropdown-menu
+                      li
+                        a(href='#') Articles with video
+                      //li.divider(role='separator')
+                      li
+                        a(href='#') Shaping the way we teach English
+                  li
+                    a(href='#') 
+                      b
+                        | News
+                ul.nav.navbar-nav.navbar-right
+                  li
+                    //- a(href="")
+                    button.btn.btn-default(type='submit', data-toggle='modal',style="margin-right:-10px;margin-top:8px;", data-target='#login') Login
+                    #login.modal.fade(role='dialog', ng-controller="LoginCtrl")
+                      .modal-dialog(style="max-width:500px;")
+                          .modal-content
+                            .modal-header
+                              h3.text-center Login
+                            .modal-body
+                              .row
+                                form.form-inline(role='form')
+                                  .form-group
+                                    .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                                      label.sr-only.control-label
+                                        | Username
+                                        span.text-danger *
+                                      input.form-control(type='text', placeholder='Username *', ng-model='user.username')
+                                  .form-group
+                                    .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                                      label.sr-only.control-label
+                                        | Password
+                                        span.text-danger *
+                                      input.form-control(type='password', placeholder='Password *', ng-model='user.password')
+                                  .checkbox.col-lg-offset-1.col-md-offset-1.col-sm-offset-1.col-xs-offset-1
+                                    label
+                                      input(type='checkbox')
+                                      |  Remember password
+                                p.errors(ng-bind="error_message")
+                            .modal-footer
+                              button.btn.btn-primary.col-lg-offset-3.col-lg-3.col-md-3.col-sm-3.col-xs-3(type='submit', ng-click='login()') Login
+                              button.btn.btn-default.col-lg-offset-3.col-lg-3.col-md-3.col-sm-3.col-xs-3(type='submit',data-dismiss="modal") Cancel
+                  li
+                      form.navbar-form(role='input')     
+                        button.btn.btn-primary(type='submit',style="margin-right:-18px;" ,data-toggle='modal', data-target='#register') Register
+              
+                      #register.modal.fade(role='dialog')
+                          .modal-dialog(style="width:500px;")
+                              .modal-content
+                                  .modal-header
+                                    h3.text-center Sign in
+                                  .modal-body
+                                    .row
+                                        form()
+                                          .form-group
+                                            .col-md-12
+                                              label.sign-in-label
+                                                | User name
+                                                span.text-danger *
+                                              input.form-control(type='text')
+                                          .form-group
+                                            .col-md-6
+                                              label.sign-in-label
+                                                | Password
+                                                span.text-danger *
+                                              input.form-control(type='password')
+                                            .col-md-6
+                                              label.sign-in-label
+                                                | Confirm Password
+                                                span.text-danger *
+                                              input.form-control(type='password')
+                                          .form-group
+                                            .col-md-6
+                                              label.sign-in-label Name
+                                              input.form-control(type='text')
+                                            .col-md-6
+                                              label.sign-in-label
+                                                | Email
+                                                span.text-danger *
+                                              input.form-control(type='text')
+                                          .form-group
+                                            .col-md-12
+                                              label.sign-in-label Phone
+                                              input.form-control(type='tel')
+                                          .form-group
+                                            .col-md-12
+                                              .row
+                                                label.col-md-12.sign-in-label-birthday Birthday
+                                                .col-md-3
+                                                  input.form-control(type='text', placeholder='year')
+                                                .col-md-6
+                                                  input.form-control(type='text', placeholder='month')
+                                                .col-md-3
+                                                  input.form-control(type='text', placeholder='day')
+                                          .form-group
+                                            .col-md-12
+                                              label.control-label.sign-in-label Country
+                                              select.form-control(name='')
+                                                option(value='vietnam') Viet Nam
+                                                option(value='american') United State of America
+                                                option(value='england') United State of Kingdom
+                                          .form-group
+                                            .col-md-12
+                                              label.control-label.sign-in-label Gender
+                                              select.form-control(name='')
+                                                option(value='male') Male
+                                                option(value='female') Female
+                                                
+                                  .modal-footer
+                                    button.btn.btn-primary.col-md-3.col-md-offset-3(type='submit') Login
+                                    button.btn.btn-default.col-md-3(type='submit',data-dismiss="modal") Cancel
+
+      .home1
+        block content
+
+script(src="/libs/requirejs/require.js", data-main="/javascripts/website/main.js")
+script(type='text/javascript', src='js/modernizr.js')
+script(src='js/jquery-2.1.4.js')
+script(type='text/javascript', src='js/html5lightbox.js') 
+script(type='text/javascript', src='js/scrolltopcontrol.js')
+script(type='text/javascript', src='js/slick.min.js')
+script(type='text/javascript', src='js/owl.carousel.min.js')
+script(type='text/javascript', src='js/highlight.pack.js')
+script(type='text/javascript', src='js/tabifier.js')
+script(type='text/javascript', src='js/js.js')
+script(type='text/javascript', src='js/jPages.min.js')
+script(type='text/javascript', src='js/perfect-scrollbar.js')
+script(type='text/javascript', src='js/perfect-scrollbar.jquery.js')
+script(src='js/script.js')
+script(src='js/clock.js')
+script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+
+script.
+  $(document).ready(function(){
+    
+    $('#search-area').on('click', function() {
+      $(this).toggleClass('click-bg');
+      $('.search-input').toggleClass('show-input-field');
+    });
+    
+    $('.menubar-item').on('click', function() {
+      $('.menubar-item').removeClass('active-item');
+      $(this).addClass('active-item');
+    });
+
+
+  });
+
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+script(src='js/bootstrap.min.js')
+  
+script.
+  $(function(){
+    $('.dropdown').hover(function() {
+        $(this).addClass('open');
+    },
+    function() {
+        $(this).removeClass('open');
+    });
+  });

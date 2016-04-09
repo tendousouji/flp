@@ -51,8 +51,8 @@
           $scope.activeId.push(0);
         }
 
-        //check scopr structure
-        console.log($scope);
+        //check scope structure
+        // console.log($scope);
         
       });
 

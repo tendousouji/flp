@@ -613,3 +613,11 @@ hr {
     margin-top: 0px;
   }
 }
+.avatar a {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.user-img {
+  width: 50px;
+  height: 50px;
+}
