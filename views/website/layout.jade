@@ -135,11 +135,11 @@ html(ng-controller="BaseCtrl")
                     a(href='#') 
                       b
                         | News
-                ul.nav.navbar-nav.navbar-right
+                ul.nav.navbar-nav.navbar-right(ng-controller="LoginCtrl")
                   li#login
                     //- a(href="")
-                    button.btn.btn-default(type='submit', data-toggle='modal',style="margin-right:-10px;margin-top:8px;", data-target='#loginModal', ng-if="$scope.user==null") Login
-                    #loginModal.modal.fade(role='dialog', ng-controller="LoginCtrl")
+                    button.btn.btn-default(type='submit', data-toggle='modal',style="margin-right:-10px;margin-top:8px;", data-target='#loginModal') Login
+                    #loginModal.modal.fade(role='dialog')
                       .modal-dialog(style="max-width:500px;")
                           .modal-content
                             .modal-header
@@ -237,11 +237,11 @@ html(ng-controller="BaseCtrl")
                                     button.btn.btn-primary.col-md-3.col-md-offset-3(type='submit') Login
                                     button.btn.btn-default.col-md-3(type='submit',data-dismiss="modal") Cancel
                   li#user.avatar
-                    //a(href='#')
-                      span(ng-bind="$scope.user.username") {{$scope.user.username}}
+                    a(href='#')
+                      |  {{user.username}}
                       img.user-img.img-circle(src='images/admin/user_admin.png')
                   li#logout
-                    //a(href='#', ng-click='logout()')
+                    a(href='#', ng-click='logout()')
                       i.fa.fa-sign-out
                       |  Sign out
 

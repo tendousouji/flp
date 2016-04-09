@@ -18,10 +18,10 @@
         if (AuthService.isLoggedIn()) {
           $('#login').hide();
           $('#register').hide();
-          // $('#user').show();
-          // $('#logout').show();
-          $('#user').append('<a href="#">'+$scope.user.username+'<img src="images/admin/user_admin.png" class="user-img img-circle"/></a>');
-          $('#logout').append('<a href="#" ng-click="logout()"><i class="fa fa-sign-out"></i> Sign out</a>');
+          $('#user').show();
+          $('#logout').show();
+          // $('#user').append('<a href="#">'+$scope.user.username+'<img src="images/admin/user_admin.png" class="user-img img-circle"/></a>');
+          // $('#logout').append('<a href="#" ng-click="logout()"><i class="fa fa-sign-out"></i> Sign out</a>');
         }else{
           $('#login').show();
           $('#register').show();
@@ -74,11 +74,9 @@
 
       // logout
       $scope.logout = function () {
-        // $cookieStore.remove(user);
-        AuthService.logout().then(function (result) {
-          console.log("logout");
-          replaceLogReg();
-        });
+        console.log("logout");
+        AuthService.logout();
+        replaceLogReg();
       }
 
     }]);
