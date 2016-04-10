@@ -86,6 +86,11 @@
     margin-top: -37px;
   }
 }
+@media (min-width:1261px) {
+  .slider {
+    margin-top: -56px;
+  }
+}
 .col-centerd {
   float: none;
   margin: 0 auto;
@@ -683,4 +688,12 @@ nav.navbar.navbar-inverse {
   #search0 {
     display: none;
   }
+}
+.avatar a {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.user-img {
+  width: 40px;
+  height: 40px;
 }
