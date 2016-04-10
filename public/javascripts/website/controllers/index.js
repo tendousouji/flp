@@ -10,5 +10,6 @@ define([
   './list_post',
   './list_catalory',
   './login',
-  './base'
+  './base',
+  './register'
 ], function () { });

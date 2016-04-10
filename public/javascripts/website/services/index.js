@@ -10,5 +10,6 @@ define([
   './catalory',
   './post',
   './auth',
-  './group'
+  './group',
+  './user'
 ], function () { });

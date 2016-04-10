@@ -27,7 +27,7 @@ var mongoose = require('mongoose');
 var db = require('./configs/database');
 mongoose.connect(db.url);
 
-var app = express();
+var app = express(); 
 
 var website = require('./controllers/website/index.js');
 var admin = require('./controllers/admin/index.js');
