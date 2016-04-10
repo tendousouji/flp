@@ -17,7 +17,7 @@ router.post('/', function (req, res) {
   if (!username || !password) { //check fill username & password
     res.json({ error_code: -1, user: null });
   } else {
-    User.findOne({ username: username }, function (err, result) {
+    User.findOne({ username: username}, function (err, result) {
       if (err) {                                    // check database error
         res.json({ error_code: -5, user: null });
       } else if (!result) {                         // check user esixt

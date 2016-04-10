@@ -45,120 +45,19 @@ html(ng-controller="BaseCtrl")
     .container-fluid#main-container 
       //.top(style="width:100%;height:160px;position:fixed;top:0;z-index:3;background-color:#ffffff;")  
       .header1.navbar-fixed-top      
-        .row.header
-          .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="background-color:#ffffff;")
+        .row
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12(style="background-image: linear-gradient(to bottom,#fdd602,#fba202)")
             .row
-              .col-lg-3.col-md-12.col-sm-12.col-xs-12
-                .logo(style="margin-top :2px;")
-                   img.img-rounded.img-responsive(src="/images/logo2.png", style="width:400px;height:40px;")
+              .col-lg-3.col-md-3.col-sm-12.col-xs-12
+                .logo
+                   img.img-rounded.img-responsive(src="/images/logo001.JPG", style="width:300px;height:60px;margin-left:20px")
               .col-lg-offset-6.col-lg-3.col-md-offset-6.col-md-6.col-sm-offset-6.col-sm-6.col-xs-offset-6.col-xs-6
-                    form.navbar-form#id-search(role='search')
-                      .input-group
-                        input.form-control(type='text', placeholder='Search', name='q')
-                        .input-group-btn
-                          button.btn.btn-default(type='submit')
-                            i.glyphicon.glyphicon-search
-         
-                
-  
-                  //- form.navbar-form(role='input')
-                  //-   button.btn.btn-default(type='submit', data-toggle='modal', data-target='#login') Login
-                  //-   #login.modal.fade(role='dialog')
-                  //-     .modal-dialog(style="width:500px;")
-                  //-         .modal-content
-                  //-           .modal-header
-                  //-             h3.text-center Login
-                  //-           .modal-body
-                  //-             .row
-                  //-               form.login-form(action='index.html')
-                  //-                 .login-wrap
-                  //-                   p.login-img
-                  //-                     i.icon_lock_alt
-                  //-                   .input-group
-                  //-                     span.input-group-addon
-                  //-                       i.icon_profile
-                  //-                     input.form-control(type='text', placeholder='Username', autofocus='')
-                  //-                   .input-group
-                  //-                     span.input-group-addon
-                  //-                       i.icon_key_alt
-                  //-                     input.form-control(type='password', placeholder='Password')
-                  //-                   label.checkbox
-                  //-                     input(type='checkbox', value='remember-me')
-                  //-                     |  Remember me
-                  //-                   button.btn.btn-primary.btn-lg.btn-block(type='submit') Login
-                               
-                
-                  //- form.navbar-form(role='input')     
-                  //-   button.btn.btn-primary(type='submit', data-toggle='modal', data-target='#register') Register
-              
-                  //- #register.modal.fade(role='dialog')
-                  //-     .modal-dialog(style="width:500px;")
-                  //-         .modal-content
-                  //-             .modal-header
-                  //-               h3.text-center Sign in
-                  //-             .modal-body
-                  //-               .row
-                  //-                   form()
-                  //-                     .form-group
-                  //-                       .col-md-12
-                  //-                         label.sign-in-label
-                  //-                           | User name
-                  //-                           span.text-danger *
-                  //-                         input.form-control(type='text')
-                  //-                     .form-group
-                  //-                       .col-md-6
-                  //-                         label.sign-in-label
-                  //-                           | Password
-                  //-                           span.text-danger *
-                  //-                         input.form-control(type='password')
-                  //-                       .col-md-6
-                  //-                         label.sign-in-label
-                  //-                           | Confirm Password
-                  //-                           span.text-danger *
-                  //-                         input.form-control(type='password')
-                  //-                     .form-group
-                  //-                       .col-md-6
-                  //-                         label.sign-in-label Name
-                  //-                         input.form-control(type='text')
-                  //-                       .col-md-6
-                  //-                         label.sign-in-label
-                  //-                           | Email
-                  //-                           span.text-danger *
-                  //-                         input.form-control(type='text')
-                  //-                     .form-group
-                  //-                       .col-md-12
-                  //-                         label.sign-in-label Phone
-                  //-                         input.form-control(type='tel')
-                  //-                     .form-group
-                  //-                       .col-md-12
-                  //-                         .row
-                  //-                           label.col-md-12.sign-in-label-birthday Birthday
-                  //-                           .col-md-3
-                  //-                             input.form-control(type='text', placeholder='year')
-                  //-                           .col-md-6
-                  //-                             input.form-control(type='text', placeholder='month')
-                  //-                           .col-md-3
-                  //-                             input.form-control(type='text', placeholder='day')
-                  //-                     .form-group
-                  //-                       .col-md-12
-                  //-                         label.control-label.sign-in-label Country
-                  //-                         select.form-control(name='')
-                  //-                           option(value='vietnam') Viet Nam
-                  //-                           option(value='american') United State of America
-                  //-                           option(value='england') United State of Kingdom
-                  //-                     .form-group
-                  //-                       .col-md-12
-                  //-                         label.control-label.sign-in-label Gender
-                  //-                         select.form-control(name='')
-                  //-                           option(value='male') Male
-                  //-                           option(value='female') Female
-                                            
-                  //-             .modal-footer
-                  //-               button.btn.btn-primary.col-md-3.col-md-offset-3(type='submit') Login
-                  //-               button.btn.btn-default.col-md-3(type='submit') Cancel
-         
-          
-         //.col-lg-2.col-md-2.col-sm-0.col-xs-0
+                #search-box
+                  form#search-form(action='/search', method='get', target='_top')
+                    input#search-text(name='q', placeholder='Search TechFrost', type='text')
+                    button#search-button(type='submit')
+                      span Search
+                        
         .row.menu1
           .col-lg-12.col-md-12.col-sm-12.col-xs-12(tyle="height: 50px;")
         
