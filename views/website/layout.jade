@@ -155,12 +155,12 @@ html(ng-controller="BaseCtrl")
                   span.icon-bar
                   span.icon-bar
               .navbar-header
-                a.navbar-brand(href='') 
+                a.navbar-brand(href='/', ng-click="scrollTop()") 
                   img(src='./images/logo001.jpg' style="height:50px;margin-top:-15px;margin-right:-15px;")
               #main-menu.navbar-collapse.collapse
                 ul.nav.navbar-nav
                   li
-                    a(href='')
+                    a(href='/', ng-click="scrollTop()")
                       | Home
                   li.dropdown
                     a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
@@ -260,63 +260,54 @@ html(ng-controller="BaseCtrl")
                               h3.text-center Sign in
                             .modal-body(style="margin-top : -20px;")
                               .row
-                                  form()
+                                  form(name='myForm')
                                     .form-group
                                       .col-md-12
                                         label.sign-in-label
                                           | User name
                                           span.text-danger *
-                                        input.form-control(type='text', ng-model="user.username")
+                                        input#name.form-control(type='text', ng-model="user.username")
+                                        //- input#username.form-control(type='text', name='username',ng-model="user.username", ng-minlength='5', ng-maxlength='20', ng-pattern='/^[A-z][A-z0-9]*$/', required='')
+                                        span(ng-show='myForm.username.$error.required && myForm.username.$dirty' style="color: red") required
+                                        span(ng-show='!myForm.username.$error.minLength && !myForm.username.$error.maxLength && myForm.username.$error.pattern && myForm.username.$dirty' style="color: red") Must start with a letter, and contain letters & numbers only.
+                                        span(ng-show='!myForm.username.$error.required && (myForm.username.$error.minlength || myForm.username.$error.maxlength) && myForm.username.$dirty' style="color: red") Username ust be between 5 and 20 characters.
+
                                     .form-group
                                       .col-md-6
                                         label.sign-in-label
                                           | Password
                                           span.text-danger *
                                         input.form-control(type='password', ng-model="user.password")
+                                        //- input#password.form-control(type='password', name='password', ng-model="user.password", ng-minlength='8', ng-maxlength='20', ng-pattern='/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/', required='')
+                                        span(ng-show='myForm.password.$error.required && myForm.password.$dirty' style="color: red") required
+                                        span(ng-show='!myForm.password.$error.required && (myForm.password.$error.minlength || myForm.password.$error.maxlength) && myForm.password.$dirty' style="color: red") Passwords must be between 8 and 20 characters.
+                                        span(ng-show='!myForm.password.$error.required && !myForm.password.$error.minlength && !myForm.password.$error.maxlength && myForm.password.$error.pattern && myForm.password.$dirty' style="color: red")
+                                          | Must contain one lower & uppercase letter, and one non-alpha character (a number or a symbol.)
                                       .col-md-6
                                         label.sign-in-label
                                           | Confirm Password
                                           span.text-danger *
                                         input.form-control(type='password', ng-model="repassword")
+                                        //- input#password_c.form-control(type='password', name='password_c', ng-model="repassword", valid-password-c='', required='')
+                                        span(ng-show='myForm.password_c.$error.required && myForm.password_c.$dirty' style="color: red") Please confirm your password.
+                                        span(ng-show='!myForm.password_c.$error.required && myForm.password_c.$error.noMatch && myForm.password.$dirty' style="color: red") Passwords do not match.
                                     .form-group
                                       .col-md-6
-                                        label.sign-in-label Name
+                                        label.sign-in-label 
+                                          | Name
+                                          //- span.text-danger *
                                         input.form-control(type='text', ng-model="user.full_name")
+                                        //- input#name.form-control(type='text', name='name', ng-model="user.full_name")
                                       .col-md-6
                                         label.sign-in-label
                                           | Email
                                           span.text-danger *
                                         input.form-control(type='text', ng-model="user.email")
-                                    .form-group
-                                      .col-md-12
-                                        label.sign-in-label Phone
-                                        input.form-control(type='tel')
-                                    .form-group
-                                      .col-md-12
-                                        .row
-                                          label.col-md-12.sign-in-label-birthday Birthday
-                                          .col-md-3
-                                            input.form-control(type='text', placeholder='day')
-                                          .col-md-6
-                                            input.form-control(type='text', placeholder='month')
-                                          .col-md-3
-                                            input.form-control(type='text', placeholder='year')
-                                    .form-group
-                                      .col-md-12
-                                        label.control-label.sign-in-label Country
-                                        select.form-control(name='')
-                                          option(value='vietnam') Viet Nam
-                                          option(value='american') United State of America
-                                          option(value='england') United State of Kingdom
-                                    .form-group
-                                      .col-md-12
-                                        label.control-label.sign-in-label Gender
-                                        select.form-control(name='')
-                                          option(value='male') Male
-                                          option(value='female') Female
-                                          
+                                        //- input#email.form-control(type='email', name='email', ng-model="user.email", required='')
+                                        span(ng-show='myForm.email.$error.required && myForm.email.$dirty' style="color: red") required
+                                        span(ng-show='!myForm.email.$error.required && myForm.email.$error.email && myForm.email.$dirty' style="color: red") invalid email
                             .modal-footer
-                              button.btn.btn-primary.col-md-3.col-md-offset-3(type='submit', ng-click="register()") Register
+                              button.btn.btn-primary.col-md-3.col-md-offset-3(type='submit', ng-click="register()", ng-disabled="!myForm.$valid") Register
                               button.btn.btn-default.col-md-3(type='submit' data-dismiss="modal") Cancel
 
                   li#user.avatar
@@ -346,39 +337,8 @@ html(ng-controller="BaseCtrl")
 
     script(src='/javascripts/jquery-2.1.4.min.js')
     script(src='/libs/bootstrap/js/bootstrap.min.js')
-
     script(src="/libs/requirejs/require.js", data-main="/javascripts/website/main.js")
-    //- script(type='text/javascript', src='js/modernizr.js')
-    //- //- script(src='js/jquery-2.1.4.js')
-    //- script(type='text/javascript', src='js/html5lightbox.js') 
-    //- script(type='text/javascript', src='js/scrolltopcontrol.js')
-    //- script(type='text/javascript', src='js/slick.min.js')
-    //- script(type='text/javascript', src='js/owl.carousel.min.js')
-    //- script(type='text/javascript', src='js/highlight.pack.js')
-    //- script(type='text/javascript', src='js/tabifier.js')
-    //- script(type='text/javascript', src='js/js.js')
-    //- script(type='text/javascript', src='js/jPages.min.js')
-    //- script(type='text/javascript', src='js/perfect-scrollbar.js')
-    //- script(type='text/javascript', src='js/perfect-scrollbar.jquery.js')
-    //- script(src='js/script.js')
-    //- script(src='js/clock.js')
-    //- script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
-
-    //- script(src='js/jquery-1.7.1.min.js')
-    //- script(src='js/jquery.flexslider-min.js')
-    //- script(src='js/modernizr.custom.17475.js')
-    //- script(src='js/jquery.elastislide.js')
-    //- script(src='js/jquery.isotope.min.js')
-    //- script(src='rs-plugin/js/jquery.themepunch.plugins.min.js')
-    //- script(src='rs-plugin/js/jquery.themepunch.revolution.js')
-    //- script(src='js/jquery.cycle.all.js')
-    //- script(src='js/jquery.prettyPhoto.js')
-    //- script(src='http://maps.google.com/maps/api/js?sensor=true')
-    //- script(src='js/jquery.ui.map.full.min.js')
-    //- script(src='js/custom.js')
-    //- cript(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
-    //- script(src='js/bootstrap.min.js')
-    //- script(src='js/jquery-2.1.1.min.js')
+    //- script(src="//cdn.jsdelivr.net/satellizer/0.14.0/satellizer.min.js")
 
 script.
   $(document).ready(function(){

@@ -53,8 +53,10 @@
                     .first-post
                       .row
                         .col-lg-3.col-md-3.col-sm-3.col-xs-3
-                          .first-post-thumbnail.img-rounded
-                            img(src="{{catalory.posts[$index].img_url}}" style="width:inherit;")
+                          a(ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
+                            .first-post-thumbnail.img-rounded
+                              img(src="{{catalory.posts[$index].img_url}}" style="width:inherit;")
+
                         .col-lg-9.col-md-9.col-sm-9.col-xs-9
                           .row
                             .col-lg-12.col-md-12.col-sm-12.col-xs-12
@@ -85,7 +87,8 @@
                       .row
                         .col-lg-2.col-md-3.col-sm-3.col-xs-3
                           .next-post-thumbnail.img-rounded
-                            img(src="{{catalory.posts[$index].img_url}}" style="width:40px;")
+                            a(ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")
+                              img(src="{{catalory.posts[$index].img_url}}" style="width:40px;")
                         .col-lg-10.col-md-9.col-sm-9.col-xs-9
                           .next-post-title 
                             a.title(ng-bind="catalory.posts[$index].title", ng-href="{{group.slug+'/'+catalory.slug+'/'+catalory.posts[$index].slug}}", ng-click="scrollTop()")

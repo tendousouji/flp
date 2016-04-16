@@ -16,18 +16,20 @@ define(['./module'], function (controllers) {
         console.log("repassword: ", $scope.repassword);
         console.log("fullname:      ", $scope.user.full_name);
         console.log("email:     ", $scope.user.email);
+        console.log("user:     ", $scope.user);
 
-        UserService.addUser($scope.user).then(function (user){
-          if(user){
-            $scope.user = {};
-            //$scope.user.is_active = 1;
-            //Flash.create('success', 'Create new user successfully.');
-            console.log("success");
-          }
-          else{
-            //Flash.create('danger', 'Create new user unsuccessfully.');
-          }
-        });
+        // //comment to test
+        // UserService.addUser($scope.user).then(function (user){
+        //   if(user){
+        //     $scope.user = {};
+        //     //$scope.user.is_active = 1;
+        //     //Flash.create('success', 'Create new user successfully.');
+        //     console.log("success");
+        //   }
+        //   else{
+        //     //Flash.create('danger', 'Create new user unsuccessfully.');
+        //   }
+        // });
 
       }
 
