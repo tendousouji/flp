@@ -14,7 +14,6 @@ html(ng-controller="BaseCtrl")
     link(rel='stylesheet', href='/libs/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
 
-  
     // Fonts
     link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,600,800', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Oswald:400,700', rel='stylesheet', type='text/css')
@@ -25,127 +24,6 @@ html(ng-controller="BaseCtrl")
     .container-fluid#main-container 
       //.top(style="width:100%;height:160px;position:fixed;top:0;z-index:3;background-color:#ffffff;")  
       .header1.navbar-fixed-top      
-        //.row.header
-          .col-lg-3.col-md-3.col-sm-6.col-xs-12
-            .logo(style="margin-top :2px;")
-               img.img-rounded.img-responsive(src="/images/logo2.png", style="width:400px;height:40px;")
-         
-          .col-lg-offset-4.col-lg-2.col-md-2.col-sm-4.col-xs-4.text-center
-            .login-form(style="margin-top:5px;")
-              .row
-                
-                .col-lg-3.col-md-3.col-sm-3.col-xs-3(style="margin-right:25px")
-                  form.navbar-form(role='input')
-                    button.btn.btn-default#btnLogin(type='submit', data-toggle='modal', data-target='#login' ) Login
-                    #login.modal.fade(role='dialog')
-                      .modal-dialog(style="width:500px;")
-                          .modal-content
-                            .modal-header
-                              h3.text-center Login
-                            .modal-body
-                              .row
-                                form.login-form(action='index.html')
-                                  .login-wrap
-                                    p.login-img
-                                      i.icon_lock_alt
-                                    .input-group
-                                      span.input-group-addon
-                                        i.icon_profile
-                                      input.form-control(type='text', placeholder='Username', autofocus='')
-                                    .input-group
-                                      span.input-group-addon
-                                        i.icon_key_alt
-                                      input.form-control(type='password', placeholder='Password')
-                                    label.checkbox
-                                      input(type='checkbox', value='remember-me')
-                                      |  Remember me
-                                    button.btn.btn-primary.btn-lg.btn-block(type='submit') Login
-                               
-                .col-lg-3.col-md-3.col-sm-3.col-xs-3
-                  form.navbar-form(role='input')     
-                    button.btn.btn-primary#btnRegister(type='submit', data-toggle='modal', data-target='#register') Register
-              
-                  #register.modal.fade(role='dialog')
-                    .modal-dialog(style="width:500px;")
-                        .modal-content
-                            .modal-header
-                              h3.text-center Sign in
-                            .modal-body
-                              .row
-                                  form()
-                                    .form-group
-                                      .col-md-12
-                                        label.sign-in-label
-                                          | User name
-                                          span.text-danger *
-                                        input.form-control(type='text')
-                                    .form-group
-                                      .col-md-6
-                                        label.sign-in-label
-                                          | Password
-                                          span.text-danger *
-                                        input.form-control(type='password')
-                                      .col-md-6
-                                        label.sign-in-label
-                                          | Confirm Password
-                                          span.text-danger *
-                                        input.form-control(type='password')
-                                    .form-group
-                                      .col-md-6
-                                        label.sign-in-label Name
-                                        input.form-control(type='text')
-                                      .col-md-6
-                                        label.sign-in-label
-                                          | Email
-                                          span.text-danger *
-                                        input.form-control(type='text')
-                                    .form-group
-                                      .col-md-12
-                                        label.sign-in-label Phone
-                                        input.form-control(type='tel')
-                                    .form-group
-                                      .col-md-12
-                                        .row
-                                          label.col-md-12.sign-in-label-birthday Birthday
-                                          .col-md-3
-                                            input.form-control(type='text', placeholder='year')
-                                          .col-md-6
-                                            input.form-control(type='text', placeholder='month')
-                                          .col-md-3
-                                            input.form-control(type='text', placeholder='day')
-                                    .form-group
-                                      .col-md-12
-                                        label.control-label.sign-in-label Country
-                                        select.form-control(name='')
-                                          option(value='vietnam') Viet Nam
-                                          option(value='american') United State of America
-                                          option(value='england') United State of Kingdom
-                                    .form-group
-                                      .col-md-12
-                                        label.control-label.sign-in-label Gender
-                                        select.form-control(name='')
-                                          option(value='male') Male
-                                          option(value='female') Female
-                                          
-                            .modal-footer
-                              button.btn.btn-primary.col-md-3.col-md-offset-3(type='submit') Login
-                              button.btn.btn-default.col-md-3(type='submit') Cancel
-          .col-lg-2.col-md-2.col-sm-6.col-xs-6
-            #search
-              form.navbar-form(role='search')
-                .input-group
-                  input.form-control(type='text', placeholder='Search', name='q')
-                  .input-group-btn
-                    button.btn.btn-default(type='submit')
-                      i.glyphicon.glyphicon-search
-          .col-lg-1.col-md-1.col-sm-2.col-xs-2(style="margin-right:-50px;")
-            nav.navbar.navbar-inverse
-              button.navbar-toggle(type='button', data-toggle='collapse', data-target='#main-menu' style="margin-top:23px;")
-                span.sr-only Toggle navigation
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-        
         .row.menu.container-fluid(style="margin-left:1px;")
           .col-lg-12.col-md-12.col-sm-12.col-xs-12
             nav.navbar.navbar-inverse
@@ -168,7 +46,7 @@ html(ng-controller="BaseCtrl")
                       span.caret
                     ul.dropdown-menu
                       li
-                        a(href='#') Assessment tools
+                        a(href='/AssessmentTool', ng-click="scrollTop()") Assessment tools
                       li
                         a(href='#') Background and Overview
                       li

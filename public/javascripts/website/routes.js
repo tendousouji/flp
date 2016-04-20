@@ -11,6 +11,18 @@ define(['./app'], function (app) {
         controller: 'LoginCtrl',
         title: 'Login'
       });
+
+      $routeProvider.when('/AssessmentTool', {
+        templateUrl: 'api/partials/assessment_tool',
+        controller: '',
+        title: 'assessment_tool'
+      });
+
+      $routeProvider.when('/Confirm/:id', {
+        templateUrl: 'api/partials/confirm',
+        controller: 'RegisterCtrl',
+        title: 'Confirm'
+      });
       
       $routeProvider.when('/:group_slug', {
         templateUrl: 'api/partials/list_catalory',

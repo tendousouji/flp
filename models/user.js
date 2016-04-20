@@ -6,10 +6,10 @@ var userSchema = new Schema({
     password: String,
     full_name: String,
     email: String,
-    avatar_url: String,
-    type_user: Number,
-    is_active: Number,
-    date_create: Date
+    avatar_url: {type: String, default: null},
+    type_user: {type: Number, default: 0},
+    is_active: {type: Number, default: 0},
+    date_create: {type: Date, default: Date.now}
 });
 
 //Instance methods
