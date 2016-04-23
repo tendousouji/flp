@@ -14,6 +14,7 @@ html(ng-controller="BaseCtrl")
     link(rel='stylesheet', href='/libs/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
 
+  
     // Fonts
     link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,600,800', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Oswald:400,700', rel='stylesheet', type='text/css')
@@ -24,6 +25,7 @@ html(ng-controller="BaseCtrl")
     .container-fluid#main-container 
       //.top(style="width:100%;height:160px;position:fixed;top:0;z-index:3;background-color:#ffffff;")  
       .header1.navbar-fixed-top      
+        
         .row.menu.container-fluid(style="margin-left:1px;")
           .col-lg-12.col-md-12.col-sm-12.col-xs-12
             nav.navbar.navbar-inverse
@@ -46,7 +48,7 @@ html(ng-controller="BaseCtrl")
                       span.caret
                     ul.dropdown-menu
                       li
-                        a(href='/AssessmentTool', ng-click="scrollTop()") Assessment tools
+                        a(href='/Assessment_tools', ng-click="scrollTop()") Assessment tools
                       li
                         a(href='#') Background and Overview
                       li
@@ -114,7 +116,7 @@ html(ng-controller="BaseCtrl")
                                       | Username
                                       span.text-danger *
                                    
-                                    input.form-control(type='text' placeholder='Username *', ng-model='user.username')
+                                    input.form-control(type='text' placeholder='Username *' autofocus, ng-model='user.username')
                                 .form-group
                                   .col-lg-6.col-md-6.col-sm-12.col-xs-12
                                     label.sr-only.control-label
@@ -216,7 +218,6 @@ html(ng-controller="BaseCtrl")
     script(src='/javascripts/jquery-2.1.4.min.js')
     script(src='/libs/bootstrap/js/bootstrap.min.js')
     script(src="/libs/requirejs/require.js", data-main="/javascripts/website/main.js")
-    //- script(src="//cdn.jsdelivr.net/satellizer/0.14.0/satellizer.min.js")
 
 script.
   $(document).ready(function(){

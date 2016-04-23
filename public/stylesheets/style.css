@@ -697,3 +697,46 @@ nav.navbar.navbar-inverse {
   width: 40px;
   height: 40px;
 }
+#assess {
+  border: 2px solid #000;
+  height: 40px;
+}
+#lead2 {
+  margin-top: 18px;
+}
+#file {
+  background: url("http://nfl2020forum.net/media/com_phocadownload/images/mime/16/icon-pdf.png") 0 center no-repeat;
+}
+.styled-button-10 {
+  margin-left: 20px;
+  margin-right: 40px;
+  width: 90px;
+  height: 40px;
+  background: #00f;
+}
+.styled-button-11 {
+  background: #008000;
+  width: 80px;
+  height: 40px;
+}
+#download {
+  margin-top: 10px;
+}
+#file1 {
+  background: url("../images/folder.png") 0 center no-repeat;
+}
+#lead1 {
+  margin-top: 18px;
+  hover: #ddd ownload1;
+  margin-top: 20px;
+}
+@media (min-width:320px) {
+  #lead3 {
+    font-size: 13px;
+  }
+}
+@media (min-width:470px) {
+  #lead3 {
+    font-size: 18px;
+  }
+}

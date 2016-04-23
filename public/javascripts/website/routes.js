@@ -12,10 +12,16 @@ define(['./app'], function (app) {
         title: 'Login'
       });
 
-      $routeProvider.when('/AssessmentTool', {
-        templateUrl: 'api/partials/assessment_tool',
+      $routeProvider.when('/Assessment_tools', {
+        templateUrl: 'api/partials/Assessment_tools',
         controller: '',
-        title: 'assessment_tool'
+        title: 'Assessment_tools'
+      });
+
+      $routeProvider.when('/Assessment_tools/English_Teacher', {
+        templateUrl: 'api/partials/English_Teacher',
+        controller: '',
+        title: 'English_Teacher'
       });
 
       $routeProvider.when('/Confirm/:id', {
