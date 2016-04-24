@@ -8,7 +8,7 @@ define(['./module'], function (services) {
           console.log("in addUser");
           return $http.post('/api/admin/user/insert', data).then(function (result) {
             if (result.data.error_code == 0) {
-              //$cookies.putObject('auth', user = result.data.user);
+              $cookies.putObject('auth', user = result.data.user);
             }
             return result.data;
           });

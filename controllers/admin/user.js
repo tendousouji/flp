@@ -29,35 +29,38 @@ router.post('/insert', function (req, res) {
   user.full_name = req.body.full_name;
   user.email = req.body.email;
 
-  User.create(user, function(err, user){
-    if (err) {
-      console.log('Error when insert user: ' + err);
-      res.json();
-    }
-    else {
-      res.json(user);
-    }
-  });
-
-  // create reusable transporter object using the default SMTP transport
-  var transporter = nodemailer.createTransport('smtps://babybito666%40gmail.com:225572754@smtp.gmail.com');
-
-  // setup e-mail data with unicode symbols
-  var mailOptions = {
-      from: '<babybito666@gmail.com>', // sender address
-      to: 'nguyenminhqoc@gmail.com', // list of receivers
-      subject: 'e4r_test', // Subject line
-      text: 'e4r_test', // plaintext body
-      // html: '<p id = "test"><b>e4r_tes</b></p>' // html body
-  };
-  console.log(mailOptions);
-  // send mail with defined transport object
-  transporter.sendMail(mailOptions, function(error, info){
-      if(error){
-          return console.log(error);
-      }
-      console.log('Message sent: ' + info.response);
-  });
+  // User.create(user, function(err, user){
+  //   if (err) {
+  //     console.log('Error when insert user: ' + err);
+  //     res.json();
+  //   }
+  //   else {
+  //     res.json(user);
+  //     // create reusable transporter object using the default SMTP transport
+      var transporter = nodemailer.createTransport('smtps://babybito666%40gmail.com:225572754@smtp.gmail.com');
+      // setup e-mail data with unicode symbols
+      var hostName = require('os').hostname();
+      var text = "http://"+hostName+":6020/Confirm/"+user.id;
+      console.log(text);
+      var mailOptions = {
+          from: '<babybito666@gmail.com>',
+          to: user.email,
+          subject: 'e4r_test',
+          // text: 'localhost:6020/Confirm/'+user.id,
+          html: text
+      };
+      console.log(mailOptions);
+      // send mail with defined transport object
+      transporter.sendMail(mailOptions, function(error, info){
+        if(error){
+          console.log('error: ', error);
+          res.json({});
+        }
+        console.log('Message sent: ' + info.response);
+        res.json(info);
+      });
+  //   }
+  // });
 
 });
 
