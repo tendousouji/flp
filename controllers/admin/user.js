@@ -29,14 +29,13 @@ router.post('/insert', function (req, res) {
   user.full_name = req.body.full_name;
   user.email = req.body.email;
 
-  // User.create(user, function(err, user){
-  //   if (err) {
-  //     console.log('Error when insert user: ' + err);
-  //     res.json();
-  //   }
-  //   else {
-  //     res.json(user);
-  //     // create reusable transporter object using the default SMTP transport
+  User.create(user, function(err, user){
+    if (err) {
+      console.log('Error when insert user: ' + err);
+      res.json();
+    }
+    else {
+      // create reusable transporter object using the default SMTP transport
       var transporter = nodemailer.createTransport('smtps://babybito666%40gmail.com:225572754@smtp.gmail.com');
       // setup e-mail data with unicode symbols
       var hostName = require('os').hostname();
@@ -56,11 +55,14 @@ router.post('/insert', function (req, res) {
           console.log('error: ', error);
           res.json({});
         }
-        console.log('Message sent: ' + info.response);
-        res.json(info);
+        else{
+          console.log('Message sent: ' + info.response);
+          res.json(info);
+        }
+        
       });
-  //   }
-  // });
+    }
+  });
 
 });
 
