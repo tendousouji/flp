@@ -708,15 +708,15 @@ nav.navbar.navbar-inverse {
   background: url("http://nfl2020forum.net/media/com_phocadownload/images/mime/16/icon-pdf.png") 0 center no-repeat;
 }
 .styled-button-10 {
-  margin-left: 20px;
-  margin-right: 40px;
-  width: 90px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 80px;
   height: 40px;
   background: #00f;
 }
 .styled-button-11 {
   background: #008000;
-  width: 80px;
+  width: 70px;
   height: 40px;
 }
 #download {

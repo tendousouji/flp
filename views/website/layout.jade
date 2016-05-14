@@ -146,7 +146,7 @@ html(ng-controller="BaseCtrl")
                                         label.sign-in-label
                                           | User name
                                           span.text-danger *
-                                        input#name.form-control(type='text', ng-model="user.username")
+                                        input#name.form-control(type='text', ng-model="user.username" autofocus)
                                         //- input#username.form-control(type='text', name='username',ng-model="user.username", ng-minlength='5', ng-maxlength='20', ng-pattern='/^[A-z][A-z0-9]*$/', required='')
                                         span(ng-show='myForm.username.$error.required && myForm.username.$dirty' style="color: red") required
                                         span(ng-show='!myForm.username.$error.minLength && !myForm.username.$error.maxLength && myForm.username.$error.pattern && myForm.username.$dirty' style="color: red") Must start with a letter, and contain letters & numbers only.

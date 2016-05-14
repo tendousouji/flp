@@ -10,15 +10,13 @@ define(['./module'], function (controllers) {
         UserService.addUser($scope.user).then(function (user){
           if(user){
             $scope.user = {};
-            //Flash.create('success', 'Create new user successfully.');
             console.log("success");
             $('#cancel_register').trigger('click');
           }
           else{
-            //Flash.create('danger', 'Create new user unsuccessfully.');
+
           }
         });
-
       }
 
       $scope.active = function () {
