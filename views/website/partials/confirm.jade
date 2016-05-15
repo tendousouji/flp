@@ -1,2 +1,23 @@
-span(ng-init="active()")
-  | hello
+.row(style="margin-top: 50px" ng-init="active()")
+  .col-md-4.col-md-offset-4
+    .row
+      form(name='myForm')
+        .form-group
+          .col-md-12
+            label.sign-in-label
+              | User name
+              span.text-danger *
+            input#name.form-control(type='text', ng-model="user.username" autofocus ng-disabled="true")
+        .form-group
+          .col-md-6
+            label.sign-in-label 
+              | Name
+              //- span.text-danger *
+            input.form-control(type='text', ng-model="user.full_name" ng-disabled="true")
+            //- input#name.form-control(type='text', name='name', ng-model="user.full_name")
+          .col-md-6
+            label.sign-in-label
+              | Email
+              span.text-danger *
+            input.form-control(type='text', ng-model="user.email" ng-disabled="true")
+              

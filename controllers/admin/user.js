@@ -36,13 +36,13 @@ router.post('/insert', function (req, res) {
     }
     else {
       // create reusable transporter object using the default SMTP transport
-      var transporter = nodemailer.createTransport('smtps://babybito666%40gmail.com:225572754@smtp.gmail.com');
+      var transporter = nodemailer.createTransport('smtps://e4rforum%40gmail.com:e4rforum@smtp.gmail.com');
       // setup e-mail data with unicode symbols
       var hostName = require('os').hostname();
-      var text = "http://"+hostName+":6020/Confirm/"+user.id;
+      var text = "http://localhost:6020/Confirm/"+user.id;
       console.log(text);
       var mailOptions = {
-          from: '<babybito666@gmail.com>',
+          from: '<e4rforum@gmail.com>',
           to: user.email,
           subject: 'e4r_test',
           // text: 'localhost:6020/Confirm/'+user.id,

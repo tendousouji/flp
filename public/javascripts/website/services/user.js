@@ -6,6 +6,7 @@ define(['./module'], function (services) {
 
         addUser: function (data) {
           console.log("in addUser");
+          data.password = md5.createHash(data.password);
           return $http.post('/api/admin/user/insert', data).then(function (result) {
             if (result.data.error_code == 0) {
               $cookies.putObject('auth', user = result.data.user);

@@ -20,10 +20,8 @@ define(['./module'], function (controllers) {
       }
 
       $scope.active = function () {
-        // var id = $routeParams.id;
-        // UserService.activeUser(id).then(function (id){
-        // });
         UserService.activeUser({_id: $routeParams.id}).then(function (id){
+          $window.location.href = '/';
         });
         console.log('id: ', id);
       }
